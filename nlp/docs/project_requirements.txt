@@ -1,0 +1,76 @@
+Dự án cuối kỳ môn 
+Nhập môn Xử lý ngôn ngữ tự nhiên
+Chọn 1 trong 2 đề tài sau:
+Đề tài 1:
+Xây dựng hệ thống hỏi đáp tiếng Việt trên một miền tri thức cụ thể, sử dụng RAG kết hợp fine-tuning LLM.
+Yêu cầu bắt buộc
+1. Dữ liệu
+Chọn 1 domain (quy chế trường, luật giao thông, y tế phổ thông, hành chính công...).
+Thu thập tài liệu/đoạn văn cho knowledge base.
+Tạo ≥ 300 cặp QA cho fine-tune, ≥ 50 cặp test chuẩn bị thủ công.
+2. Fine-tuning
+Fine-tune 1 LLM (1B–7B tham số) bằng LoRA/QLoRA trên Colab Free.
+Mô hình gợi ý: tự chọn
+3. Pipeline RAG
+Chunking + embedding + vector store (Chroma/FAISS).
+Retriever top-k, có prompt template rõ ràng.
+4. Thực nghiệm so sánh 4 cấu hình
+LLM gốc
+LLM fine-tuned
+Không RAG
+A
+C
+Có RAG
+B
+D
+5. Đánh giá
+Định lượng: BLEU, ROUGE-L, BERTScore.
+Retrieval: Recall@5
+Human eval: 50 câu 
+6. Demo
+Có demo, khuyến khích có giao diện
+Sản phẩm nộp
+Mã nguồn GitHub (có README).
+Báo cáo 15–20 trang.
+Slide thuyết trình + video demo 3–5 phút.
+Dataset và checkpoint (HuggingFace Hub và Driver).
+Đề tài 2
+Xây dựng hệ thống tóm tắt văn bản tiếng Việt tự động trên một miền chuyên biệt bằng cách fine-tune các mô hình pretrained encoder-decoder (ViT5, BARTpho, mT5,...) trên bộ dữ liệu tự xây dựng. Bản tóm tắt phải giữ nguyên chính xác mọi số liệu có trong văn bản gốc (số tiền, ngày tháng, phần trăm, số lượng, thống kê...) và có độ dài bằng 20–25% độ dài văn bản gốc.
+Yêu cầu bắt buộc
+1. Dữ liệu (thu thập và tự xây dựng)
+Chọn 1 miền chuyên biệt giàu số liệu (tin tức tài chính/kinh tế, báo cáo thể thao, tin y tế/dịch tễ, thống kê giáo dục, báo cáo thị trường...).
+Thu thập văn bản gốc từ website/báo/tạp chí của miền đã chọn.
+Tự xây dựng bộ dữ liệu dạng cặp (văn bản gốc, bản tóm tắt): 
+≥ 500 cặp cho huấn luyện.
+≥ 100 cặp test chuẩn bị thủ công, không trùng tập huấn luyện.
+Bản tóm tắt do nhóm tự viết hoặc biên tập lại, đảm bảo: 
+Giữ nguyên 100% số liệu có trong bản gốc (sai 1 số liệu = lỗi nghiêm trọng).
+Độ dài 20–25% so với văn bản gốc (đo theo số từ hoặc số token).
+Chia train/val/test theo tỉ lệ 80/10/10.
+Khuyến khích tăng cường dữ liệu
+2. Fine-tuning
+Fine-tune ít nhất 2 mô hình pretrained tiếng Việt khác nhau: 
+ViT5-base/large, BARTpho-word/syllable, mT5-base...
+Full fine-tune hoặc LoRA/PEFT tùy tài nguyên.
+Báo cáo rõ hyperparameter, cấu hình generation (beam, length penalty, min/max length).
+Khuyến khích kỹ thuật ràng buộc độ dài output và bảo toàn số liệu (ví dụ: copy mechanism, constrained decoding, post-processing kiểm tra số).
+3. Tìm hiểu phương pháp đánh giá
+Bắt buộc có một chương riêng trong báo cáo phân tích các nhóm độ đo:
+Trùng bề mặt: ROUGE-1/2/L, BLEU, METEOR.
+Ngữ nghĩa: BERTScore.
+Hiện đại: dùng LLM như trọng tài
+Phân tích ưu nhược từng độ đo, đặc biệt về khả năng phát hiện sai số liệu và kiểm soát độ dài. Giải thích lựa chọn độ đo của nhóm.
+4. Thực nghiệm và so sánh
+Định lượng:
+ROUGE-1, ROUGE-2, ROUGE-L, BERTScore, BLEU.
+Number Accuracy: tỉ lệ số liệu trong bản tóm tắt khớp chính xác với bản gốc (trích số bằng regex, so sánh tập số).
+Length Compliance: tỉ lệ bản tóm tắt có độ dài nằm trong khoảng 20–25% so với bản gốc.
+5. Demo
+Khuyến khích có giao diện
+6. Câu nâng cao (điểm cộng)
+Huấn luyện bổ sung bằng Reinforcement Learning để tinh chỉnh chất lượng:
+Sản phẩm nộp
+Mã nguồn GitHub (có README chi tiết, hướng dẫn chạy lại).
+Báo cáo 15–20 trang (có chương riêng về đánh giá).
+Slide thuyết trình + video demo 3–5 phút.
+Dataset + checkpoint (HuggingFace Hub và Driver).

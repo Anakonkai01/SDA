@@ -1,0 +1,1305 @@
+{
+  "metadata": {
+    "total": 215,
+    "train": 172,
+    "val": 21,
+    "test": 22,
+    "model": "qwen2.5:14b"
+  },
+  "train": [
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4184-MOV_out0047_png.rf.wCNE3re8doNfsX4QfJEp.png",
+      "question": "Cái biển bên trái kia là loại biển gì?",
+      "answer": "Biển cảnh báo",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4189-MOV_out0088_png.rf.NvJFVMcvdaXSOZGtbhcE.png",
+      "question": "Cỡ biển báo ở giữa là gì nhỉ?",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4007-MOV_out0081_png.rf.Yt6Xo3SLi5CtuV4bv2nv.png",
+      "question": "Biển báo này ngăn chặn hành động nào của người điều khiển phương tiện?",
+      "answer": "Đi ngược chiều",
+      "type": "reasoning"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4051-MOV_out0003_png.rf.ufiwPoTgFi70VzP05Wfk.png",
+      "question": "Chiếc biển ở giữa có kích cỡ như thế nào?",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4164-MOV_out0021_png.rf.HEBXfAebYQenCIi4adc0.png",
+      "question": "Biển báo nào nằm ngoài cùng bên trái trong ảnh?",
+      "answer": "Biển vòng qua chướng ngại vật",
+      "type": "spatial"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4032-MOV_out0013_png.rf.OQKOmR1tznQ7H3JjZ33Q.png",
+      "question": "Em có thể chỉ cho anh chỗ biển cấm xe ô tô không?",
+      "answer": "Bên trái, giữa ảnh",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4160-MOV_out0009_png.rf.AEiPvYlP4xmtUJBH9sXB.png",
+      "question": "Cậu có thể nói cho tớ biết biển báo ở hình là gì không?",
+      "answer": "Biển cấm dừng và đỗ xe",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4147-MOV_out0005_png.rf.6mE0t7TxPFxdfeDA8MFT.png",
+      "question": "Trong bức hình có thấy bao nhiêu biển báo?",
+      "answer": "3",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4214-MOV_out0030_png.rf.GWqLjAv0ndHXDu9A9b0s.png",
+      "question": "Ảnh này có mấy biển báo?",
+      "answer": "1",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4123-MOV_out0033_png.rf.mTC09VJoZIlKiQ4OsNhT.png",
+      "question": "Có phải ảnh này đang chụp lại một biển cấm chuyên dụng cho xe tải không?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/image_367_jpg.rf.oVBUSKtyYPP5XqsoFFkg.jpg",
+      "question": "Cậu biết không, trong ảnh có một biển báo cho thấy không được phép xe khách đi qua. Đó là biển nào vậy?",
+      "answer": "Biển cấm xe khách",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4162-MOV_out0017_png.rf.lpI4PSCGbEsJrpkViRsK.png",
+      "question": "Kích cỡ của biển báo trung tâm như thế nào?",
+      "answer": "Biển nhỏ",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4049-MOV_out0022_png.rf.bXPwjae3aMSVSGNFu1j6.png",
+      "question": "Em nhìn thấy biển số lượng km/h tối đa trong hình thì nó ở chỗ nào?",
+      "answer": "Ở giữa, giữa ảnh",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4119-MOV_out0012_png.rf.Tf9GF26h6RDp5AvWih9o.png",
+      "question": "Biển báo nào có màu đỏ và trắng, cấm dừng và đỗ xe?",
+      "answer": "Đỏ và trắng",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4052-MOV_out0044_png.rf.K7naAkvny6RaTzDUwJy6.png",
+      "question": "Nhắc tôi xem lại, cái biển ở giữa là thuộc nhóm nào?",
+      "answer": "Biển chỉ dẫn",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4022-MOV_out0078_png.rf.in6soSxEjJnniBLUiIxI.png",
+      "question": "Ở nơi có biển cấm dừng và đỗ, tài xế phải làm sao?",
+      "answer": "Không được dừng hoặc đỗ xe",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4178-MOV_out0007_png.rf.ii5CwyotmqNLhX1yhS9w.png",
+      "question": "Kích cỡ của biển báo ở phía bên trái là như thế nào?",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4032-MOV_out0018_png.rf.Uh66woUkEyocfwxH4vcf.png",
+      "question": "Biển báo khi đường bị thu hẹp thường có màu gì?",
+      "answer": "Vàng và đen",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4144-MOV_out0017_png.rf.1tH6m3nYa2JBt5OQvAdH.png",
+      "question": "Trong hình có biển cấm tải trọng gì không nhỉ?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4219-MOV_out0001_png.rf.KrTVRppA2uVfMD4eqwVN.png",
+      "question": "Người đi bộ phải làm gì khi thấy biển này?",
+      "answer": "Chờ đến lượt đi qua đường",
+      "type": "reasoning"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4154-MOV_out0013_png.rf.R1p0pPD5feRoexV72drF.png",
+      "question": "Trong ảnh có thấy mấy biển báo giao thông?",
+      "answer": "1",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4189-MOV_out0067_png.rf.SXQfn0MY5dBgMi51eCBo.png",
+      "question": "Có ai biết biển báo hình tròn hoặc tam giác ngược mà mình thấy ở giữa đường là loại biển gì không?",
+      "answer": "Biển cấm",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4029-MOV_out0013_png.rf.PzOizf2S9Q2xJuxKJ2EJ.png",
+      "question": "Kích cỡ của biển báo chính giữa ra sao?",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4123-MOV_out0033_png.rf.mTC09VJoZIlKiQ4OsNhT.png",
+      "question": "Trong ảnh có biển cấm xe tải không?",
+      "answer": "Không",
+      "type": "yes_no"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4052-MOV_out0005_png.rf.mFuJfcHQ9c9Ai6FPmpRk.png",
+      "question": "Biển cảnh báo dành cho khu vực đông dân cư có xuất hiện trong ảnh không?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4052-MOV_out0002_png.rf.avxZxCRQD6s5d4ZozYmI.png",
+      "question": "Trong hình, số lượng biển cảnh báo cấm là bao nhiêu?",
+      "answer": "2",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4074-MOV_out0007_png.rf.zJUwWAm8J75YfrdQOIue.png",
+      "question": "Ở cuối hàng biển báo bên phải, bạn thấy biển nào được gọi là biển cấm?",
+      "answer": "Biển cấm dừng và đỗ xe",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4160-MOV_out0006_png.rf.YhTIMGEywJFpeKa5GamR.png",
+      "question": "Có phải trong ảnh có biển cấm vượt không vậy?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4022-MOV_out0177_png.rf.pwI71upbxbs9itzuX2X5.png",
+      "question": "Khi thấy biển báo phải đi chậm, tài xế nên làm gì?",
+      "answer": "Giảm tốc độ đi chậm lại",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/image_367_jpg.rf.oVBUSKtyYPP5XqsoFFkg.jpg",
+      "question": "Mình nhìn lại hình này xem, cái biển báo tròn ở giữa là gì nhỉ?",
+      "answer": "Biển cấm xe khách",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4119-MOV_out0012_png.rf.Tf9GF26h6RDp5AvWih9o.png",
+      "question": "Biển cấm dừng và đỗ xe có màu sắc chủ đạo là gì?",
+      "answer": "Đỏ và trắng",
+      "type": "attribute"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4160-MOV_out0006_png.rf.YhTIMGEywJFpeKa5GamR.png",
+      "question": "Em nhìn xem trong ảnh có biểu tượng nào giống biển cấm vượt không?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4022-MOV_out0078_png.rf.in6soSxEjJnniBLUiIxI.png",
+      "question": "Biển cấm dừng và đỗ xuất hiện thì tài xế phải tuân theo quy định gì?",
+      "answer": "Không được dừng hoặc đỗ xe",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4055-MOV_out0006_png.rf.qd1RmmViJeifa4d6aWfi.png",
+      "question": "Trong ảnh có biển giao nhau với đường ưu tiên không?",
+      "answer": "Không",
+      "type": "yes_no"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4032-MOV_out0013_png.rf.OQKOmR1tznQ7H3JjZ33Q.png",
+      "question": "Biển cấm xe ô tô trong hình đặt ở đâu?",
+      "answer": "Bên trái, giữa ảnh",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4094-MOV_out0012_png.rf.DyA0piOnyydaFRW0FC7X.png",
+      "question": "Chiếc biển đường bộ này có mang tính chất cấm không vậy?",
+      "answer": "Có",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4110-MOV_out0026_png.rf.SmR0BeTnAEPZHOTSE4Lg.png",
+      "question": "Màu sắc của biển báo chỉ số tốc độ tối đa là gì?",
+      "answer": "Đỏ và trắng",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4189-MOV_out0067_png.rf.SXQfn0MY5dBgMi51eCBo.png",
+      "question": "Trên đường mình đi có cái biển vuông với màu đỏ ở giữa và trắng xung quanh, nó thuộc nhóm nào vậy?",
+      "answer": "Biển cấm",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4052-MOV_out0044_png.rf.K7naAkvny6RaTzDUwJy6.png",
+      "question": "Ở giữa là biển báo loại gì nhỉ?",
+      "answer": "Biển chỉ dẫn",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4005-MOV_out0040_png.rf.1j0P6IDqveaHw78bY87G.png",
+      "question": "Có bao nhiêu biển báo giao thông trong ảnh?",
+      "answer": "2",
+      "type": "count"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4164-MOV_out0021_png.rf.HEBXfAebYQenCIi4adc0.png",
+      "question": "Em có thể chỉ cho anh biển báo nằm ngoài cùng bên trái trong ảnh không?",
+      "answer": "Biển vòng qua chướng ngại vật",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4200-MOV_out0025_png.rf.sU5T4LVTrRS3AEpzET4U.png",
+      "question": "Màu sắc đặc trưng của biển báo giao nhau có đèn là gì?",
+      "answer": "Vàng và đen",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4053-MOV_out0006_png.rf.L5OEyy4aJjsif7WvPavW.png",
+      "question": "Ảnh này có thấy biển báo đường ưu tiên nào không nhỉ?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4153-MOV_out0025_png.rf.BNplJwMzcDaM6JnZwgr3.png",
+      "question": "Kích cỡ của biển báo ở trung tâm ra sao?",
+      "answer": "Biển nhỏ",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4219-MOV_out0001_png.rf.KrTVRppA2uVfMD4eqwVN.png",
+      "question": "Đèn tín hiệu dành cho người đi bộ chuyển sang màu gì để đi?",
+      "answer": "Màu xanh",
+      "type": "reasoning"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4153-MOV_out0025_png.rf.BNplJwMzcDaM6JnZwgr3.png",
+      "question": "Cỡ biển ở giữa là gì nhỉ?",
+      "answer": "Biển nhỏ",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4022-MOV_out0078_png.rf.in6soSxEjJnniBLUiIxI.png",
+      "question": "Khi gặp biển cấm dừng và đỗ xe, tài xế cần làm gì?",
+      "answer": "Không được dừng hoặc đỗ xe",
+      "type": "attribute"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4184-MOV_out0047_png.rf.wCNE3re8doNfsX4QfJEp.png",
+      "question": "Em có thể nói tên nhóm của biển báo này được không ạ?",
+      "answer": "Biển cảnh báo",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4050-MOV_out0008_png.rf.zAvjJubiuh3SljVLsHP7.png",
+      "question": "Cỡ biển báo ở giữa là gì nhỉ?",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4050-MOV_out0008_png.rf.zAvjJubiuh3SljVLsHP7.png",
+      "question": "Dạng của biển ở chính giữa như thế nào?",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4178-MOV_out0007_png.rf.ii5CwyotmqNLhX1yhS9w.png",
+      "question": "Bạn biết kích thước của biển báo bên phải sao? À quên, tôi hỏi bên trái đấy!",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4074-MOV_out0007_png.rf.zJUwWAm8J75YfrdQOIue.png",
+      "question": "Biển báo nào nằm ngoài cùng bên phải trong ảnh?",
+      "answer": "Biển cấm dừng và đỗ xe",
+      "type": "spatial"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4162-MOV_out0017_png.rf.lpI4PSCGbEsJrpkViRsK.png",
+      "question": "Cỡ biển báo ở giữa là gì?",
+      "answer": "Biển nhỏ",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4160-MOV_out0009_png.rf.AEiPvYlP4xmtUJBH9sXB.png",
+      "question": "Có được phép đỗ xe tạm thời ở khu vực có biển báo cấm dừng và đỗ xe không?",
+      "answer": "Không, bị cấm đỗ",
+      "type": "reasoning"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4073-MOV_out0005_png.rf.AOZtgoETojoEIRAYdh4m.png",
+      "question": "Có bao nhiêu biển báo giao thông trong ảnh?",
+      "answer": "1",
+      "type": "count"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4051-MOV_out0003_png.rf.ufiwPoTgFi70VzP05Wfk.png",
+      "question": "Biển báo ở giữa có kích thước thế nào?",
+      "answer": "Biển vừa",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4200-MOV_out0025_png.rf.sU5T4LVTrRS3AEpzET4U.png",
+      "question": "Biển báo giao thông có đèn tín hiệu thường là màu gì?",
+      "answer": "Vàng và đen",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4145-MOV_out0014_png.rf.OVXN33ZQ03Ra0hL02IpO.png",
+      "question": "Đây có phải biển cấm không?",
+      "answer": "Có",
+      "type": "yes_no"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4097-MOV_out0008_png.rf.NdK2ztVplGOykV0zPKkA.png",
+      "question": "Ảnh có thấy biển báo cảnh báo đường xấu hay gồ ghề không nhỉ?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4064-MOV_out0007_png.rf.kFjKCoQF8KueIIqkAPAN.png",
+      "question": "Chị nhìn thấy bao nhiêu biển báo trong ảnh này?",
+      "answer": "3",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4007-MOV_out0008_png.rf.R11GBc499jX2NuMpggaE.png",
+      "question": "Trong ảnh, biển báo đầu tiên bên trái là gì?",
+      "answer": "Biển cấm đi ngược chiều",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4097-MOV_out0008_png.rf.NdK2ztVplGOykV0zPKkA.png",
+      "question": "Biển báo về đoạn đường xấu hoặc cần giảm tốc độ có xuất hiện trong ảnh không?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4160-MOV_out0006_png.rf.YhTIMGEywJFpeKa5GamR.png",
+      "question": "Trong ảnh có biển cấm vượt không?",
+      "answer": "Không",
+      "type": "yes_no"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4052-MOV_out0005_png.rf.mFuJfcHQ9c9Ai6FPmpRk.png",
+      "question": "Ảnh này có thấy biển báo khu vực đông dân cư nào không?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4055-MOV_out0006_png.rf.qd1RmmViJeifa4d6aWfi.png",
+      "question": "Biển giao nhau với đường cấp cao hơn có trong ảnh k?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4069-MOV_out0012_png.rf.4d9nvKSznTlE92TEmAJi.png",
+      "question": "Em nhìn thấy biển báo nào ở phía cuối bên phải trong bức ảnh không?",
+      "answer": "Biển cấm người đi bộ",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4184-MOV_out0047_png.rf.wCNE3re8doNfsX4QfJEp.png",
+      "question": "Bạn biết biển báo đó thuộc nhóm nào không?",
+      "answer": "Biển cảnh báo",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4162-MOV_out0081_png.rf.MpNuWR6i9G2elrx2wjZG.png",
+      "question": "Biển báo bên trái có kích thước thế nào?",
+      "answer": "Biển nhỏ",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4164-MOV_out0021_png.rf.HEBXfAebYQenCIi4adc0.png",
+      "question": "Trong hình, biển nào ở vị trí đầu tiên bên phải của mình?",
+      "answer": "Biển vòng qua chướng ngại vật",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4162-MOV_out0088_png.rf.Tn3bvWjqNqcDSSX1uffx.png",
+      "question": "Biển báo hình vuông nhỏ hay lớn?",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4200-MOV_out0025_png.rf.sU5T4LVTrRS3AEpzET4U.png",
+      "question": "Các bạn biết biển báo nào màu vàng với chữ hoặc hình đen không?",
+      "answer": "Vàng và đen",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4123-MOV_out0033_png.rf.mTC09VJoZIlKiQ4OsNhT.png",
+      "question": "Ảnh này có thấy biển hạn chế xe tải nào không?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4052-MOV_out0005_png.rf.mFuJfcHQ9c9Ai6FPmpRk.png",
+      "question": "Nhìn vào hình, bạn có thấy biển báo đặc biệt dành cho nơi đông người không?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4119-MOV_out0012_png.rf.Tf9GF26h6RDp5AvWih9o.png",
+      "question": "Bạn biết biển báo cấm dừng và đỗ có màu gì không?",
+      "answer": "Đỏ và trắng",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4112-MOV_out0031_png.rf.sO6U7Hm5oFbTTHdnvNy8.png",
+      "question": "Cỡ của biển ở giữa là gì?",
+      "answer": "Biển nhỏ",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4219-MOV_out0001_png.rf.KrTVRppA2uVfMD4eqwVN.png",
+      "question": "Biển báo ở giữa trong ảnh là gì?",
+      "answer": "Biển đường người đi bộ cắt ngang",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4219-MOV_out0001_png.rf.KrTVRppA2uVfMD4eqwVN.png",
+      "question": "Ảnh chụp biển báo giao thông này ở giữa là gì nhỉ?",
+      "answer": "Biển đường người đi bộ cắt ngang",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4051-MOV_out0003_png.rf.ufiwPoTgFi70VzP05Wfk.png",
+      "question": "Bạn biết biển báo ở giữa to hay nhỏ không?",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4005-MOV_out0040_png.rf.1j0P6IDqveaHw78bY87G.png",
+      "question": "Trong ảnh có thấy bao nhiêu biển báo đường bộ?",
+      "answer": "2",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/image_367_jpg.rf.oVBUSKtyYPP5XqsoFFkg.jpg",
+      "question": "Biển báo ở giữa trong ảnh là gì?",
+      "answer": "Biển cấm xe khách",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4162-MOV_out0088_png.rf.Tn3bvWjqNqcDSSX1uffx.png",
+      "question": "Đường kính của biển báo ở bên kia là bao nhiêu?",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4160-MOV_out0009_png.rf.AEiPvYlP4xmtUJBH9sXB.png",
+      "question": "Người điều khiển phương tiện nhận biết dấu hiệu nào khi thấy biển này?",
+      "answer": "Phải tiếp tục di chuyển",
+      "type": "reasoning"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/image_367_jpg.rf.oVBUSKtyYPP5XqsoFFkg.jpg",
+      "question": "Các loại phương tiện nào được phép đi qua đoạn đường có biển cấm xe khách?",
+      "answer": "Phương tiện không phải là xe khách",
+      "type": "reasoning"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4189-MOV_out0088_png.rf.NvJFVMcvdaXSOZGtbhcE.png",
+      "question": "Kích cỡ của biển báo hình tròn ở giữa như nào?",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4051-MOV_out0003_png.rf.ufiwPoTgFi70VzP05Wfk.png",
+      "question": "Kích thước của biển báo nằm ở giữa là bao nhiêu?",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4145-MOV_out0014_png.rf.OVXN33ZQ03Ra0hL02IpO.png",
+      "question": "Điều này có nghĩa là biển cảnh báo hay biển cấm vậy anh?",
+      "answer": "Có",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4147-MOV_out0005_png.rf.6mE0t7TxPFxdfeDA8MFT.png",
+      "question": "Nhận ra được mấy biển báo trong ảnh không?",
+      "answer": "3",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4064-MOV_out0007_png.rf.kFjKCoQF8KueIIqkAPAN.png",
+      "question": "Có bao nhiêu biển báo giao thông trong ảnh?",
+      "answer": "3",
+      "type": "count"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4144-MOV_out0017_png.rf.1tH6m3nYa2JBt5OQvAdH.png",
+      "question": "Ảnh này có thấy biển báo giới hạn trọng lượng xe không?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4055-MOV_out0006_png.rf.qd1RmmViJeifa4d6aWfi.png",
+      "question": "Ảnh này có thấy biển báo đường ưu tiên không nhỉ?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4052-MOV_out0044_png.rf.K7naAkvny6RaTzDUwJy6.png",
+      "question": "Cái hình trong trung tâm ấy, nó gọi là gì?",
+      "answer": "Biển chỉ dẫn",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4162-MOV_out0081_png.rf.MpNuWR6i9G2elrx2wjZG.png",
+      "question": "Bạn biết kích cỡ của tấm biển báo này không?",
+      "answer": "Biển nhỏ",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4005-MOV_out0050_png.rf.UXE79MzadHHugVDmQjTR.png",
+      "question": "Bạn chỉ cho mình biển báo bên tay phải đầu tiên trong ảnh được không?",
+      "answer": "Biển cấm đi ngược chiều",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4032-MOV_out0013_png.rf.OQKOmR1tznQ7H3JjZ33Q.png",
+      "question": "Trong bức hình này, vị trí của biển cấm xe ô tô là ở đâu nhỉ?",
+      "answer": "Bên trái, giữa ảnh",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4189-MOV_out0067_png.rf.SXQfn0MY5dBgMi51eCBo.png",
+      "question": "Biển báo ở giữa thuộc nhóm nào?",
+      "answer": "Biển cấm",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4053-MOV_out0006_png.rf.L5OEyy4aJjsif7WvPavW.png",
+      "question": "Biển báo giao thông trong ảnh có đề cập đến việc gặp đường ưu tiên không?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4214-MOV_out0030_png.rf.GWqLjAv0ndHXDu9A9b0s.png",
+      "question": "Bạn đếm được bao nhiêu biển báo giao thông ở đây?",
+      "answer": "1",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4166-MOV_out0074_png.rf.K0e3S1KVxpKMFMtcpEI9.png",
+      "question": "Biển báo bên trái thuộc nhóm nào?",
+      "answer": "Biển cấm",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4162-MOV_out0081_png.rf.MpNuWR6i9G2elrx2wjZG.png",
+      "question": "Cỡ của biển báo bên trái là như thế nào?",
+      "answer": "Biển nhỏ",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4147-MOV_out0005_png.rf.6mE0t7TxPFxdfeDA8MFT.png",
+      "question": "Có bao nhiêu biển báo giao thông trong ảnh?",
+      "answer": "3",
+      "type": "count"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4110-MOV_out0026_png.rf.SmR0BeTnAEPZHOTSE4Lg.png",
+      "question": "Biển báo giới hạn tốc độ thường có màu gì?",
+      "answer": "Đỏ và trắng",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4007-MOV_out0008_png.rf.R11GBc499jX2NuMpggaE.png",
+      "question": "Ở góc trái trên cùng của ảnh, biển báo đó có ý nghĩa gì?",
+      "answer": "Biển cấm đi ngược chiều",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4112-MOV_out0079_png.rf.3JoC0lJLiUX0QSqEwInz.png",
+      "question": "Tài xế cần làm gì khi thấy biển báo tốc độ tối đa?",
+      "answer": "Tuân thủ giới hạn tốc độ",
+      "type": "reasoning"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4110-MOV_out0026_png.rf.SmR0BeTnAEPZHOTSE4Lg.png",
+      "question": "Biển tốc độ tối đa có màu sắc chủ đạo là gì?",
+      "answer": "Đỏ và trắng",
+      "type": "attribute"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4166-MOV_out0074_png.rf.K0e3S1KVxpKMFMtcpEI9.png",
+      "question": "Khi thấy hình tròn màu đỏ với dấu hiệu cảnh báo bên trong, ta gọi là gì?",
+      "answer": "Biển cấm",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4112-MOV_out0031_png.rf.sO6U7Hm5oFbTTHdnvNy8.png",
+      "question": "Biển báo trung tâm có kích cỡ ra sao?",
+      "answer": "Biển nhỏ",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4164-MOV_out0021_png.rf.HEBXfAebYQenCIi4adc0.png",
+      "question": "Cậu nhìn vào ảnh xem cái biển báo nào nằm cuối cùng bên trái không?",
+      "answer": "Biển vòng qua chướng ngại vật",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4029-MOV_out0013_png.rf.PzOizf2S9Q2xJuxKJ2EJ.png",
+      "question": "Biển cảnh báo ở giữa to hay nhỏ vậy?",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4178-MOV_out0007_png.rf.ii5CwyotmqNLhX1yhS9w.png",
+      "question": "Biển báo bên trái có kích thước thế nào?",
+      "answer": "Biển vừa",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4069-MOV_out0012_png.rf.4d9nvKSznTlE92TEmAJi.png",
+      "question": "Biển báo nào nằm ngoài cùng bên phải trong ảnh?",
+      "answer": "Biển cấm người đi bộ",
+      "type": "spatial"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4052-MOV_out0044_png.rf.K7naAkvny6RaTzDUwJy6.png",
+      "question": "Biển báo ở giữa thuộc nhóm nào?",
+      "answer": "Biển chỉ dẫn",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4147-MOV_out0005_png.rf.6mE0t7TxPFxdfeDA8MFT.png",
+      "question": "Bạn đếm được tổng cộng mấy cái biển báo trong tấm hình này?",
+      "answer": "3",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4053-MOV_out0006_png.rf.L5OEyy4aJjsif7WvPavW.png",
+      "question": "Trong bức ảnh, bạn có nhận ra biển báo cho biết sắp tới là điểm giao nhau với đường có quyền đi trước không?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4189-MOV_out0067_png.rf.SXQfn0MY5dBgMi51eCBo.png",
+      "question": "Mình nhìn thấy một biển báo ở giữa giống như hình phạt, đó là loại biển gì nhỉ?",
+      "answer": "Biển cấm",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4219-MOV_out0001_png.rf.KrTVRppA2uVfMD4eqwVN.png",
+      "question": "Tôi muốn biết tên của biển báo giao thông ở giữa ảnh này.",
+      "answer": "Biển đường người đi bộ cắt ngang",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4055-MOV_out0006_png.rf.qd1RmmViJeifa4d6aWfi.png",
+      "question": "Trong bức hình có biểu tượng nào cảnh báo về đường ưu tiên không?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4160-MOV_out0009_png.rf.AEiPvYlP4xmtUJBH9sXB.png",
+      "question": "Anh chị biết biển báo giao thông màu đỏ với đường kẻ trắng bên trái trong ảnh là gì không?",
+      "answer": "Biển cấm dừng và đỗ xe",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4073-MOV_out0005_png.rf.AOZtgoETojoEIRAYdh4m.png",
+      "question": "Em đếm được tổng cộng bao nhiêu biển báo trong bức hình kia?",
+      "answer": "1",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4007-MOV_out0081_png.rf.Yt6Xo3SLi5CtuV4bv2nv.png",
+      "question": "Bạn nhìn vào hình trên và cho mình biết cái biển báo màu đỏ bên trái là biểu tượng của quy định giao thông nào?",
+      "answer": "Biển cấm đi ngược chiều",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4094-MOV_out0012_png.rf.DyA0piOnyydaFRW0FC7X.png",
+      "question": "Biển hiệu này có ý nghĩa là cấm không ta?",
+      "answer": "Có",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4112-MOV_out0031_png.rf.sO6U7Hm5oFbTTHdnvNy8.png",
+      "question": "Chiếc biển trong hình có lớn không?",
+      "answer": "Biển nhỏ",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4214-MOV_out0030_png.rf.GWqLjAv0ndHXDu9A9b0s.png",
+      "question": "Có bao nhiêu biển báo giao thông trong ảnh?",
+      "answer": "1",
+      "type": "count"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4162-MOV_out0017_png.rf.lpI4PSCGbEsJrpkViRsK.png",
+      "question": "Biển báo có hình dạng và kích thước ra sao khi nó nằm ở vị trí giữa?",
+      "answer": "Biển nhỏ",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4162-MOV_out0081_png.rf.MpNuWR6i9G2elrx2wjZG.png",
+      "question": "Biển báo đó có to không?",
+      "answer": "Biển nhỏ",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4032-MOV_out0018_png.rf.Uh66woUkEyocfwxH4vcf.png",
+      "question": "Biển đường bị thu hẹp có màu sắc chủ đạo là gì?",
+      "answer": "Vàng và đen",
+      "type": "attribute"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4022-MOV_out0177_png.rf.pwI71upbxbs9itzuX2X5.png",
+      "question": "Khi gặp biển đi chậm, tài xế cần làm gì?",
+      "answer": "Giảm tốc độ đi chậm lại",
+      "type": "attribute"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4007-MOV_out0081_png.rf.Yt6Xo3SLi5CtuV4bv2nv.png",
+      "question": "Một tài xế cần làm gì khi nhìn thấy biển cấm đi ngược chiều?",
+      "answer": "Tiếp tục đi đúng hướng hiện tại",
+      "type": "reasoning"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4022-MOV_out0078_png.rf.in6soSxEjJnniBLUiIxI.png",
+      "question": "Khi thấy biển báo không cho phép dừng hoặc đỗ, lái xe nên xử lý thế nào?",
+      "answer": "Không được dừng hoặc đỗ xe",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4178-MOV_out0007_png.rf.ii5CwyotmqNLhX1yhS9w.png",
+      "question": "Chiếc biển báo bên tay trái có to không?",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4069-MOV_out0012_png.rf.4d9nvKSznTlE92TEmAJi.png",
+      "question": "Cậu có thể chỉ cho tôi biết biển báo nằm ngoài cùng bên phải trong ảnh là gì không?",
+      "answer": "Biển cấm người đi bộ",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4074-MOV_out0034_png.rf.k3pbZHbq2zyXVG52aATQ.png",
+      "question": "Biển giao thông trong ảnh có biểu thị hạn chế xe tải không?",
+      "answer": "Có",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4189-MOV_out0088_png.rf.NvJFVMcvdaXSOZGtbhcE.png",
+      "question": "Biển báo ở giữa có kích thước thế nào?",
+      "answer": "Biển vừa",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4162-MOV_out0088_png.rf.Tn3bvWjqNqcDSSX1uffx.png",
+      "question": "Cỡ biển báo bên trái là gì?",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/image_367_jpg.rf.oVBUSKtyYPP5XqsoFFkg.jpg",
+      "question": "Xe khách được phép đi vào đoạn đường này không?",
+      "answer": "Không, xe khách bị cấm",
+      "type": "reasoning"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4119-MOV_out0012_png.rf.Tf9GF26h6RDp5AvWih9o.png",
+      "question": "Màu sắc của biển báo không cho phép dừng hoặc đỗ xe là gì?",
+      "answer": "Đỏ và trắng",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4032-MOV_out0013_png.rf.OQKOmR1tznQ7H3JjZ33Q.png",
+      "question": "Biển cấm xe ô tô nằm ở vị trí nào trong ảnh?",
+      "answer": "Bên trái, giữa ảnh",
+      "type": "spatial"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4145-MOV_out0014_png.rf.OVXN33ZQ03Ra0hL02IpO.png",
+      "question": "Chắc chắn đây là biển báo cấm chứ?",
+      "answer": "Có",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4074-MOV_out0034_png.rf.k3pbZHbq2zyXVG52aATQ.png",
+      "question": "Ảnh này có thấy biển cấm xe tải không?",
+      "answer": "Có",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4214-MOV_out0030_png.rf.GWqLjAv0ndHXDu9A9b0s.png",
+      "question": "Có thấy bao nhiêu biển báo trong bức hình?",
+      "answer": "1",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4112-MOV_out0079_png.rf.3JoC0lJLiUX0QSqEwInz.png",
+      "question": "Biển báo bên phải trong ảnh là gì?",
+      "answer": "Biển tốc độ tối đa",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4112-MOV_out0079_png.rf.3JoC0lJLiUX0QSqEwInz.png",
+      "question": "Điều gì xảy ra khi vượt quá tốc độ tối đa được chỉ định?",
+      "answer": "Phải giảm tốc độ",
+      "type": "reasoning"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4052-MOV_out0002_png.rf.avxZxCRQD6s5d4ZozYmI.png",
+      "question": "Nhìn vào ảnh, bạn thấy bao nhiêu biển báo không cho phép?",
+      "answer": "2",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4112-MOV_out0079_png.rf.3JoC0lJLiUX0QSqEwInz.png",
+      "question": "Anh/cô có thể chỉ cho tôi biết biển báo đó là gì được không?",
+      "answer": "Biển tốc độ tối đa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4074-MOV_out0007_png.rf.zJUwWAm8J75YfrdQOIue.png",
+      "question": "Trong hình, hãy chỉ ra biển báo nằm ngoài cùng bên phải có ý nghĩa gì?",
+      "answer": "Biển cấm dừng và đỗ xe",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4162-MOV_out0017_png.rf.lpI4PSCGbEsJrpkViRsK.png",
+      "question": "Biển báo ở giữa có kích thước thế nào?",
+      "answer": "Biển nhỏ",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4219-MOV_out0001_png.rf.KrTVRppA2uVfMD4eqwVN.png",
+      "question": "Xe ô tô cần dừng lại trước khi nào?",
+      "answer": "Khi có người đi bộ muốn vượt qua",
+      "type": "reasoning"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4007-MOV_out0081_png.rf.Yt6Xo3SLi5CtuV4bv2nv.png",
+      "question": "Anh chị biết biển báo hình tam giác nhọn màu đỏ ở phía bên trái trong ảnh là gì không?",
+      "answer": "Biển cấm đi ngược chiều",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4064-MOV_out0007_png.rf.kFjKCoQF8KueIIqkAPAN.png",
+      "question": "Em ơi, em đếm được bao nhiêu biển báo trong hình không?",
+      "answer": "3",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/image_367_jpg.rf.oVBUSKtyYPP5XqsoFFkg.jpg",
+      "question": "Điều gì xảy ra với các tài xế xe khách khi họ vi phạm biển báo này?",
+      "answer": "Bị yêu cầu quay lại hoặc tìm lộ trình thay thế",
+      "type": "reasoning"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4160-MOV_out0009_png.rf.AEiPvYlP4xmtUJBH9sXB.png",
+      "question": "Em thấy cái biển báo trên đường giống như trong ảnh, nó có ý nghĩa gì nhỉ?",
+      "answer": "Biển cấm dừng và đỗ xe",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4049-MOV_out0015_png.rf.99q82dUYRTR3xCujNaHY.png",
+      "question": "Màu sắc đặc trưng của biển chỉ dẫn ở khu vực giao thông phức tạp là gì?",
+      "answer": "Vàng và đen",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4005-MOV_out0050_png.rf.UXE79MzadHHugVDmQjTR.png",
+      "question": "Cái biển màu đỏ nằm góc trái của hình là gì vậy?",
+      "answer": "Biển cấm đi ngược chiều",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4145-MOV_out0014_png.rf.OVXN33ZQ03Ra0hL02IpO.png",
+      "question": "Biển này có phải là biển cấm không nhỉ?",
+      "answer": "Có",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4005-MOV_out0040_png.rf.1j0P6IDqveaHw78bY87G.png",
+      "question": "Hình đó có tổng cộng mấy cái biển báo không nhỉ?",
+      "answer": "2",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4189-MOV_out0088_png.rf.NvJFVMcvdaXSOZGtbhcE.png",
+      "question": "Biển báo tròn ở giữa có cỡ lớn không?",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4112-MOV_out0079_png.rf.3JoC0lJLiUX0QSqEwInz.png",
+      "question": "Em muốn biết tên của biển báo ở bên phải trong ảnh.",
+      "answer": "Biển tốc độ tối đa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4160-MOV_out0009_png.rf.AEiPvYlP4xmtUJBH9sXB.png",
+      "question": "Xe ô tô được phép dừng lại ở nơi có biển cấm dừng và đỗ xe không?",
+      "answer": "Không, xe bị cấm dừng",
+      "type": "reasoning"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4007-MOV_out0008_png.rf.R11GBc499jX2NuMpggaE.png",
+      "question": "Biển báo nào nằm ngoài cùng bên trái trong ảnh?",
+      "answer": "Biển cấm đi ngược chiều",
+      "type": "spatial"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4154-MOV_out0013_png.rf.R1p0pPD5feRoexV72drF.png",
+      "question": "Có bao nhiêu biển báo giao thông trong ảnh?",
+      "answer": "1",
+      "type": "count"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4112-MOV_out0079_png.rf.3JoC0lJLiUX0QSqEwInz.png",
+      "question": "Có nên tăng tốc khi không có xe khác trên đường và thấy biển tốc độ tối đa?",
+      "answer": "Không, tuân thủ quy định",
+      "type": "reasoning"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4112-MOV_out0031_png.rf.sO6U7Hm5oFbTTHdnvNy8.png",
+      "question": "Biển báo ở giữa có kích thước thế nào?",
+      "answer": "Biển nhỏ",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4050-MOV_out0008_png.rf.zAvjJubiuh3SljVLsHP7.png",
+      "question": "Biển báo ở giữa có kích thước thế nào?",
+      "answer": "Biển vừa",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4162-MOV_out0088_png.rf.Tn3bvWjqNqcDSSX1uffx.png",
+      "question": "Biển báo bên trái có kích thước thế nào?",
+      "answer": "Biển vừa",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4153-MOV_out0025_png.rf.BNplJwMzcDaM6JnZwgr3.png",
+      "question": "Biển trong hình có lớn không?",
+      "answer": "Biển nhỏ",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4074-MOV_out0034_png.rf.k3pbZHbq2zyXVG52aATQ.png",
+      "question": "Trong ảnh có biển cấm xe tải không?",
+      "answer": "Có",
+      "type": "yes_no"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4064-MOV_out0007_png.rf.kFjKCoQF8KueIIqkAPAN.png",
+      "question": "Ảnh có mấy biển báo giao thông nhỉ?",
+      "answer": "3",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4049-MOV_out0022_png.rf.bXPwjae3aMSVSGNFu1j6.png",
+      "question": "Biển báo giới hạn tốc độ trong bức ảnh đó nằm ở vị trí nào?",
+      "answer": "Ở giữa, giữa ảnh",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4112-MOV_out0079_png.rf.3JoC0lJLiUX0QSqEwInz.png",
+      "question": "Ảnh này có phải là biển báo về tốc độ không?",
+      "answer": "Biển tốc độ tối đa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4007-MOV_out0081_png.rf.Yt6Xo3SLi5CtuV4bv2nv.png",
+      "question": "Biển báo bên trái trong ảnh là gì?",
+      "answer": "Biển cấm đi ngược chiều",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4200-MOV_out0025_png.rf.sU5T4LVTrRS3AEpzET4U.png",
+      "question": "Biển giao nhau có tín hiệu đèn có màu sắc chủ đạo là gì?",
+      "answer": "Vàng và đen",
+      "type": "attribute"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4094-MOV_out0012_png.rf.DyA0piOnyydaFRW0FC7X.png",
+      "question": "Biển này có phải là biển cấm không nhỉ?",
+      "answer": "Có",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4069-MOV_out0012_png.rf.4d9nvKSznTlE92TEmAJi.png",
+      "question": "Trong hình, biển báo nào được đặt ở vị trí xa nhất về phía phải?",
+      "answer": "Biển cấm người đi bộ",
+      "type": "spatial_llm"
+    }
+  ],
+  "val": [
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4049-MOV_out0022_png.rf.bXPwjae3aMSVSGNFu1j6.png",
+      "question": "Biển tốc độ tối đa nằm ở vị trí nào trong ảnh?",
+      "answer": "Ở giữa, giữa ảnh",
+      "type": "spatial"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4094-MOV_out0012_png.rf.DyA0piOnyydaFRW0FC7X.png",
+      "question": "Đây có phải biển cấm không?",
+      "answer": "Có",
+      "type": "yes_no"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4052-MOV_out0002_png.rf.avxZxCRQD6s5d4ZozYmI.png",
+      "question": "Có bao nhiêu biển cấm trong ảnh?",
+      "answer": "2",
+      "type": "count"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4029-MOV_out0013_png.rf.PzOizf2S9Q2xJuxKJ2EJ.png",
+      "question": "Cỡ biển báo ở giữa là gì nhỉ?",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4049-MOV_out0022_png.rf.bXPwjae3aMSVSGNFu1j6.png",
+      "question": "Trong hình này, biển báo tốc độ tối đa xuất hiện ở đâu?",
+      "answer": "Ở giữa, giữa ảnh",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4144-MOV_out0017_png.rf.1tH6m3nYa2JBt5OQvAdH.png",
+      "question": "Trong ảnh có biển hạn chế trọng tải không?",
+      "answer": "Không",
+      "type": "yes_no"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4052-MOV_out0002_png.rf.avxZxCRQD6s5d4ZozYmI.png",
+      "question": "Ảnh có mấy biển cấm?",
+      "answer": "2",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4160-MOV_out0006_png.rf.YhTIMGEywJFpeKa5GamR.png",
+      "question": "Ảnh này có thấy biển báo cấm vượt nào không nhỉ?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4160-MOV_out0009_png.rf.AEiPvYlP4xmtUJBH9sXB.png",
+      "question": "Biển báo bên trái trong ảnh là gì?",
+      "answer": "Biển cấm dừng và đỗ xe",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4166-MOV_out0074_png.rf.K0e3S1KVxpKMFMtcpEI9.png",
+      "question": "Em biết biển báo hình tròn màu đỏ với dòng gạch ngang bên trong là gì không?",
+      "answer": "Biển cấm",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4074-MOV_out0007_png.rf.zJUwWAm8J75YfrdQOIue.png",
+      "question": "Biển báo màu đỏ nằm ngoài cùng bên phải trong ảnh là biển gì?",
+      "answer": "Biển cấm dừng và đỗ xe",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4049-MOV_out0015_png.rf.99q82dUYRTR3xCujNaHY.png",
+      "question": "Biển báo ở đoạn đường khúc khuỷu thường có màu gì?",
+      "answer": "Vàng và đen",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4022-MOV_out0177_png.rf.pwI71upbxbs9itzuX2X5.png",
+      "question": "Biển cảnh báo cần giảm tốc độ nằm ở đâu trên đường?",
+      "answer": "Giảm tốc độ đi chậm lại",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4144-MOV_out0017_png.rf.1tH6m3nYa2JBt5OQvAdH.png",
+      "question": "Biển báo đường bộ nào hạn chế trọng lượng xuất hiện trong ảnh chưa?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4029-MOV_out0013_png.rf.PzOizf2S9Q2xJuxKJ2EJ.png",
+      "question": "Biển báo ở giữa có kích thước thế nào?",
+      "answer": "Biển vừa",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4219-MOV_out0001_png.rf.KrTVRppA2uVfMD4eqwVN.png",
+      "question": "Cái biển ở giữa trong hình có phải là biển cho người đi bộ không?",
+      "answer": "Biển đường người đi bộ cắt ngang",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4052-MOV_out0005_png.rf.mFuJfcHQ9c9Ai6FPmpRk.png",
+      "question": "Trong ảnh có biển khu đông dân cư không?",
+      "answer": "Không",
+      "type": "yes_no"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4005-MOV_out0040_png.rf.1j0P6IDqveaHw78bY87G.png",
+      "question": "Bạn nhìn kỹ xem trong bức hình có mấy biển báo giao thông nhé?",
+      "answer": "2",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4007-MOV_out0008_png.rf.R11GBc499jX2NuMpggaE.png",
+      "question": "Biển báo nào ở vị trí xa nhất bên trái trong bức hình?",
+      "answer": "Biển cấm đi ngược chiều",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4005-MOV_out0050_png.rf.UXE79MzadHHugVDmQjTR.png",
+      "question": "Em nhìn vào ảnh, biển báo góc trái đầu tiên là gì nhỉ?",
+      "answer": "Biển cấm đi ngược chiều",
+      "type": "spatial_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/image_367_jpg.rf.oVBUSKtyYPP5XqsoFFkg.jpg",
+      "question": "Anh ơi, em thấy có biển ở giữa hình giống như không cho phép loại phương tiện nào đi qua nhỉ?",
+      "answer": "Biển cấm xe khách",
+      "type": "recognition_llm"
+    }
+  ],
+  "test": [
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4053-MOV_out0006_png.rf.L5OEyy4aJjsif7WvPavW.png",
+      "question": "Trong ảnh có biển giao nhau với đường ưu tiên không?",
+      "answer": "Không",
+      "type": "yes_no"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4097-MOV_out0008_png.rf.NdK2ztVplGOykV0zPKkA.png",
+      "question": "Trong ảnh có biển đường xấu hoặc có gồ giảm tốc không?",
+      "answer": "Không",
+      "type": "yes_no"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4049-MOV_out0015_png.rf.99q82dUYRTR3xCujNaHY.png",
+      "question": "Biển chỗ ngoặt nguy hiểm có màu sắc chủ đạo là gì?",
+      "answer": "Vàng và đen",
+      "type": "attribute"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4154-MOV_out0013_png.rf.R1p0pPD5feRoexV72drF.png",
+      "question": "Ảnh đó có tất cả mấy cái biển báo không nhỉ?",
+      "answer": "1",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4032-MOV_out0018_png.rf.Uh66woUkEyocfwxH4vcf.png",
+      "question": "Khi lái xe thấy đường sắp bị thu hẹp, biển cảnh báo đó thường có màu sắc như thế nào?",
+      "answer": "Vàng và đen",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4153-MOV_out0025_png.rf.BNplJwMzcDaM6JnZwgr3.png",
+      "question": "Biển báo ở giữa có kích thước thế nào?",
+      "answer": "Biển nhỏ",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4022-MOV_out0177_png.rf.pwI71upbxbs9itzuX2X5.png",
+      "question": "Nếu gặp biển chỉ dẫn phải đi chậm, người lái xe cần thực hiện điều gì?",
+      "answer": "Giảm tốc độ đi chậm lại",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4166-MOV_out0074_png.rf.K0e3S1KVxpKMFMtcpEI9.png",
+      "question": "Anh có nhận ra cái biển báo trên đường mà ai đi vào khu vực đó sẽ bị phạt không?",
+      "answer": "Biển cấm",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4154-MOV_out0013_png.rf.R1p0pPD5feRoexV72drF.png",
+      "question": "Em nhìn thấy bao nhiêu biển báo trong hình?",
+      "answer": "1",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4050-MOV_out0008_png.rf.zAvjJubiuh3SljVLsHP7.png",
+      "question": "Kích cỡ của biển ở trung tâm ra sao?",
+      "answer": "Biển vừa",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4005-MOV_out0050_png.rf.UXE79MzadHHugVDmQjTR.png",
+      "question": "Biển báo nào nằm ngoài cùng bên trái trong ảnh?",
+      "answer": "Biển cấm đi ngược chiều",
+      "type": "spatial"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4123-MOV_out0033_png.rf.mTC09VJoZIlKiQ4OsNhT.png",
+      "question": "Biển cấm dành cho xe tải có xuất hiện trong ảnh không nhỉ?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4007-MOV_out0081_png.rf.Yt6Xo3SLi5CtuV4bv2nv.png",
+      "question": "Em thấy bên trái có một chiếc biển báo, bạn nào biết nó mang ý nghĩa gì không?",
+      "answer": "Biển cấm đi ngược chiều",
+      "type": "recognition_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4073-MOV_out0005_png.rf.AOZtgoETojoEIRAYdh4m.png",
+      "question": "Trong ảnh có thấy mấy biển báo giao thông?",
+      "answer": "1",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4184-MOV_out0047_png.rf.wCNE3re8doNfsX4QfJEp.png",
+      "question": "Biển báo bên trái thuộc nhóm nào?",
+      "answer": "Biển cảnh báo",
+      "type": "recognition"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4049-MOV_out0015_png.rf.99q82dUYRTR3xCujNaHY.png",
+      "question": "Các biển cảnh báo tại những vị trí nguy hiểm trên đường thường được thiết kế với tông màu nào?",
+      "answer": "Vàng và đen",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4097-MOV_out0008_png.rf.NdK2ztVplGOykV0zPKkA.png",
+      "question": "Trong hình, bạn nhìn thấy dấu hiệu nào cảnh báo về mặt đường kém hay phải đi chậm lại không?",
+      "answer": "Không",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4074-MOV_out0034_png.rf.k3pbZHbq2zyXVG52aATQ.png",
+      "question": "Trong hình, có phải có biển báo không cho phép xe tải đi qua không?",
+      "answer": "Có",
+      "type": "yes_no_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4073-MOV_out0005_png.rf.AOZtgoETojoEIRAYdh4m.png",
+      "question": "Hình ảnh đó có bao nhiêu cái biển báo đường bộ?",
+      "answer": "1",
+      "type": "count_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4032-MOV_out0018_png.rf.Uh66woUkEyocfwxH4vcf.png",
+      "question": "Các biển báo ở vị trí đường sắp thu hẹp thường có tông màu chủ yếu là gì?",
+      "answer": "Vàng và đen",
+      "type": "attribute_llm"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4007-MOV_out0081_png.rf.Yt6Xo3SLi5CtuV4bv2nv.png",
+      "question": "Điều gì xảy ra khi đi xe vào con đường có biển cấm đi ngược chiều?",
+      "answer": "Phải quay lại hoặc tìm đường khác",
+      "type": "reasoning"
+    },
+    {
+      "image": "data/datasets/remapped_v2/train/images/IMG_4110-MOV_out0026_png.rf.SmR0BeTnAEPZHOTSE4Lg.png",
+      "question": "Bạn biết màu nào trên biển báo tốc độ không?",
+      "answer": "Đỏ và trắng",
+      "type": "attribute_llm"
+    }
+  ]
+}

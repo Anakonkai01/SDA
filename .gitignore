@@ -1,0 +1,45 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+ENV/
+
+# Local environment and logs
+.env
+.env.*
+!.env.example
+*.log
+
+# NLP artifacts and heavy assets
+nlp/models/**
+!nlp/models/
+!nlp/models/**/
+!nlp/models/**/README.md
+nlp/vector_db/
+nlp/unsloth_compiled_cache/
+nlp/data/laws/
+
+# VQA artifacts and heavy assets
+vqa/checkpoints/
+vqa/data/vqa/vqa_log.txt
+vqa/data/vqa/vqa_template.json
+
+# Temporary office lock files
+.~lock.*

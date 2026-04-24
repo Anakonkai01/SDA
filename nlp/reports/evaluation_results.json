@@ -1,0 +1,34 @@
+{
+  "A": {
+    "config": "A",
+    "n_samples": 50,
+    "bleu": 0.06,
+    "rouge_l": 0.2698,
+    "bert_score": 0.7188,
+    "recall_at_5": null
+  },
+  "B": {
+    "config": "B",
+    "n_samples": 50,
+    "bleu": 0.0818,
+    "rouge_l": 0.2657,
+    "bert_score": 0.6547,
+    "recall_at_5": 0.7476
+  },
+  "C": {
+    "config": "C",
+    "n_samples": 50,
+    "bleu": 0.1165,
+    "rouge_l": 0.3973,
+    "bert_score": 0.7777,
+    "recall_at_5": null
+  },
+  "D": {
+    "config": "D",
+    "n_samples": 50,
+    "bleu": 0.1872,
+    "rouge_l": 0.3842,
+    "bert_score": 0.6965,
+    "recall_at_5": 0.7476
+  }
+}

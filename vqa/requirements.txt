@@ -1,0 +1,14 @@
+torch>=2.10.0
+torchaudio>=2.10.0
+torchvision>=0.25.0
+transformers>=4.57.6
+peft
+accelerate
+open-clip-torch
+evaluate
+rouge-score
+bert-score
+gradio
+Pillow
+tqdm
+wandb

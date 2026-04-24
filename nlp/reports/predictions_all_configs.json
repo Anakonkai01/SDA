@@ -1,0 +1,210 @@
+{
+  "A": [
+    {
+      "question": "Quy định về nhường đường tại nơi đường giao nhau giữa đường nhánh và đường chính là gì?",
+      "reference": "Xe đi từ đường nhánh phải nhường đường cho xe đi trên đường chính từ bất kỳ hướng nào.",
+      "prediction": "Theo Luật Giao thông đường bộ Việt Nam 2019, khi đến nơi giao nhau giữa đường nhánh và đường chính, người điều khiển phương tiện phải nhường đường cho phương tiện đi trên đường chính. Đây được gọi là nguyên tắc \"nhường đường cho xe đi trước\"."
+    },
+    {
+      "question": "Biển số R.412o có ý nghĩa gì?",
+      "reference": "Biển số R.412o báo hiệu hết làn đường dành cho xe máy và xe đạp.",
+      "prediction": "Biển số xe R.412o ở Việt Nam thường thuộc về tỉnh Quảng Ninh (R là mã tỉnh Quảng Ninh). Tuy nhiên, mã biển số cụ thể không cung cấp thông tin về loại xe hoặc đơn vị sở hữu. Mã biển số có cấu trúc như sau: R (mã tỉnh), số thứ tự 412, o (loại xe)."
+    },
+    {
+      "question": "Sau khi kết thúc việc sử dụng đường bộ, người tham gia giao thông phải làm gì?",
+      "reference": "Hoàn trả nguyên trạng lòng đường, vỉa hè.",
+      "prediction": "Sau khi kết thúc việc sử dụng đường bộ, người tham gia giao thông không cần thực hiện bất kỳ thủ tục nào đặc biệt. Tuy nhiên, họ vẫn phải tuân thủ các quy định về an toàn giao thông và có thể di chuyển bằng phương tiện cá nhân hoặc thuê xe theo quy định của pháp luật."
+    },
+    {
+      "question": "Chiều cao của chữ trong bảng kỹ thuật kiểu chữ nén là bao nhiêu?",
+      "reference": "Chiều cao chữ là 100mm.",
+      "prediction": "Theo các quy định về bảng kỹ thuật, chiều cao của chữ trong kiểu chữ nén (còn gọi là kiểu chữ 12) thường là 12 mm. Tuy nhiên, điều này có thể thay đổi tùy thuộc vào tiêu chuẩn cụ thể được áp dụng tại từng quốc gia hoặc trường hợp cụ thể. Bạn có thể cần kiểm tra thêm thông tin cụ thể từ các nguồn chính thức về tiêu chuẩn giao thông của Việt Nam."
+    },
+    {
+      "question": "Biển báo R.403e có ý nghĩa gì?",
+      "reference": "Biển báo R.403e là đường dành cho xe máy.",
+      "prediction": "Biển báo R.403e thường liên quan đến quy định về tốc độ tối thiểu và tối đa khi di chuyển trên các đường cao tốc ở Việt Nam. Tuy nhiên, mã số biển báo cụ thể này không rõ ràng trong thông tin hiện có. Thông thường, biển báo này có thể cung cấp thông tin về tốc độ tối thiểu hoặc giới hạn trên cao tốc. Để có thông tin chính xác nhất, bạn nên tham khảo trực tiếp từ cơ quan quản lý giao thông địa phương hoặc văn bản pháp luật hiện hành."
+    },
+    {
+      "question": "Cơ sở dữ liệu khác được quy định ở đâu trong Luật này?",
+      "reference": "Cơ sở dữ liệu khác được quy định tại khoản 1 Điều 7 của Luật này.",
+      "prediction": "Cơ sở dữ liệu trong Luật Giao thông đường bộ và đường sắt quy định tại Chương 2, Luật này."
+    },
+    {
+      "question": "Biển số P.119 được dùng để làm gì?",
+      "reference": "Để báo đường cấm các loại xe có độ dài toàn bộ vượt quá trị số ghi trên biển.",
+      "prediction": "Biển số xe P.119 thường thuộc về các loại xe thương mại như xe tải, container ở khu vực phía Bắc Việt Nam. Tuy nhiên, chi tiết cụ thể có thể thay đổi theo quy định mới của ngành giao thông vận tải Việt Nam. Bạn nên kiểm tra thông tin từ cơ quan chức năng gần nhất để có thông tin chính xác nhất."
+    },
+    {
+      "question": "Theo quy định, người lái xe phải hướng dẫn hành khách sử dụng thiết bị nào?",
+      "reference": "Trang thiết bị an toàn trên xe.",
+      "prediction": "Theo quy định hiện hành, người lái xe không có trách nhiệm hướng dẫn hành khách sử dụng bất kỳ thiết bị nào cụ thể. Tuy nhiên, người lái xe cần đảm bảo rằng hành khách sử dụng kính chắn gió khi ra vào xe và sử dụng dây an toàn khi xe di chuyển."
+    },
+    {
+      "question": "Tình trạng đường nào thường được biển báo I.445c mô tả?",
+      "reference": "Biển báo mô tả nền đường yếu hoặc đoạn đường chậm.",
+      "prediction": "Biển báo I.445c thường được sử dụng để cảnh báo về các điểm có nguy cơ tai nạn giao thông cao, như các góc giữa đường, điểm kết thúc băng đỏ, hoặc nơi có nhiều xe tải qua lại. Đây là một biển báo cảnh báo về tình trạng đường phức tạp."
+    },
+    {
+      "question": "Mục đích của việc đặt đèn tín hiệu bổ sung trên cột cần vươn hoặc giá long môn là gì?",
+      "reference": "Để nhắc lại và thuận tiện cho việc quan sát từ phía bên kia nút giao.",
+      "prediction": "Mục đích của việc đặt đèn tín hiệu bổ sung trên cột cần vươn hoặc giá long môn thường bao gồm:\n\n1. Giúp người điều khiển phương tiện dễ dàng nhận biết vị trí, hoạt động của cột cần.\n2. Tăng cường khả năng nhận biết đường đi cho các phương tiện di chuyển qua lại.\n3. Giúp cảnh sát giao thông và người điều khiển phương tiện dễ dàng theo dõi hoạt động của cột cần.\n\nĐèn tín hiệu bổ sung này giúp cải thiện an toàn giao thông và hiệu quả trong việc điều khiển giao thông."
+    }
+  ],
+  "B": [
+    {
+      "question": "Quy định về nhường đường tại nơi đường giao nhau giữa đường nhánh và đường chính là gì?",
+      "reference": "Xe đi từ đường nhánh phải nhường đường cho xe đi trên đường chính từ bất kỳ hướng nào.",
+      "prediction": "Theo Điều 22 về nhường đường tại nơi đường giao nhau, khi đến gần đường giao nhau giữa đường nhánh và đường chính:\n\n- Xe đi từ đường nhánh phải nhường đường cho xe đi trên đường chính từ bất kỳ hướng nào tới.\n\nĐiều này áp dụng cho trường hợp đường nhánh kết nối vào đường chính hoặc giữa các tuyến đường với nhau."
+    },
+    {
+      "question": "Biển số R.412o có ý nghĩa gì?",
+      "reference": "Biển số R.412o báo hiệu hết làn đường dành cho xe máy và xe đạp.",
+      "prediction": "\u0000\nH ì n h\u0000D.14\u0000-\u0000B iển\u0000s ố \u0000R.403\u0000\nD.12\u0000 Biển\u0000 số\u0000 R .404a\u0000 \"Hết\u0000 đ oạn\u0000 đ ườ ng\u0000 dành\u0000 cho\u0000 xe\u0000 ô \u0000 tô”,\u0000 biển\u0000 số\u0000 R .404b\u0000\n“Hết\u0000đoạn\u0000đường\u0000dành\u0000ch o\u0000xe\u0000ô\u0000tô,\u0000xe\u0000máy\",\u0000biển\u0000số\u0000R .404c\u0000“Hết\u0000đoạn\u0000đường\u0000dành\u0000\ncho\u0000 xe\u0000 b uýt”,\u0000 biển\u0000 số\u0000 R.404d\u0000 “Hết\u0000 đoạn\u0000 đường\u0000 dành\u0000 cho\u0000 xe\u0000 ô\u0000 tô\u0000 con”,\u0000 biển\u0000 số\u0000\nR.404e\u0000“H"
+    },
+    {
+      "question": "Sau khi kết thúc việc sử dụng đường bộ, người tham gia giao thông phải làm gì?",
+      "reference": "Hoàn trả nguyên trạng lòng đường, vỉa hè.",
+      "prediction": "Sau khi kết thúc việc sử dụng đường bộ, người tham gia giao thông không có nghĩa vụ cụ thể theo thông tin bạn cung cấp. Tuy nhiên, họ vẫn phải tuân thủ các quy định chung về giao thông đường bộ như:\n\n- Bảo đảm an toàn cho công trình đường bộ\n- An toàn phòng cháy, nổ\n- Tổ chức giao thông và các trường hợp cần thiết khác\n\nNhững quy định này áp dụng cho cả người tham gia giao thông trước và sau khi sử dụng đường bộ. Không có thông tin cụ thể về hậu kỳ sử dụng đường bộ mà bạn cần hỏi."
+    },
+    {
+      "question": "Chiều cao của chữ trong bảng kỹ thuật kiểu chữ nén là bao nhiêu?",
+      "reference": "Chiều cao chữ là 100mm.",
+      "prediction": "viết\u0000tố\u0000i\u0000 \u0000t hiểu\u0000\u0000\nBạn có thể giúp tôi phân loại biển chỉ dẫn theo loại A hay loại B?"
+    },
+    {
+      "question": "Biển báo R.403e có ý nghĩa gì?",
+      "reference": "Biển báo R.403e là đường dành cho xe máy.",
+      "prediction": "ổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổiổi"
+    },
+    {
+      "question": "Cơ sở dữ liệu khác được quy định ở đâu trong Luật này?",
+      "reference": "Cơ sở dữ liệu khác được quy định tại khoản 1 Điều 7 của Luật này.",
+      "prediction": "Cơ sở dữ liệu khác liên quan đến công tác bảo đảm trật tự, an toàn giao thông đường bộ được quy định ở điểm k của Điều 2. Theo đó, cơ sở dữ liệu này bao gồm các thông tin về việc bảo đảm trật tự, an toàn giao thông đường bộ và được kết nối, chia sẻ với các cơ sở dữ liệu khác có liên quan."
+    },
+    {
+      "question": "Biển số P.119 được dùng để làm gì?",
+      "reference": "Để báo đường cấm các loại xe có độ dài toàn bộ vượt quá trị số ghi trên biển.",
+      "prediction": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+    },
+    {
+      "question": "Theo quy định, người lái xe phải hướng dẫn hành khách sử dụng thiết bị nào?",
+      "reference": "Trang thiết bị an toàn trên xe.",
+      "prediction": "Theo quy định, người lái xe phải hướng dẫn hành khách sử dụng thiết bị âm thanh báo hiệu đường bộ."
+    },
+    {
+      "question": "Tình trạng đường nào thường được biển báo I.445c mô tả?",
+      "reference": "Biển báo mô tả nền đường yếu hoặc đoạn đường chậm.",
+      "prediction": "\u0000\nb)\u0000Biển\u0000số\u0000I.445d\u0000 \u0000 \u0000 c)\u0000Biển\u0000số\u0000I.445e\u0000\nHìn h\u0000E.5 5\u0000-\u0000Biển\u0000số\u0000I.445(d,e)\u0000\n\n-\u0000 Biển\u0000 báo\u0000 xe\u0000l ớn\u0000h oặc\u0000 quá\u0000 khổ\u0000 đi\u0000sát\u0000 về\u0000 bên\u0000 phải\u0000(biển\u0000 số\u0000I.445e)\u0000biển\u0000đặt\u0000 ở\u0000nơi\u0000\nthích\u0000hợp\u0000trước\u0000khi \u0000đi \u0000vào\u0000đoạn\u0000đường\u0000có\u0000 từ\u0000 hai\u0000làn\u0000xe\u0000tr ở\u0000lên,\u0000hướng\u0000 dẫn\u0000 cho\u0000 lái \u0000xe\u0000lớn\u0000\nhoặc\u0000quá\u0000khổ\u0000ph"
+    },
+    {
+      "question": "Mục đích của việc đặt đèn tín hiệu bổ sung trên cột cần vươn hoặc giá long môn là gì?",
+      "reference": "Để nhắc lại và thuận tiện cho việc quan sát từ phía bên kia nút giao.",
+      "prediction": "đèn\u0000đến\u0000mép\u0000phần\u0000đường\u0000xe\u0000chạy\u0000từ\u00000,5\u0000đến\u00002 m.\u0000\u0000\n9.3.\u0000Khi\u0000đèn\u0000được\u0000 đặt\u0000theo\u0000chiều\u0000ngang\u0000trên\u0000cần\u0000vươn\u0000thì\u0000chiều\u0000cao\u0000tối\u0000thiểu\u0000l à\u00005,2\u0000\nm,\u0000tối\u0000đa\u0000là\u00007,8m\u0000tính\u0000từ\u0000điểm\u0000thấp\u0000nhất\u0000của \u0000đèn\u0000đến\u0000mặt\u0000đường\u0000hoặc\u0000mặt\u0000v ỉ a\u0000hè;\u0000\n9.4.\u0000Đèn\u0000được\u0000bố \u0000trí\u0000sao\u0000cho\u0000người\u0000tham\u0000gia\u0000giao\u0000thô ng\u0000nh"
+    }
+  ],
+  "C": [
+    {
+      "question": "Quy định về nhường đường tại nơi đường giao nhau giữa đường nhánh và đường chính là gì?",
+      "reference": "Xe đi từ đường nhánh phải nhường đường cho xe đi trên đường chính từ bất kỳ hướng nào.",
+      "prediction": "Khi đường nhánh và đường chính cùng chiều, nhường đường cho phương tiện đi trên đường chính."
+    },
+    {
+      "question": "Biển số R.412o có ý nghĩa gì?",
+      "reference": "Biển số R.412o báo hiệu hết làn đường dành cho xe máy và xe đạp.",
+      "prediction": "Biển số R.412o được đặt để chỉ dẫn đường đi đến các công trình xây dựng, công trình giao thông khác."
+    },
+    {
+      "question": "Sau khi kết thúc việc sử dụng đường bộ, người tham gia giao thông phải làm gì?",
+      "reference": "Hoàn trả nguyên trạng lòng đường, vỉa hè.",
+      "prediction": "Phải di chuyển xe ra khỏi đường bộ."
+    },
+    {
+      "question": "Chiều cao của chữ trong bảng kỹ thuật kiểu chữ nén là bao nhiêu?",
+      "reference": "Chiều cao chữ là 100mm.",
+      "prediction": "Chiều cao chữ là 1/4 chiều cao chữ trong bảng kỹ thuật không nén."
+    },
+    {
+      "question": "Biển báo R.403e có ý nghĩa gì?",
+      "reference": "Biển báo R.403e là đường dành cho xe máy.",
+      "prediction": "Biển báo R.403e được đặt để cảnh báo người tham gia giao thông về các nguy cơ tiềm ẩn nguy hiểm cho an toàn giao thông đường bộ."
+    },
+    {
+      "question": "Cơ sở dữ liệu khác được quy định ở đâu trong Luật này?",
+      "reference": "Cơ sở dữ liệu khác được quy định tại khoản 1 Điều 7 của Luật này.",
+      "prediction": "Cơ sở dữ liệu khác được quy định tại khoản 2 Điều 14."
+    },
+    {
+      "question": "Biển số P.119 được dùng để làm gì?",
+      "reference": "Để báo đường cấm các loại xe có độ dài toàn bộ vượt quá trị số ghi trên biển.",
+      "prediction": "Biển số P.119 được dùng để chỉ dẫn đường đi cho phương tiện."
+    },
+    {
+      "question": "Theo quy định, người lái xe phải hướng dẫn hành khách sử dụng thiết bị nào?",
+      "reference": "Trang thiết bị an toàn trên xe.",
+      "prediction": "Người lái xe phải hướng dẫn hành khách sử dụng thiết bị định vị trên xe."
+    },
+    {
+      "question": "Tình trạng đường nào thường được biển báo I.445c mô tả?",
+      "reference": "Biển báo mô tả nền đường yếu hoặc đoạn đường chậm.",
+      "prediction": "Đường có vạch kẻ trên mặt đường có thể là vạch kẻ trên mặt đường hoặc vạch kẻ trên mặt đường và mặt nền."
+    },
+    {
+      "question": "Mục đích của việc đặt đèn tín hiệu bổ sung trên cột cần vươn hoặc giá long môn là gì?",
+      "reference": "Để nhắc lại và thuận tiện cho việc quan sát từ phía bên kia nút giao.",
+      "prediction": "Để làm rõ ý nghĩa của các biển báo giao thông."
+    }
+  ],
+  "D": [
+    {
+      "question": "Quy định về nhường đường tại nơi đường giao nhau giữa đường nhánh và đường chính là gì?",
+      "reference": "Xe đi từ đường nhánh phải nhường đường cho xe đi trên đường chính từ bất kỳ hướng nào.",
+      "prediction": "Khi đến gần đường giao nhau, xe đi trên đường nhánh phải nhường đường cho xe đi trên đường chính từ bất kỳ hướng nào tới."
+    },
+    {
+      "question": "Biển số R.412o có ý nghĩa gì?",
+      "reference": "Biển số R.412o báo hiệu hết làn đường dành cho xe máy và xe đạp.",
+      "prediction": "\u0000\nH ì n h\u0000D.14\u0000-\u0000B iển\u0000s ố \u0000R.403\u0000\nD.15\u0000 Biển\u0000số\u0000 R.404a\u0000 \"Hết\u0000 đ oạn\u0000 đ ườ ng\u0000 dành\u0000 cho\u0000 xe\u0000 ô \u0000 tô”,\u0000 biển\u0000 số\u0000 R .404b\u0000\n“Hết\u0000đoạn\u0000đường\u0000dành\u0000ch o\u0000xe\u0000ô\u0000tô,\u0000xe\u0000máy\",\u0000biển\u0000số\u0000R .404c\u0000“Hết\u0000đoạn\u0000đường\u0000dành\u0000\ncho\u0000 xe\u0000 b uýt”,\u0000 biển\u0000 số\u0000 R.404d\u0000 “Hết\u0000 đoạn\u0000 đường\u0000 dành\u0000 cho\u0000 xe\u0000 ô\u0000 tô\u0000 con”,\u0000 biển\u0000 số\u0000\nR.404e\u0000“"
+    },
+    {
+      "question": "Sau khi kết thúc việc sử dụng đường bộ, người tham gia giao thông phải làm gì?",
+      "reference": "Hoàn trả nguyên trạng lòng đường, vỉa hè.",
+      "prediction": "Sau khi kết thúc việc sử dụng đường bộ, người tham gia giao thông phải thực hiện theo quy định tại Điều 31 của Luật này."
+    },
+    {
+      "question": "Chiều cao của chữ trong bảng kỹ thuật kiểu chữ nén là bao nhiêu?",
+      "reference": "Chiều cao chữ là 100mm.",
+      "prediction": "viết\u0000tố\u0000\n46.2.\u0000Bố\u0000trí\u0000chữ\u0000viết\u0000tố\u0000i\u0000 \u0000t hiểu\u0000\u0000\n46.2.1.\u0000N guyên\u0000tắc\u0000bố\u0000trí\u0000chữ\u0000viết\u0000tố\u0000i\u0000 \u0000t hiểu\u0000\u0000\n46.2.2.\u0000Kích\u0000c ỡ\u0000chữ\u0000viết\u0000tố\u0000i\u0000 \u0000t hiểu\u0000\u0000\n46.2.3.\u0000Phải\u0000được\u0000dán\u0000m àng\u0000ph ản\u0000quang\u0000,\u0000đảm\u0000 bảo\u0000 yêu\u0000 cầu\u0000theo\u0000ti êu\u0000chuẩn\u0000quốc\u0000\ngia\u0000về\u0000“Màng\u0000phản\u0000quang\u0000dùng\u0000ch o\u0000báo\u0000hiệu\u0000đường\u0000bộ”.\u0000\n46"
+    },
+    {
+      "question": "Biển báo R.403e có ý nghĩa gì?",
+      "reference": "Biển báo R.403e là đường dành cho xe máy.",
+      "prediction": "i\n-\u0000Biển\u0000số\u0000R .403e:\u0000Đường\u0000dành\u0000cho\u0000xe\u0000máy;\u0000\n-\u0000Biển\u0000số\u0000R .403f:\u0000Đường\u0000dành\u0000cho\u0000xe\u0000máy\u0000và\u0000xe\u0000đạp;\u0000\n-\u0000Biển\u0000số\u0000R .403g:\u0000Đường\u0000dành\u0000cho\u0000xe\u0000chở\u0000hàng\u0000bốn\u0000bánh\u0000gắn\u0000động\u0000cơ;\u0000\n-\u0000Biển\u0000số\u0000R .403h:\u0000Đường\u0000dành\u0000cho\u0000xe\u0000chở\u0000người\u0000bốn\u0000bánh\u0000gắn\u0000động\u0000cơ;\u0000\n-\u0000Biển\u0000số\u0000R .403k:\u0000Đường\u0000dành\u0000cho\u0000xe\u0000chở"
+    },
+    {
+      "question": "Cơ sở dữ liệu khác được quy định ở đâu trong Luật này?",
+      "reference": "Cơ sở dữ liệu khác được quy định tại khoản 1 Điều 7 của Luật này.",
+      "prediction": "Cơ sở dữ liệu khác được quy định tại khoản 2 Điều 2."
+    },
+    {
+      "question": "Biển số P.119 được dùng để làm gì?",
+      "reference": "Để báo đường cấm các loại xe có độ dài toàn bộ vượt quá trị số ghi trên biển.",
+      "prediction": ",\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000"
+    },
+    {
+      "question": "Theo quy định, người lái xe phải hướng dẫn hành khách sử dụng thiết bị nào?",
+      "reference": "Trang thiết bị an toàn trên xe.",
+      "prediction": "Người lái xe phải hướng dẫn hành khách sử dụng thiết bị âm thanh báo hiệu đường bộ."
+    },
+    {
+      "question": "Tình trạng đường nào thường được biển báo I.445c mô tả?",
+      "reference": "Biển báo mô tả nền đường yếu hoặc đoạn đường chậm.",
+      "prediction": "\u0000\nb)\u0000Biển\u0000số\u0000I.445e\u0000 \u0000 c)\u0000Biển\u0000số\u0000I.445f\u0000\nHìn h\u0000E.5 5\u0000-\u0000Biển\u0000số\u0000I.445\u0000(e,f)\u0000\n\u0000 \u0000 \u0000\na)\u0000Biển\u0000số\u0000I.445g\u0000 \u0000 \u0000 b )\u0000Biển\u0000số\u0000I.445h\u0000\nHình\u0000E.56-\u0000Biển\u0000số\u0000I.445\u0000(g,h)\u0000\n\nBiển\u0000số\u0000I.445\u0000(a,b,c,d,e,f,g,h)\u0000\nHìn h\u0000E.57\u0000\nBiển\u0000số\u0000I.445\u0000(a,b,c,d,e,f,g,h)\u0000\nHìn h\u0000E"
+    },
+    {
+      "question": "Mục đích của việc đặt đèn tín hiệu bổ sung trên cột cần vươn hoặc giá long môn là gì?",
+      "reference": "Để nhắc lại và thuận tiện cho việc quan sát từ phía bên kia nút giao.",
+      "prediction": "đèn\u0000tín\u0000h iệu\u0000đặt\u0000trên\u0000từng\u0000nhánh\u0000đường\u0000ngay\u0000trước\u0000 nút\u0000giao\u0000theo \u0000c h iều\u0000đi;\u0000Tùy\u0000\ntừng\u0000trường\u0000hợp,\u0000 có\u0000thể\u0000 bổ\u0000sung\u0000đèn\u0000 tín\u0000hiệu\u0000trên\u0000cột\u0000cần\u0000v ươn\u0000hoặc\u0000giá\u0000 long\u0000 môn\u0000phía\u0000\nbên\u0000kia\u0000nút\u0000giao\u0000the o\u0000chiều\u0000đi\u0000đ ể\u0000nhắc\u0000lại\u0000và\u0000thuận\u0000tiện\u0000cho\u0000việc\u0000quan\u0000sát.\u0000\n\nđèn\u0000đến\u0000mép\u0000phần\u0000đường\u0000xe\u0000chạy\u0000từ\u00000,5\u0000đến\u00002 m"
+    }
+  ]
+}

@@ -1,0 +1,1802 @@
+[
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Phần đường dành cho xe cơ giới là gì?",
+    "output": "Là phần của đường bộ được sử dụng cho các phương tiện giao thông cơ giới đường bộ qua lại.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 4"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện để thực hiện điều chỉnh chủ trương đầu tư?",
+    "output": "Phải có thỏa thuận với nhà đầu tư theo quy định của Luật Đầu tư theo phương thức đối tác công tư.",
+    "source": "35-2024-qh15.pdf, trang 43"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Việc xử lý vi phạm trật tự an toàn giao thông được thực hiện như thế nào?",
+    "output": "Việc vi phạm phải bị xử lý nghiêm minh theo quy định của pháp luật.",
+    "source": "36-2024-qh15.pdf, trang 2"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Các loại biển chỉ dẫn khác bao gồm những gì?",
+    "output": "Biển chỉ dẫn địa danh, địa phận hành chính cấp tỉnh, thành phố, tên cầu, tên công trình lớn.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 37"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Kích thước loại A của biển báo sân bay là bao nhiêu?",
+    "output": "Kích thước loại A là A=75,0; B=2,0; C=6,2; D=62,6; E=5,0 cm.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 375"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Thông tin thời tiết nào cần được công bố để đảm bảo an toàn giao thông?",
+    "output": "Thông tin thời tiết, sự kiện thiên tai ảnh hưởng đến giao thông phải được công bố.",
+    "source": "35-2024-qh15.pdf, trang 48"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Mức vận tốc thiết kế tối đa của xe chở người bốn bánh có gắn động cơ là bao nhiêu?",
+    "output": "Không lớn hơn 30 km/h.",
+    "source": "36-2024-qh15_tiep.pdf, trang 7"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Màu sắc nền của biển số IE.451b được quy định như thế nào?",
+    "output": "Nền biển số IE.451b có màu xanh lam hoặc xanh lá cây, kèm hình vẽ trắng.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 347"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Giấy phép lái xe hạng A khác hạng A1 như thế nào?",
+    "output": "Hạng A cấp cho xe mô tô hai bánh có dung tích xi-lanh trên 125 cm3 hoặc công suất động cơ điện trên 11 kW, bao gồm cả các loại xe quy định cho hạng A1.",
+    "source": "36-2024-qh15_tiep.pdf, trang 29"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Giá trị của thông số E trong biển IE.468a, b, c là bao nhiêu?",
+    "output": "Giá trị của E là 45°.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 393"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khoảng cách tối thiểu giữa các tiêu phản quang trên đường thẳng là bao nhiêu?",
+    "output": "Khoảng cách tối thiểu là 10m.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 65"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số IE.468a, b, c dùng để làm gì?",
+    "output": "Dùng để chỉ dẫn chướng ngại vật phía trước.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 393"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Hành vi vượt xe bị xử lý như thế nào nếu vi phạm?",
+    "output": "Đoạn văn bản không đề cập mức phạt cụ thể cho hành vi vượt xe, chỉ nêu điều kiện và quy định về việc vượt xe hợp lệ.",
+    "source": "36-2024-qh15.pdf, trang 13"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Đường ô tô thông thường có nhiều hơn hai làn xe không có dải phân cách giữa sử dụng cột kilômét như thế nào?",
+    "output": "Sử dụng hai cột kilômét dạng cột thấp đặt ở hai bên lề đường.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 68"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Đơn vị nào chịu trách nhiệm báo cáo trong văn bản này?",
+    "output": "Bộ trưởng (để báo cáo).",
+    "source": "36-byt.pdf, trang 4"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Mục đích của việc quy định tốc độ khai thác là gì?",
+    "output": "Đảm bảo an toàn giao thông và khai thác hiệu quả tuyến đường.",
+    "source": "35-2024-qh15.pdf, trang 24"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Vạch 1.2 được sử dụng để làm gì?",
+    "output": "Vạch 1.2 dùng để phân chia hai chiều xe chạy ngược chiều.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 157"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Làn đường dành cho xe đạp kết thúc tại biển số nào?",
+    "output": "Làn đường dành cho xe đạp kết thúc tại biển số R.412p.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 284"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Chiều dài nét liền (L1) của vạch 6.1 được quy định như thế nào?",
+    "output": "Chiều dài nét liền (L1) của vạch 6.1 là 100 cm hoặc bằng chiều dài của viên bó vỉa.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 181"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Theo luật, nghĩa vụ của lực lượng tuần tra, kiểm soát liên quan đến hệ thống, phương tiện, thiết bị là gì?",
+    "output": "Phải vận hành, sử dụng hệ thống, phương tiện, thiết bị, dữ liệu theo quy định tại Điều 67 và Điều 70 của Luật này.",
+    "source": "36-2024-qh15_tiep.pdf, trang 40"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Tốc độ thiết kế của đường bộ là gì?",
+    "output": "Tốc độ thiết kế là giá trị vận tốc được dùng để tính toán các chỉ tiêu kỹ thuật của đường bộ.",
+    "source": "35-2024-qh15.pdf, trang 24"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Trường hợp cầu, cống, rãnh nằm liền kề với công trình xây dựng khác thì phần đất bảo vệ, bảo trì được xác định ra sao?",
+    "output": "Là ranh giới của các công trình xây dựng liền kề đó.",
+    "source": "35-2024-qh15.pdf, trang 9"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Mục đích đặt biển số R.415a là gì?",
+    "output": "Biển số R.415a được đặt để chỉ dẫn kết thúc đoạn đường lưu thông trên từng làn đường theo quy định.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 125"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Hành động giơ tay phải về phía trước của người điều khiển giao thông có ý nghĩa gì?",
+    "output": "Đây là tín hiệu yêu cầu phương tiện phía sau và bên phải dừng lại, phương tiện phía trước được rẽ phải.",
+    "source": "36-2024-qh15.pdf, trang 10"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Làn đường trên cùng một chiều đường cần đảm bảo điều gì?",
+    "output": "Phải đảm bảo yêu cầu về mục đích sử dụng, bề rộng để lưu thông thông suốt và an toàn.",
+    "source": "35-2024-qh15.pdf, trang 25"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Theo văn bản, biển hiệu lệnh được hướng dẫn tại phụ lục nào?",
+    "output": "Biển hiệu lệnh được hướng dẫn tại phụ lục D.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 2"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khoảng cách cắm cọc mốc lộ giới trên đường qua khu dân cư là bao nhiêu?",
+    "output": "Đường qua khu dân cư, thị xã, làng, bản: cứ 100 m cắm một cột về mỗi bên đường.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 70"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Cột kilômét dạng cao được đặt ở đâu trên đường ô tô thông thường có dải phân cách giữa?",
+    "output": "Đặt ở giữa dải phân cách nếu bề rộng dải phân cách ≤ 4,0m.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 68"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số W.244 nên đặt ở đâu?",
+    "output": "Biển số W.244 nên đặt ở vị trí thích hợp gần đoạn đường thường xảy ra tai nạn.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 112"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Sửa chữa đột xuất là gì?",
+    "output": "Sửa chữa đột xuất bao gồm sửa chữa, khắc phục điểm hay xảy ra tai nạn giao thông đường bộ.",
+    "source": "35-2024-qh15.pdf, trang 34"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Trường hợp đường ô tô thông thường có lan can phòng hộ, cột kilômét được đặt như thế nào?",
+    "output": "Sử dụng cột kilômét dạng cao đặt phía bên ngoài của lan can phòng hộ.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 68"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Người quản lý đường cao tốc có trách nhiệm gì khi có nguy cơ sự cố?",
+    "output": "Kịp thời dừng sử dụng, thông báo nguyên nhân trong 60 phút và chịu trách nhiệm về quyết định của mình.",
+    "source": "35-2024-qh15.pdf, trang 45"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi nào xe được phép vượt trên đường có hai làn đường trở lên?",
+    "output": "Khi có hai làn đường trở lên, xe đi phía sau di chuyển lên trước phải tuân theo quy tắc sử dụng làn đường quy định tại Điều 13 của Luật này.",
+    "source": "36-2024-qh15.pdf, trang 13"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Kích thước của biển số IE.451b là bao nhiêu?",
+    "output": "Kích thước của biển số IE.451b là 100 cm x 70 cm.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 347"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Cấu tạo của cọc mốc lộ giới được quy định như thế nào?",
+    "output": "Cọc mốc được đúc bằng bê tông không có cốt thép, kích thước 20cm x 20cm x 100cm, phần đầu mỗi cạnh vát 10°.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 70"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Đèn tín hiệu được đặt ở độ cao tối thiểu bao nhiêu khi bố trí theo chiều thẳng đứng?",
+    "output": "Độ cao tối thiểu của đèn là 1,7m.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 10"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số W.222b có ý nghĩa gì?",
+    "output": "Biển số W.222b cảnh báo về lề đường không ổn định, dễ gây văng đất đá hoặc bánh xe quay tại chỗ.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 105"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Loại vạch nào được sử dụng trong phạm vi chiều dài đoạn d và L?",
+    "output": "Vạch đôi, liền nét có quy cách, màu sắc giống vạch 1.3.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 171"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Giấy vận tải có vai trò gì trong việc vận chuyển hàng hóa?",
+    "output": "Giấy vận tải xác nhận người lái xe đã nhận hàng hóa và là bằng chứng của hợp đồng vận tải.",
+    "source": "35-2024-qh15.pdf, trang 54"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khoảng cách giữa các xe trên đường bộ được định nghĩa như thế nào?",
+    "output": "Là cự ly tối thiểu giữa các phương tiện liền nhau trên cùng làn đường để đảm bảo an toàn.",
+    "source": "35-2024-qh15.pdf, trang 25"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Kích thước chữ trên biển báo đường cao tốc có những cỡ nào?",
+    "output": "Kích thước chữ có các cỡ 40cm, 33cm và 30cm.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 340"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện nào để phương tiện được phép đi theo hướng mũi tên màu xanh?",
+    "output": "Khi tín hiệu mũi tên xanh bật sáng cùng lúc với tín hiệu đỏ hoặc vàng, phương tiện được đi theo hướng mũi tên nhưng phải nhường đường cho các phương tiện khác.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 8"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Hệ thống nào được nâng cấp theo quy định?",
+    "output": "Hệ thống quản lý, vận hành giao thông đường bộ; hệ thống thu phí; công trình kiểm soát tải trọng xe được sửa chữa, nâng cấp.",
+    "source": "35-2024-qh15.pdf, trang 34"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Trường hợp nào cho phép đặt biển báo trên cột điện?",
+    "output": "Cho phép đặt biển trên cột điện, cây cối hoặc vật kiến trúc nếu dễ quan sát và đảm bảo thẩm mỹ.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 18"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Nhóm biển phụ được sử dụng để làm gì?",
+    "output": "Nhóm biển phụ được sử dụng để thuyết minh bổ sung nội dung các nhóm biển khác hoặc có thể sử dụng độc lập.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 11"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Cơ quan nào có trách nhiệm phối hợp với Bộ Công an trong quản lý trật tự, an toàn giao thông đường bộ?",
+    "output": "Bộ, cơ quan ngang Bộ có trách nhiệm phối hợp với Bộ Công an trong phạm vi nhiệm vụ, quyền hạn của mình.",
+    "source": "36-2024-qh15_tiep.pdf, trang 57"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Trong trường hợp nào có thể sử dụng biển số W.207 tại ngõ, ngách, hẻm?",
+    "output": "Biển số W.207 có thể được sử dụng tại ngõ, ngách, hẻm khi điều kiện giao thông yêu cầu.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 99"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Thông tin nào phải được cung cấp khi xảy ra tai nạn giao thông?",
+    "output": "Thông tin về vị trí, thời gian tai nạn, ùn tắc giao thông, sự cố công trình, cháy, nổ.",
+    "source": "35-2024-qh15.pdf, trang 48"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Yêu cầu về chu kỳ nháy của đèn cảnh báo là gì?",
+    "output": "Chu kỳ nháy của đèn phải đủ để gây chú ý nhưng vẫn cho người điều khiển phương tiện đọc được nội dung cần cảnh báo.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 77"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khoản 3 Điều 10 của Luật này có hiệu lực từ khi nào?",
+    "output": "Khoản 3 Điều 10 có hiệu lực thi hành từ ngày 01 tháng 01 năm 2026.",
+    "source": "36-2024-qh15_tiep.pdf, trang 57"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Ai có trách nhiệm quy định chi tiết điều này?",
+    "output": "Bộ trưởng Bộ Giao thông vận tải.",
+    "source": "35-2024-qh15.pdf, trang 35"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi phát hiện nguy cơ mất an toàn trên đường cao tốc, người quản lý phải làm gì?",
+    "output": "Phải dừng sử dụng đường cao tốc và thông báo cho người có thẩm quyền trong thời hạn không quá 60 phút.",
+    "source": "35-2024-qh15.pdf, trang 45"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Màu sắc của tiêu phản quang dạng mũi tên trên đỉnh các cột là gì?",
+    "output": "Tiêu phản quang này có màu đen trên nền vàng.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 65"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Đèn dạng 9 được sử dụng để làm gì?",
+    "output": "Đèn dạng 9 được sử dụng để cảnh báo nguy hiểm, có thể có dạng tròn hoặc chữ nhật với nội dung thay đổi tùy theo yêu cầu cảnh báo.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 77"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện nào để đặt biển số IE.453c?",
+    "output": "Biển số IE.453c được đặt khi cần chỉ dẫn việc kết thúc đường cao tốc.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 46"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều gì được gọi là vượt xe theo luật giao thông Việt Nam?",
+    "output": "Vượt xe là tình huống xe đi phía sau di chuyển sang bên trái để vượt lên trước xe phía trước trên đường chỉ có một làn đường dành cho xe cơ giới.",
+    "source": "36-2024-qh15.pdf, trang 13"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Định nghĩa về công trình đường bộ để bồi hoàn theo quy định?",
+    "output": "Là công trình đường bộ được xây dựng để thay thế hoặc bồi hoàn phần đường bộ bị ảnh hưởng bởi công trình thủy lợi, thủy điện.",
+    "source": "35-2024-qh15.pdf, trang 32"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi nào có thể sử dụng các màu sắc khác cho vạch giao thông?",
+    "output": "Khi cần nâng mức độ cảnh báo giao thông trên mặt đường.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 60"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi đặt biển báo cấm cách xa vị trí cấm, cần đặt biển phụ nào?",
+    "output": "Phải đặt biển phụ số S.502 để chỉ rõ khoảng cách từ biển cấm đến vị trí bắt đầu có hiệu lực.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 21"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Theo quy định, việc quản lý hệ thống giao thông thông minh thuộc trách nhiệm của bên nào?",
+    "output": "Việc quản lý, vận hành, khai thác hệ thống quản lý giao thông thông minh thuộc trách nhiệm của các cơ quan có liên quan theo quy định.",
+    "source": "35-2024-qh15.pdf, trang 35"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi tốc độ vận hành càng cao, chiều dài đoạn nét liền L1 và nét đứt L2 thay đổi như thế nào?",
+    "output": "Tốc độ càng cao, chiều dài đoạn nét liền L1 và nét đứt L2 càng lớn.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 157"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Độ cao đặt biển báo trên đường ngoài khu dân cư là bao nhiêu?",
+    "output": "Độ cao đặt biển từ mép dưới đến mặt đường là 1,8 m.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 18"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Theo luật giao thông Việt Nam, công trình phụ trợ gắn liền với đường bộ bao gồm những gì?",
+    "output": "Công trình phụ trợ gắn liền với đường bộ bao gồm báo hiệu đường bộ (trừ hiệu lệnh của người điều khiển giao thông), công trình an toàn giao thông, hệ thống thoát nước, tường chắn, kè bảo vệ, cọc mốc giải phóng mặt bằng và các công trình, thiết bị khác lắp đặt vào đường bộ.",
+    "source": "35-2024-qh15.pdf, trang 19"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện để Ủy ban nhân dân các cấp thực hiện quản lý trật tự, an toàn giao thông đường bộ là gì?",
+    "output": "Ủy ban nhân dân các cấp thực hiện quản lý trong phạm vi nhiệm vụ, quyền hạn của mình.",
+    "source": "36-2024-qh15_tiep.pdf, trang 57"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Nội dung của việc quy định chi tiết điều này là gì?",
+    "output": "Quy định chi tiết các quy định trong điều này.",
+    "source": "35-2024-qh15.pdf, trang 35"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Đường đô thị có quy định về chiều rộng tối thiểu là bao nhiêu?",
+    "output": "Đường đô thị có chiều rộng tối thiểu là 5075 mm.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 306"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Chính sách phát triển hạ tầng đường bộ tại Việt Nam có yêu cầu gì về môi trường?",
+    "output": "Hạ tầng đường bộ phải thân thiện với môi trường, thích ứng với biến đổi khí hậu.",
+    "source": "35-2024-qh15.pdf, trang 1"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển nào chỉ ra điểm bắt đầu của đường cao tốc?",
+    "output": "Biển số IE.452 là biển chỉ bắt đầu đường cao tốc.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 42"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Đường kính và hình dạng của vành kính được xác định theo tiêu chuẩn nào?",
+    "output": "Đường kính và hình dạng của vành kính được xác định bởi kí hiệu của nút giao thông.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 176"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Tổ chức, cá nhân có trách nhiệm gì khi xây dựng biển quảng cáo?",
+    "output": "Phải xây dựng, lắp đặt biển quảng cáo đáp ứng quy định tại các khoản 1, 2 và 3.",
+    "source": "35-2024-qh15.pdf, trang 15"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số W.244 được dùng để làm gì?",
+    "output": "Biển số W.244 được dùng để cảnh báo đoạn đường phía trước thường xảy ra tai nạn.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 112"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Có thể sử dụng vạch mắt võng để làm gì?",
+    "output": "Xác định khu vực không cho phép dừng xe tại các vị trí mặt đường tiềm ẩn nguy cơ tai nạn giao thông.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 176"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Vật liệu sử dụng cho chữ trên biển IE.471 là gì?",
+    "output": "Chữ trên biển IE.471 được làm bằng màng phản quang loại VIII, IX, XI.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 396"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện xác định tốc độ thiết kế của đường bộ là gì?",
+    "output": "Tốc độ thiết kế được xác định trong giai đoạn đầu tư xây dựng, nâng cấp, cải tạo đường bộ nhằm đảm bảo an toàn cho phương tiện di chuyển.",
+    "source": "35-2024-qh15.pdf, trang 24"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Giấy phép lái xe quốc tế được cấp cho đối tượng nào?",
+    "output": "Người có giấy phép lái xe do Việt Nam hoặc quốc gia thành viên của điều ước quốc tế cấp, còn giá trị sử dụng.",
+    "source": "36-2024-qh15_tiep.pdf, trang 32"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Tại sao phương tiện không được đi theo hướng mũi tên khi tín hiệu mũi tên màu đỏ bật sáng cùng lúc với đèn chính màu xanh?",
+    "output": "Vì khi tín hiệu mũi tên đỏ bật sáng cùng lúc với đèn chính xanh, phương tiện không được phép đi theo hướng mũi tên.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 8"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số W.245(a,b) có ý nghĩa gì?",
+    "output": "Biển số W.245(a,b) là biển báo yêu cầu lái xe đi chậm.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 112"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số W.247 có ý nghĩa gì?",
+    "output": "Biển số W.247 là biển cảnh báo 'Chú ý xe đỗ'.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 113"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Hệ thống xử lý vi phạm giao thông được kết nối với những cơ quan nào?",
+    "output": "Hệ thống được kết nối, chia sẻ với cơ quan quản lý đường bộ và các cơ quan liên quan.",
+    "source": "36-2024-qh15_tiep.pdf, trang 44"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số W.222a được sử dụng trong trường hợp nào?",
+    "output": "Biển số W.222a được đặt khi thời tiết xấu như mưa phùn để cảnh báo đoạn đường có thể trơn trượt.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 105"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Trong khu vực tác dụng của biển báo, người lái xe có được phép rẽ trái không?",
+    "output": "Không được phép rẽ trái và quay đầu trong khu vực tác dụng của biển.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 115"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Chiều cao tối thiểu của chữ trên biển báo đường có tốc độ hạn chế từ 70 km/h trở lên là bao nhiêu?",
+    "output": "Chiều cao tối thiểu là 450 mm.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 16"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi sử dụng đường bộ, người tham gia giao thông phải tuân thủ những yêu cầu nào?",
+    "output": "Sử dụng đúng mục đích do cơ quan có thẩm quyền cho phép, chấp hành yêu cầu của Cảnh sát giao thông, không làm mất trật tự, an toàn giao thông.",
+    "source": "36-2024-qh15_tiep.pdf, trang 48"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi tham gia giao thông tại nơi đường giao nhau giữa đường không ưu tiên và đường ưu tiên, xe nào phải nhường đường?",
+    "output": "Xe đi từ đường không ưu tiên phải nhường đường cho xe đi trên đường ưu tiên từ bất kỳ hướng nào.",
+    "source": "36-2024-qh15.pdf, trang 18"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Chính sách phát triển đường bộ có nội dung nào về huy động nguồn lực xã hội?",
+    "output": "Xây dựng cơ chế đa dạng hình thức đầu tư, quản lý, bảo trì hạ tầng đường bộ.",
+    "source": "35-2024-qh15.pdf, trang 1"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Hình G.22 và G.23 mô tả bố trí vạch sơn ở khu vực nào?",
+    "output": "Hình G.22 mô tả bố trí vạch sơn giữa đường 4 làn xe và đường 3 làn xe; Hình G.23 mô tả bố trí vạch sơn giữa đường 4 làn xe và đường 2 làn xe.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 170"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi nào cần đặt biển số R.415b?",
+    "output": "Biển số R.415b được đặt khi cần chỉ dẫn kết thúc làn đường theo phương tiện.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 125"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Theo Điều 69, điều kiện nào được áp dụng khi xử lý phương tiện vi phạm dừng, đỗ gây ùn tắc giao thông?",
+    "output": "Điều kiện là phương tiện vi phạm gây cản trở, ùn tắc hoặc nguy cơ tai nạn, nhưng người điều khiển hoặc chủ phương tiện không có mặt tại nơi vi phạm.",
+    "source": "36-2024-qh15_tiep.pdf, trang 42"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Nội dung biển chỉ dẫn trên đường cao tốc gồm những yếu tố nào?",
+    "output": "Gồm địa danh, ký hiệu đường bộ, mũi tên chỉ hướng, chữ viết, chữ số, hình vẽ và các ký hiệu khác.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 34"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi nào người đi bộ được phép qua đường theo đèn tín hiệu dạng 7?",
+    "output": "Người đi bộ được phép qua đường khi tín hiệu xanh sáng.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 77"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi đổi giấy phép lái xe hạng E sang hạng D, người lái xe cần được cấp thêm gì?",
+    "output": "Khi đổi hạng E sang D, người lái xe cần được cấp chứng chỉ điều khiển xe máy chuyên dùng cho người điều khiển máy kéo có trọng tải trên 3.500 kg.",
+    "source": "36-2024-qh15_tiep.pdf, trang 59"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Dải phân cách có tác dụng gì?",
+    "output": "Dải phân cách được lắp đặt để phân chia phần đường xe chạy thành hai chiều riêng biệt hoặc phân chia phần đường dành cho xe cơ giới và xe thô sơ.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 4"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Theo Điều 34, xe ba bánh nào được coi là xe cơ giới?",
+    "output": "Xe ba bánh có khối lượng bản thân lớn hơn 400 kg được phân loại là xe cơ giới.",
+    "source": "36-2024-qh15_tiep.pdf, trang 7"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện nào được áp dụng đối với việc đậu xe tại các khu vực như rừng sinh thái?",
+    "output": "Đoạn văn không đề cập điều kiện cụ thể, chỉ liệt kê các khu vực như rừng sinh thái trong danh sách quy định.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 41"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Cơ sở để thực hiện công tác bảo đảm trật tự an toàn giao thông là gì?",
+    "output": "Công tác được thực hiện thống nhất trên cơ sở phân công, phân cấp và phối hợp chặt chẽ giữa các cơ quan, tổ chức, cá nhân có liên quan.",
+    "source": "36-2024-qh15.pdf, trang 2"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện nào yêu cầu phải có biện pháp báo hiệu ngay cho người tham gia giao thông?",
+    "output": "Khi cần thiết để thông báo cho người tham gia giao thông biết về tình trạng hư hỏng hoặc xâm hại.",
+    "source": "35-2024-qh15.pdf, trang 19"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Thời gian tối đa để thông báo khi dừng sử dụng đường cao tốc là bao lâu?",
+    "output": "Không quá 60 phút kể từ thời điểm dừng.",
+    "source": "35-2024-qh15.pdf, trang 45"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Trường hợp nào được xem là mất chức năng 02 ngón tay của 01 bàn tay trở lên?",
+    "output": "Cụt hoặc mất chức năng 02 ngón tay của 01 bàn tay trở lên.",
+    "source": "36-byt.pdf, trang 7"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Đoàn xe đỗ trên đường hai làn xe, biển W.247 đặt ở đâu?",
+    "output": "Biển đặt phía trước xe đầu và phía sau xe cuối của đoàn xe.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 113"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Trường hợp nào không cần đặt biển I.401?",
+    "output": "Khi trên đường ưu tiên đã có biển W.207 và tại các đường nhánh có biển W.208 thì không nhất thiết đặt biển I.401.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 129"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Người khuyết tật điều khiển xe mô tô ba bánh cần đáp ứng điều kiện sức khỏe nào?",
+    "output": "Người khuyết tật cần đủ điều kiện sức khỏe lái xe hạng AI.",
+    "source": "36-byt.pdf, trang 13"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Người thuê vận tải có được yêu cầu xếp hàng hóa vượt quá khối lượng không?",
+    "output": "Không được yêu cầu hoặc xếp hàng hóa vượt quá khối lượng hàng hóa.",
+    "source": "35-2024-qh15.pdf, trang 57"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Ai là lực lượng quản lý hệ thống xử lý vi phạm giao thông?",
+    "output": "Lực lượng Cảnh sát giao thông là cơ quan quản lý, vận hành hệ thống này.",
+    "source": "36-2024-qh15_tiep.pdf, trang 44"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Định nghĩa về trách nhiệm quản lý trật tự, an toàn giao thông đường bộ tại địa phương?",
+    "output": "Ủy ban nhân dân các cấp có trách nhiệm quản lý trật tự, an toàn giao thông đường bộ tại địa phương theo nhiệm vụ, quyền hạn được giao.",
+    "source": "36-2024-qh15_tiep.pdf, trang 57"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Chiều rộng tối thiểu của vạch 6.1 là bao nhiêu?",
+    "output": "Chiều rộng tối thiểu của vạch 6.1 là 15 cm.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 181"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Theo luật, xe quá tải trọng được định nghĩa như thế nào?",
+    "output": "Xe quá tải trọng là xe có khối lượng toàn bộ vượt quá khối lượng cho phép hoặc tải trọng của đường bộ, hoặc phân bổ lên trục xe vượt quá tải trọng của trục xe hoặc đường bộ.",
+    "source": "36-2024-qh15_tiep.pdf, trang 24"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Phụ lục C trong luật giao thông Việt Nam quy định nội dung gì?",
+    "output": "Phụ lục C quy định về sử dụng biển báo nguy hiểm và cảnh báo.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 2"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi xây dựng công trình ngầm bên dưới công trình đường bộ, phải đảm bảo điều gì?",
+    "output": "Phải bảo đảm quy chuẩn, tiêu chuẩn kỹ thuật và an toàn cho công trình đường bộ, công trình liền kề.",
+    "source": "35-2024-qh15.pdf, trang 14"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Thông tin chi tiết về cách sử dụng các biển báo được quy định ở đâu?",
+    "output": "Thông tin chi tiết được giải thích ở Phụ lục E của Quy chuẩn này.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 29"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Theo quy định, người tham gia giao thông có nghĩa vụ gì khi phát hiện sự cố?",
+    "output": "Bảo vệ hiện trường, tham gia cứu nạn, cứu hộ và giải quyết ùn tắc giao thông.",
+    "source": "35-2024-qh15.pdf, trang 45"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Tuyến xe buýt nội tỉnh được xác định như thế nào?",
+    "output": "Tuyến xe buýt nội tỉnh là tuyến có phạm vi hoạt động trên địa bàn của một tỉnh, thành phố trực thuộc trung ương.",
+    "source": "35-2024-qh15.pdf, trang 50"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện để một tuyến xe buýt được coi là liên tỉnh?",
+    "output": "Tuyến xe buýt liên tỉnh là tuyến có phạm vi hoạt động trên địa bàn từ 02 tỉnh, thành phố trực thuộc trung ương trở lên.",
+    "source": "35-2024-qh15.pdf, trang 50"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Phí bảo hiểm hành khách được tính như thế nào?",
+    "output": "Phí bảo hiểm được tính vào giá vé, giá trị hợp đồng vận tải.",
+    "source": "35-2024-qh15.pdf, trang 53"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Việc kiểm định chất lượng hạ tầng đường bộ được thực hiện theo quy định nào?",
+    "output": "Theo quy định của pháp luật về xây dựng.",
+    "source": "35-2024-qh15.pdf, trang 35"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Theo luật giao thông Việt Nam, tổ chức giao thông phải tuân thủ quy định nào?",
+    "output": "Tổ chức giao thông phải tuân thủ quy định tại khoản 2 và khoản 3 Điều 25 của Luật này.",
+    "source": "35-2024-qh15.pdf, trang 35"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Người lái xe cần mang theo những giấy tờ nào khi tham gia giao thông?",
+    "output": "Người lái xe phải mang theo các giấy tờ theo quy định của pháp luật (nội dung giấy tờ không được nêu cụ thể trong đoạn văn).",
+    "source": "36-2024-qh15_tiep.pdf, trang 28"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Theo quy định, nội dung biển chỉ dẫn trên đường cao tốc được trình bày như thế nào?",
+    "output": "Được trình bày theo quy tắc: địa danh, tên đoạn tuyến đường cao tốc, ký hiệu đường bộ được viết bằng chữ in hoa.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 34"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Ngoài đèn dạng 9, còn có thể sử dụng loại đèn nào khác?",
+    "output": "Có thể sử dụng đèn mũi tên kết hợp hình một để cảnh báo nguy hiểm ngoài các dạng đã nêu.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 77"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số P.126 có ý nghĩa gì?",
+    "output": "Biển P.126 'Cấm xe ô tô tải vượt' được dùng để cấm các loại ô tô tải vượt xe cơ giới khác.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 87"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Những biển báo cấm nào không cần quy định riêng?",
+    "output": "Các biển báo cấm từ biển số P.101 đến biển số P.120 không cần quy định riêng.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 21"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Chiều dài phần cọc mốc lộ giới được chôn xuống đất là bao nhiêu?",
+    "output": "Phần cọc mốc chôn xuống đất dài 50cm.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 70"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Vạch trên mặt đường có màu gì?",
+    "output": "Vạch trên mặt đường có màu trắng, trừ một số vạch quy định ở Phụ lục G có màu vàng.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 60"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số P.124a có hình dạng như thế nào?",
+    "output": "Biển số P.124a có hình dạng theo quy định chung của biển báo cấm, với mũi tên chỉ chiều cấm quay đầu xe.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 86"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Tại điểm bắt đầu hoặc kết thúc đường cong cần bố trí bao nhiêu tiêu phản quang?",
+    "output": "Phải bố trí 3 tiêu phản quang.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 65"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Giấy vận tải được sử dụng trong trường hợp nào?",
+    "output": "Giấy vận tải được sử dụng khi vận tải hàng hóa bằng xe ô tô.",
+    "source": "35-2024-qh15.pdf, trang 54"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khoảng cách giữa các dòng chữ trên biển báo được tính như thế nào?",
+    "output": "Khoảng cách giữa các dòng chữ từ 50% đến 75% chiều cao chữ.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 16"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Vạch 8.2 được sử dụng để làm gì?",
+    "output": "Vạch 8.2 được dùng để xác định mép dưới thấp nhất của kết cấu cầu vượt qua đường hoặc công trình khác phía trên đường.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 191"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển phụ số S.503 dùng để làm gì?",
+    "output": "Biển phụ số S.503 dùng để chỉ hướng tác dụng của biển và vị trí bắt đầu hoặc kết thúc hiệu lực của biển.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 21"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Quy định về trị số d và L được xác định như thế nào?",
+    "output": "Trị số d và L được xác định tương tự quy định tại điểm e, mục G.1.3.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 171"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Mức phạt khi phát hiện công trình đường bộ bị hư hỏng mà không báo cáo?",
+    "output": "Không có quy định về mức phạt trong đoạn văn bản này.",
+    "source": "35-2024-qh15.pdf, trang 19"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển IE.471 có chức năng gì?",
+    "output": "Biển IE.471 là biển chỉ dẫn giữ khoảng cách an toàn giữa các phương tiện.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 396"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Thanh tra đường bộ có nhiệm vụ gì theo quy định?",
+    "output": "Thanh tra đường bộ có nhiệm vụ thanh tra, kiểm tra và xử lý vi phạm pháp luật về kết cấu hạ tầng đường bộ và vận tải đường bộ.",
+    "source": "35-2024-qh15.pdf, trang 65"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển báo I.445c có ý nghĩa gì?",
+    "output": "Biển báo mô tả tình trạng đường, như nền đường yếu hoặc chậm.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 321"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi điều khiển phương tiện, người lái xe cần căn cứ vào những yếu tố nào ngoài tốc độ trên biển P.127?",
+    "output": "Người lái xe cần căn cứ vào điều kiện khí hậu, thời tiết, tình trạng mặt đường và hình hình giao thông.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 88"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số W.207 được đặt ở đâu?",
+    "output": "Biển số W.207 được đặt tại nơi giao nhau giữa đường ưu tiên và không ưu tiên, hoặc tại các ngõ, ngách, hẻm khi cần thiết.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 99"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Trên cùng một chiều đường có nhiều làn đường, tốc độ giới hạn của các làn có thể khác nhau không?",
+    "output": "Có, tốc độ giới hạn có thể khác nhau tùy theo mục đích sử dụng và bề rộng của từng làn đường.",
+    "source": "35-2024-qh15.pdf, trang 25"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Vành khuyên của vành kính được vẽ bằng màu gì?",
+    "output": "Vành khuyên được kẻ bằng màu trắng.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 176"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển P.126 được đặt ở đâu?",
+    "output": "Biển được đặt tại nơi cần cấm các loại ô tô tải có khối lượng chuyên chở vượt quá quy định.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 87"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Giấy phép lái xe hạng A1 cấp cho loại xe nào?",
+    "output": "Hạng A1 cấp cho người lái xe mô tô hai bánh có dung tích xi-lanh đến 125 cm3 hoặc công suất động cơ điện đến 11 kW.",
+    "source": "36-2024-qh15_tiep.pdf, trang 29"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Mục đích của cọc mốc lộ giới là gì?",
+    "output": "Cọc mốc lộ giới là báo hiệu đường bộ dùng để xác định giới hạn bề rộng đất dành cho đường bộ.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 70"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Đơn vị đo lường các thông số kỹ thuật của biển IE.468a, b, c là gì?",
+    "output": "Đơn vị đo lường là cm.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 393"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Mục đích của biển số W.207 là gì?",
+    "output": "Biển số W.207 được đặt trên đường ưu tiên để báo trước nơi giao nhau với đường không ưu tiên.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 99"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Luật này có hiệu lực thi hành từ ngày nào?",
+    "output": "Luật này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2025, trừ trường hợp quy định tại khoản 2 Điều này.",
+    "source": "36-2024-qh15_tiep.pdf, trang 57"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Việc quản lý đất của đường bộ và hành lang an toàn đường bộ thuộc trách nhiệm của ai?",
+    "output": "Việc này thuộc trách nhiệm bảo vệ kết cấu hạ tầng đường bộ và quản lý, sử dụng đất của đường bộ, hành lang an toàn đường bộ.",
+    "source": "35-2024-qh15.pdf, trang 35"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Theo quy định, biển P.127 cấm xe cơ giới vượt quá tốc độ nào?",
+    "output": "Biển P.127 cấm các xe cơ giới chạy với tốc độ tối đa vượt quá trị số ghi trên biển.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 88"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển R.302(a,b,c) được sử dụng để làm gì?",
+    "output": "Để báo hướng phải đi vòng chướng ngại vật.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 116"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Các biển báo I.445c, I.445d, I.445e được dùng để làm gì?",
+    "output": "Dùng để thông báo tình trạng đường, cảnh báo người tham gia giao thông.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 321"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Loại xe nào có thể được cấp giấy phép lưu hành trên đường bộ theo quy định?",
+    "output": "Xe quá khổ giới hạn, xe quá tải trọng, xe bánh xích được cấp giấy phép lưu hành trên đường bộ theo quy định.",
+    "source": "36-2024-qh15_tiep.pdf, trang 24"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Nếu xe máy chuyên dùng đang được thế chấp tại ngân hàng, cần mang thêm giấy tờ nào?",
+    "output": "Cần mang bản gốc giấy biên nhận còn hiệu lực của tổ chức tín dụng hoặc chi nhánh ngân hàng nước ngoài.",
+    "source": "36-2024-qh15_tiep.pdf, trang 28"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện nào để cấp giấy phép lưu hành cho xe quá khổ hoặc xe quá tải?",
+    "output": "Giấy phép được cấp cho xe quá khổ, quá tải, xe bánh xích trong các trường hợp quy định tại khoản 3.",
+    "source": "36-2024-qh15_tiep.pdf, trang 24"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Vạch 7.1 là loại vạch nào?",
+    "output": "Vạch 7.1 là vạch liền nét màu trắng, được vẽ ngang toàn bộ bề rộng đường hướng xe chạy.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 182"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi nào cơ quan chức năng được điều chỉnh tổ chức giao thông?",
+    "output": "Khi cần sửa chữa, bảo trì công trình hoặc đảm bảo trật tự, an toàn giao thông đường bộ.",
+    "source": "35-2024-qh15.pdf, trang 48"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Vạch đứng được kẻ ở đâu?",
+    "output": "Vạch đứng được kẻ trên thành vỉa hè, các công trình giao thông và một số bộ phận khác của đường.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 60"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Vật liệu nào được sử dụng cho biển số IE.451b?",
+    "output": "Biển số IE.451b sử dụng màng phản quang loại VIII, IX, XI và vật liệu kim cương.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 347"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Màu sắc của chữ, số và khung trên biển báo đường bộ là gì?",
+    "output": "Chữ, số và khung được sơn màu đen.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 340"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều 8 của luật giao thông Việt Nam quy định những loại đường bộ nào?",
+    "output": "Điều 8 quy định các loại đường bộ bao gồm: quốc lộ, đường tỉnh, đường huyện, đường xã, đường thôn, đường đô thị và đường chuyên dùng.",
+    "source": "35-2024-qh15.pdf, trang 4"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Mục đích của biển số P.112 là gì?",
+    "output": "Cấm người đi bộ qua lại",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 83"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Giấy phép lái xe hạng D có thể đổi sang hạng nào?",
+    "output": "Giấy phép lái xe hạng D có thể đổi sang hạng D2 và được cấp chứng chỉ điều khiển xe máy chuyên dùng cho người điều khiển máy kéo có trọng tải trên 3.500 kg.",
+    "source": "36-2024-qh15_tiep.pdf, trang 59"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Xe cứu hộ giao thông đường bộ phải được trang bị những gì?",
+    "output": "Xe cứu hộ giao thông đường bộ phải được trang bị dụng cụ, thiết bị dùng để cứu hộ, hỗ trợ di chuyển hoặc chuyên chở các phương tiện giao thông đường bộ bị hư hỏng, bị sự cố.",
+    "source": "36-2024-qh15_tiep.pdf, trang 26"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Phạm vi chiều dài tổng cộng các đoạn D, L và d được xác định như thế nào?",
+    "output": "Phạm vi chiều dài tổng cộng các đoạn D, L và d được xác định trên các hình G.20, G.21, G.22 và G.23.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 170"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Vạch kẻ kiểu mắt võng được sử dụng ở những vị trí nào?",
+    "output": "Ở các nút giao, điểm đen tai nạn giao thông, cổng trường học, bệnh viện, trung tâm y tế, trung tâm hành chính.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 176"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Người đi bộ phải làm gì khi qua đường có người điều khiển giao thông?",
+    "output": "Người đi bộ phải đi sau lưng người điều khiển giao thông.",
+    "source": "36-2024-qh15.pdf, trang 10"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều 69 quy định như thế nào về việc di chuyển phương tiện vi phạm dừng, đỗ trên đường bộ?",
+    "output": "Điều 69 quy định rằng khi phát hiện phương tiện vi phạm dừng, đỗ gây cản trở giao thông hoặc nguy cơ tai nạn, người điều khiển hoặc chủ phương tiện có thể không có mặt tại nơi vi phạm.",
+    "source": "36-2024-qh15_tiep.pdf, trang 42"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Đèn tín hiệu dạng 7 có những kiểu bố trí nào?",
+    "output": "Đèn tín hiệu dạng 7 có hai kiểu: Kiểu 1 (tín hiệu đỏ bên trái, xanh bên phải) và Kiểu 2 (tín hiệu đỏ ở trên, xanh ở dưới).",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 77"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Các cơ quan nào được liệt kê là người nhận văn bản?",
+    "output": "Các Bộ, cơ quan ngang Bộ, cơ quan thuộc Chính phủ; Uỷ ban nhân dân các tỉnh, thành phố trực thuộc Trung ương; Sở Y tế các tỉnh, thành phố trực thuộc Trung ương;...",
+    "source": "36-byt.pdf, trang 4"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số R.301(b,c) được đặt ở đâu?",
+    "output": "Biển được đặt ở sau nơi đường giao nhau.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 115"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Theo quy định, phương tiện phải thực hiện điều gì khi dừng lại nhường đường?",
+    "output": "Phương tiện phải dừng lại và nhường đường cho phương tiện trên đường chính đi trước.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 129"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Phần 3 của văn bản luật giao thông Việt Nam đề cập đến vấn đề nào?",
+    "output": "Phần 3 đề cập đến tổ chức thực hiện các quy định giao thông.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 2"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số R.412n dùng để chỉ điều gì?",
+    "output": "Biển số R.412n báo hiệu hết làn đường dành cho xe ô tô.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 284"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Bộ trưởng Bộ Giao thông Vận tải có trách nhiệm gì liên quan đến giấy phép lái xe?",
+    "output": "Quy định mẫu giấy phép lái xe, trình tự, thủ tục cấp và việc sử dụng giấy phép lái xe, giấy phép lái xe quốc tế.",
+    "source": "36-2024-qh15_tiep.pdf, trang 32"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Màu sắc phần trên cùng của cọc được quy định như thế nào?",
+    "output": "Phần trên cùng của cọc (10 cm từ đỉnh cột) được sơn màu đỏ.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 70"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Thanh tra đường bộ thực hiện kiểm tra tại những nơi nào?",
+    "output": "Thanh tra đường bộ thực hiện kiểm tra tại đơn vị vận tải, bến xe, bãi đỗ xe, trạm dừng nghỉ và đơn vị cung cấp dịch vụ hỗ trợ vận tải.",
+    "source": "35-2024-qh15.pdf, trang 65"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Xe chở người bốn bánh có gắn động cơ được phép chở tối đa bao nhiêu người?",
+    "output": "Tối đa 15 người (không kể người lái xe).",
+    "source": "36-2024-qh15_tiep.pdf, trang 7"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển R.302 được đặt ở đâu so với chướng ngại vật?",
+    "output": "Được đặt trước chướng ngại vật.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 116"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Theo luật Việt Nam, quốc lộ được xác định như thế nào?",
+    "output": "Quốc lộ là đường nối liền Thủ đô Hà Nội với trung tâm hành chính cấp tỉnh, đường nối liền các trung tâm hành chính cấp tỉnh, hoặc đường có vị trí quan trọng đối với phát triển kinh tế - xã hội, quốc phòng, an ninh.",
+    "source": "35-2024-qh15.pdf, trang 4"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khoảng cách từ bộ đèn đến mép phần đường xe chạy khi đặt đèn theo chiều thẳng đứng là bao nhiêu?",
+    "output": "Khoảng cách từ bộ đèn đến mép phần đường xe chạy là từ 0,5m đến 2m.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 10"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Quy trình chứng nhận chất lượng an toàn kỹ thuật và bảo vệ môi trường bao gồm những bước nào?",
+    "output": "Bao gồm kiểm tra, thử nghiệm, chứng nhận chất lượng an toàn kỹ thuật và bảo vệ môi trường.",
+    "source": "36-2024-qh15_tiep.pdf, trang 15"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Mục đích của bảng tiêu chuẩn sức khỏe trong văn bản là gì?",
+    "output": "Bảng này quy định các tiêu chuẩn sức khỏe để xác định điều kiện đủ hay không đủ để lái xe theo các hạng xe tương ứng.",
+    "source": "36-byt.pdf, trang 5"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Nhiệm vụ nào được thực hiện sau thiên tai?",
+    "output": "Sửa chữa, nâng cấp hệ thống quản lý giao thông thông minh và các công trình liên quan như trung tâm quản lý, điều hành giao thông đường cao tốc.",
+    "source": "35-2024-qh15.pdf, trang 34"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Quy định thiết kế các biển chỉ dẫn khác như thế nào?",
+    "output": "Có thể vận dụng quy định về biển chỉ dẫn cho đường ô tô không phải là đường cao tốc, trừ các quy định nêu trong Bảng này.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 37"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Quy định về khoảng cách giữa các hàng chữ trên biển báo?",
+    "output": "Khoảng cách theo chiều đứng giữa các hàng chữ tối thiểu là 50% - 75% chiều cao chữ lớn nhất của hàng sau.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 14"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Kích thước chữ 'K' trong phần đầu cột kilômét là bao nhiêu?",
+    "output": "Chữ 'K' có chiều cao 8cm.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 199"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển P.127c được đặt ở đâu?",
+    "output": "Biển P.127c được đặt bên đường hoặc treo trên cột cần vươn hay giá long môn.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 91"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số IE.453c có ý nghĩa gì?",
+    "output": "Biển số IE.453c được dùng để chỉ dẫn 'Hết đường cao tốc'.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 46"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Mục đích của vạch kẻ kiểu mắt võng là gì?",
+    "output": "Xác định phạm vi cấm dừng xe trong phạm vi nút giao, trên nhánh dẫn cửa vào hoặc cửa ra của nút giao.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 176"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Việc chở hành khách trên nóc xe thuộc hành vi nào?",
+    "output": "Vi phạm quy định về vận chuyển hành khách, không được phép.",
+    "source": "36-2024-qh15_tiep.pdf, trang 19"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số S.505b được lắp đặt ở đâu?",
+    "output": "Biển được đặt bên phải theo chiều đi, cách hai đầu cầu từ 10m đến 20m ở vị trí dễ quan sát.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 152"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Chứng chỉ điều khiển xe máy chuyên dùng được cấp cho loại xe nào?",
+    "output": "Chứng chỉ được cấp cho người điều khiển máy kéo có trọng tải trên 3.500 kg.",
+    "source": "36-2024-qh15_tiep.pdf, trang 59"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Tên địa phương cần chỉ dẫn trên cột kilômét được quy định tại đâu?",
+    "output": "Tên địa phương cần chỉ dẫn được quy định tại khoản 40.4 Điều 40 của Quy chuẩn này.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 199"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi tạm dừng để xử lý sự cố, người tham gia giao thông cần làm gì?",
+    "output": "Phải tạm dừng và chịu trách nhiệm về quyết định của mình.",
+    "source": "35-2024-qh15.pdf, trang 45"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Xe chở người bốn bánh có gắn động cơ được định nghĩa như thế nào?",
+    "output": "Là xe có từ bốn bánh trở lên, chạy bằng động cơ, thiết kế để chở người, vận tốc thiết kế không lớn hơn 30 km/h.",
+    "source": "36-2024-qh15_tiep.pdf, trang 7"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Vạch 4.4 được sử dụng để làm gì?",
+    "output": "Vạch 4.4 được sử dụng để báo cho người điều khiển phương tiện không được dừng trong phạm vi phần mặt đường có bố trí vạch để trấn áp tắc nghẽn giao thông.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 176"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Kinh doanh vận tải hành khách bằng xe taxi là gì?",
+    "output": "Kinh doanh vận tải hành khách bằng xe taxi là loại hình kinh doanh vận tải được quy định trong luật giao thông Việt Nam.",
+    "source": "35-2024-qh15.pdf, trang 50"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Chính phủ có trách nhiệm quy định chi tiết điều gì theo khoản 9?",
+    "output": "Chính phủ quy định chi tiết khoản 5 Điều này.",
+    "source": "35-2024-qh15.pdf, trang 14"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi xếp, dỡ hàng hóa trên xe, đơn vị kinh doanh dịch vụ đại lý vận tải hàng hóa phải tuân thủ quy định nào?",
+    "output": "Phải tuân thủ quy định của Luật này và quy định khác của pháp luật có liên quan.",
+    "source": "35-2024-qh15.pdf, trang 62"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Có bao nhiêu mẫu sử dụng vạch 8.1 tại trạm thu phí?",
+    "output": "Có hai mẫu sử dụng vạch 8.1 tại trạm thu phí, được thể hiện trên Hình G.63 và Hình G.64.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 191"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Quy định về bố trí vạch sơn chỉ áp dụng cho khu vực nào?",
+    "output": "Quy định chỉ áp dụng cho khu vực phần xe chạy bị thay đổi, được xác định là phạm vi chiều dài tổng cộng các đoạn D, L và d trên các hình G.20, G.21, G.22 và G.23.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 170"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Theo luật, hàng siêu trường, siêu trọng là gì?",
+    "output": "Là hàng không thể chia nhỏ, tháo rời, khi vận chuyển làm phương tiện vượt quá giới hạn kích thước, khối lượng theo quy định.",
+    "source": "36-2024-qh15_tiep.pdf, trang 26"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện để đặt biển số P.118 là gì?",
+    "output": "Khi khoảng cách theo chiều ngang ở trạng thái tĩnh nhỏ hơn 3,2m.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 85"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Phụ lục E liên quan đến loại biển nào?",
+    "output": "Phụ lục E liên quan đến sử dụng biển chỉ dẫn.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 2"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số IE.450(a,b) dùng để làm gì?",
+    "output": "Biển này dùng để chỉ sơ đồ và khoảng cách đến nút giao với đường dẫn vào đường cao tốc.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 42"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi đặt đèn trên cột điện, cần đảm bảo những tiêu chuẩn kỹ thuật nào?",
+    "output": "Phải đảm bảo tiêu chuẩn kỹ thuật về vị trí, độ cao và khoảng cách nhìn thấy đèn theo quy chuẩn.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 10"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện nào cần đáp ứng trước khi vận chuyển hàng hóa?",
+    "output": "Lái xe phải yêu cầu người chịu trách nhiệm trước khi thực hiện vận tải hàng hóa.",
+    "source": "35-2024-qh15.pdf, trang 56"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Trung tâm quản lý, điều hành giao thông tuyến đường cao tốc bao gồm những gì?",
+    "output": "Bao gồm các thành phần được quy định trong văn bản luật, nhưng chi tiết không được nêu rõ trong đoạn trích này.",
+    "source": "35-2024-qh15.pdf, trang 47"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện để tổ chức, cá nhân lắp đặt biển quảng cáo là gì?",
+    "output": "Phải được cơ quan quản lý đường bộ chấp thuận bằng văn bản về vị trí, quy mô, kích thước biển quảng cáo và phương án thi công.",
+    "source": "35-2024-qh15.pdf, trang 15"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số R.415b có ý nghĩa gì?",
+    "output": "Biển số R.415b được đặt để chỉ dẫn kết thúc làn đường theo phương tiện.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 125"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Chương 15 của luật giao thông Việt Nam quy định về nội dung gì?",
+    "output": "Chương 15 quy định về gương cầu lồi, dải phân cách và lan can phòng hộ.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 2"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Phụ lục B trong văn bản luật giao thông có nội dung liên quan đến điều gì?",
+    "output": "Phụ lục B giải thích ý nghĩa và cách sử dụng biển báo cấm.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 2"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Ai là người có quyền quyết định giá cước vận tải?",
+    "output": "Người trực tiếp điều hành phương tiện hoặc người lái xe.",
+    "source": "35-2024-qh15.pdf, trang 62"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện để được cấp giấy phép lái xe quốc tế là gì?",
+    "output": "Người có giấy phép lái xe do Việt Nam hoặc quốc gia thành viên của điều ước quốc tế cấp, còn giá trị sử dụng.",
+    "source": "36-2024-qh15_tiep.pdf, trang 32"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Theo quy định, người khuyết tật lái xe ô tô số tự động cần đáp ứng điều kiện sức khỏe nào?",
+    "output": "Người khuyết tật cần đủ điều kiện sức khỏe lái xe hạng B.",
+    "source": "36-byt.pdf, trang 13"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Tên địa phương được ghi ở đâu trên cột kilômét?",
+    "output": "Tên địa phương được ghi trên phần mặt trắng.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 199"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Độ cao đặt biển báo trên đường trong khu dân cư là bao nhiêu?",
+    "output": "Độ cao đặt biển từ mép dưới đến mặt đường là 2,0 m.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 18"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Những tình trạng sức khỏe nào khiến người lái xe hạng AI, BI và người điều khiển xe máy chuyên dùng không đủ điều kiện lái xe?",
+    "output": "Người đang ở giai đoạn cấp tính hoặc đang tiến triển của các tình trạng bệnh, tật được nêu trong Nhóm 1.",
+    "source": "36-byt.pdf, trang 5"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Đơn vị kinh doanh dịch vụ đại lý vận tải hàng hóa được hưởng tiền công như thế nào?",
+    "output": "Theo thoả thuận với đơn vị kinh doanh vận tải.",
+    "source": "35-2024-qh15.pdf, trang 62"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Quy định về việc thông báo khi phát hiện hành lang an toàn đường bộ bị lấn chiếm?",
+    "output": "Phải thông báo ngay cho Ủy ban nhân dân cấp xã, cơ quan quản lý đường bộ hoặc cơ quan công an nơi gần nhất.",
+    "source": "35-2024-qh15.pdf, trang 19"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Vật liệu dùng để làm nền của biển báo đường bộ là gì?",
+    "output": "Nền sử dụng vật liệu vàng huỳnh quang.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 340"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Hàng hoá ký gửi là gì theo luật Việt Nam?",
+    "output": "Hàng hoá ký gửi là hàng hoá gửi theo xe ô tô kinh doanh vận tải hành khách mà người gửi không đi cùng trên xe.",
+    "source": "35-2024-qh15.pdf, trang 58"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Màu sắc của số hiệu hoặc tên đường trên mặt song song với trục tim đường là gì?",
+    "output": "Số hiệu hoặc tên đường được ghi bằng màu đen.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 199"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Nghĩa vụ của người thuê vận tải hàng hóa bằng xe ô tô là gì?",
+    "output": "Có đầy đủ giấy tờ hợp pháp, đóng gói đúng quy cách, giao hàng đúng thời gian và địa điểm, không xếp vượt khối lượng.",
+    "source": "35-2024-qh15.pdf, trang 57"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Theo luật giao thông, điều kiện nào được coi là mất toàn vẹn chân hoặc tay?",
+    "output": "Chân hoặc tay bị cụt, giảm chức năng, hoặc khớp giả ở một vị trí xương lớn.",
+    "source": "36-byt.pdf, trang 7"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Tốc độ khai thác trên đường bộ là gì?",
+    "output": "Là giá trị giới hạn tốc độ (tối đa, tối thiểu) cho phép phương tiện tham gia giao thông đảm bảo an toàn và khai thác hiệu quả tuyến đường.",
+    "source": "35-2024-qh15.pdf, trang 24"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Đơn vị đo lường kích thước biển báo được quy định là gì?",
+    "output": "Đơn vị đo lường là cm.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 375"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Cơ quan Cảnh sát giao thông có trách nhiệm gì trong việc đảm bảo trật tự an toàn giao thông?",
+    "output": "Xây dựng, tổ chức thực hiện phương án bảo đảm trật tự, an toàn giao thông đường bộ và thông báo, thực hiện phương án phân luồng giao thông tạm thời.",
+    "source": "36-2024-qh15_tiep.pdf, trang 48"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Hàng hóa nào không được phép lưu thông?",
+    "output": "Hàng hóa cấm lưu thông theo quy định của pháp luật không được phép tham gia giao thông.",
+    "source": "35-2024-qh15.pdf, trang 56"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Các loại phụ tùng xe cơ giới nào không cần kiểm tra chất lượng an toàn kỹ thuật và bảo vệ môi trường?",
+    "output": "Loại phụ tùng nhập khẩu, sản xuất, lắp ráp thuộc danh mục phải kiểm tra, trừ trường hợp để nghiên cứu khoa học, trưng bày, giới thiệu tại hội chợ, triển lãm.",
+    "source": "36-2024-qh15_tiep.pdf, trang 15"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện để được miễn kiểm tra chất lượng an toàn kỹ thuật và bảo vệ môi trường đối với phụ tùng xe cơ giới là gì?",
+    "output": "Phải thuộc trường hợp nghiên cứu khoa học, phục vụ sản xuất, trưng bày, giới thiệu tại hội chợ, triển lãm thương mại.",
+    "source": "36-2024-qh15_tiep.pdf, trang 15"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Quy định về vận chuyển hàng siêu trường, siêu trọng có yêu cầu gì?",
+    "output": "Hàng không được chia nhỏ, tháo rời và phương tiện phải đáp ứng yêu cầu về kích thước, khối lượng cho phép.",
+    "source": "36-2024-qh15_tiep.pdf, trang 26"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số IE.455(a,b) có ý nghĩa gì?",
+    "output": "Biển này dùng để chỉ khoảng cách đến các lối ra tiếp theo trên đường cao tốc.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 42"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Yêu cầu khi ghi chữ địa danh và tên đoạn tuyến đường cao tốc trên biển chỉ dẫn là gì?",
+    "output": "Phải viết bằng chữ in hoa theo quy định tại 46.1.2a.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 34"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Mức phạt cho hành vi vi phạm trên đường đô thị là bao nhiêu?",
+    "output": "Không thể xác định từ đoạn văn bản đã cung cấp.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 306"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều 12 của quy chuẩn này quy định nội dung gì?",
+    "output": "Điều 12 quy định các thông số về kích thước của biển báo.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 11"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện để được cấp giấy phép lái xe hạng B1 là gì?",
+    "output": "Hạng B1 cấp cho người lái xe mô tô ba bánh và các loại xe quy định cho giấy phép lái xe hạng A1.",
+    "source": "36-2024-qh15_tiep.pdf, trang 29"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi nào đường có từ 4 làn xe trở lên được phép kẻ vạch theo Hình G.25?",
+    "output": "Khi có chướng ngại vật nằm ở giữa đường.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 171"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Hệ thống thiết bị kỹ thuật nghiệp vụ được dùng để làm gì?",
+    "output": "Để kiểm tra, phát hiện và xử lý hành vi vi phạm quy định về tải trọng xe trên đường bộ.",
+    "source": "36-2024-qh15_tiep.pdf, trang 44"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện để phương tiện giao thông thông minh được hoạt động là gì?",
+    "output": "Phương tiện phải đảm bảo các điều kiện quy định tại khoản 1 và được cơ quan có thẩm quyền cấp phép hoạt động.",
+    "source": "36-2024-qh15_tiep.pdf, trang 9"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Xe vận chuyển hàng siêu trường, siêu trọng cần đảm bảo điều kiện gì?",
+    "output": "Phải phù hợp với loại hàng và kích thước, khối lượng của hàng hóa.",
+    "source": "36-2024-qh15_tiep.pdf, trang 26"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi thực hiện nhiệm vụ, lực lượng tuần tra, kiểm soát phải tuân thủ nguyên tắc nào?",
+    "output": "Phải tuân thủ các nguyên tắc theo quy định của pháp luật.",
+    "source": "36-2024-qh15_tiep.pdf, trang 40"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi nào cần đặt biển số P.118 trên đường?",
+    "output": "Khi khoảng cách theo chiều ngang ở trạng thái tĩnh nhỏ hơn 3,2m.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 85"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển báo R.403g quy định cho loại xe nào?",
+    "output": "Biển báo R.403g là đường dành cho xe chở hàng bốn bánh gắn động cơ.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 26"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Tỷ lệ bề rộng và chiều cao của chữ trên biển báo được quy định như thế nào?",
+    "output": "Tỷ lệ bề rộng và chiều cao từ 0,7 đến 1,0; với kiểu chữ nén có thể giảm xuống 0,2.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 16"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Lề trái của chữ in hoa 'B' trong bảng kỹ thuật là bao nhiêu?",
+    "output": "Lề trái của chữ 'B' là 7,76mm.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 209"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Đơn vị tính của các thông số kỹ thuật kiểu chữ nén là gì?",
+    "output": "Đơn vị tính là mm.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 209"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khoảng cách giữa các chữ cái trên biển báo phải là bao nhiêu phần trăm chiều cao chữ?",
+    "output": "Khoảng cách giữa các chữ cái từ 25% - 40% chiều cao chữ.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 14"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Mục đích của trung tâm quản lý, điều hành giao thông tuyến đường cao tốc là gì?",
+    "output": "Phục vụ quản lý, điều hành, bảo trì cho một hoặc một số tuyến cao tốc và hỗ trợ người tham gia giao thông đường bộ.",
+    "source": "35-2024-qh15.pdf, trang 47"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện đóng gói hàng hóa khi thuê vận tải bằng xe ô tô là gì?",
+    "output": "Đóng gói hàng hóa đúng quy cách, ghi ký hiệu, mã hiệu hàng hóa đầy đủ, rõ ràng.",
+    "source": "35-2024-qh15.pdf, trang 57"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số I.446 dùng để chỉ điều gì?",
+    "output": "Biển số I.446 là 'Nơi đỗ xe dành cho người khuyết tật'.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 29"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi nào cần đặt biển số P.124a?",
+    "output": "Biển số P.124a được đặt khi cần cấm các loại xe quay đầu theo kiểu chữ U.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 86"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển R.302(a,b) được kết hợp với biển nào để báo hiệu chiều đi một chiều?",
+    "output": "Kết hợp với biển P.102 tại dải phân cách.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 116"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Tiêu phản quang dạng mũi tên màu trắng trên nền đỏ thường được sử dụng ở đâu?",
+    "output": "Tiêu phản quang này thường sử dụng cho đường 2 chiều không có dải phân cách giữa.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 65"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Theo luật giao thông đường bộ, điều kiện nào để điều khiển xe máy chuyên dùng hợp pháp?",
+    "output": "Phải có chứng nhận đăng ký xe (hoặc bản sao có chứng thực nếu xe được thế chấp) và bằng/chứng chỉ điều khiển xe máy chuyên dùng.",
+    "source": "36-2024-qh15_tiep.pdf, trang 28"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Xe cơ giới được định nghĩa như thế nào theo Điều 34?",
+    "output": "Xe cơ giới bao gồm xe ô tô từ bốn bánh trở lên chạy bằng động cơ, không chạy trên đường ray, dùng để chở người, hàng hóa, kéo rơ moóc hoặc có chức năng đặc biệt.",
+    "source": "36-2024-qh15_tiep.pdf, trang 7"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khoảng cách cắm cọc mốc lộ giới trên đường qua khu vực đồng ruộng, đồi thấp là gì?",
+    "output": "Khoảng cách cắm cọc từ 200 m đến 500 m tùy theo địa hình cụ thể.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 70"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Loại B của biển báo bến xe khách có kích thước như thế nào?",
+    "output": "Kích thước loại B là A=60,0; B=1,5; C=5,0; D=50,0; E=5,0 cm.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 375"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Đèn tín hiệu dạng 7 là gì?",
+    "output": "Đèn tín hiệu dạng 7 là đèn điều khiển người đi bộ, có tín hiệu đỏ và xanh. Khi tín hiệu đỏ sáng, người đi bộ không được phép đi; khi tín hiệu xanh sáng, người đi bộ được phép đi trong phần đường dành cho người đi bộ.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 77"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Hoạt động bảo đảm trật tự an toàn giao thông đường bộ cần đảm bảo điều kiện gì?",
+    "output": "Hoạt động này phải công khai, minh bạch và thuận lợi cho người dân.",
+    "source": "36-2024-qh15.pdf, trang 2"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện nào để một con đường được xếp là quốc lộ?",
+    "output": "Một con đường được xếp là quốc lộ nếu nó nối liền Thủ đô Hà Nội với trung tâm hành chính cấp tỉnh, hoặc có vai trò quan trọng đối với phát triển kinh tế - xã hội và an ninh quốc gia.",
+    "source": "35-2024-qh15.pdf, trang 4"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Dấu hiệu nào cấm xe ba bánh có động cơ?",
+    "output": "Biển số P.111b hoặc P.111c",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 83"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Báo hiệu đường bộ theo luật giao thông Việt Nam có bao gồm hiệu lệnh của người điều khiển giao thông không?",
+    "output": "Không, báo hiệu đường bộ không bao gồm hiệu lệnh của người điều khiển giao thông.",
+    "source": "35-2024-qh15.pdf, trang 19"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Cơ quan nào có trách nhiệm lưu trữ văn bản?",
+    "output": "Lưu: VT, KCB (02), PC (02).",
+    "source": "36-byt.pdf, trang 4"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Mục đích của biển số R.301(b,c) là gì?",
+    "output": "Hướng dẫn xe đi ngang qua nơi đường giao nhau và ngăn chặn hướng đi ngược chiều trên đường một chiều.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 115"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Trên đường hai chiều, biển W.247 phải đặt cách xe đỗ bao xa?",
+    "output": "Biển phải đặt cách xe phía trước và phía sau xe (theo chiều đi) tối thiểu 5m.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 113"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Chiều cao H1 của biển IE.471 là bao nhiêu?",
+    "output": "Chiều cao H1 của biển IE.471 là 40 cm.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 396"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi xây dựng công trình thủy lợi, thủy điện ảnh hưởng đến đường bộ, chủ đầu tư phải làm gì?",
+    "output": "Chủ đầu tư phải xây dựng công trình đường bộ để bồi hoàn, thay thế cho phần đường bộ bị ảnh hưởng.",
+    "source": "35-2024-qh15.pdf, trang 32"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Kích thước của tiêu phản quang dạng mũi tên được quy định như thế nào?",
+    "output": "Kích thước tiêu phản quang dạng mũi tên được quy định theo điều 56.3.2.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 65"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Đơn vị kinh doanh vận tải phải thực hiện điều gì theo quy định?",
+    "output": "Chấp hành quy định kinh doanh vận tải, cam kết chất lượng và thực hiện hợp đồng vận tải.",
+    "source": "35-2024-qh15.pdf, trang 53"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Vạch 8.1 được vẽ ở đâu?",
+    "output": "Vạch 8.1 được vẽ trên đảo phân làn tại trạm thu phí, như thể hiện trên Hình G.63 và Hình G.64.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 191"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Hành vi nào bị coi là vi phạm khi vận chuyển hàng hóa?",
+    "output": "Vi phạm khi phương tiện xếp hàng hóa vượt quá tải trọng, khổ giới hạn của đường bộ hoặc quá kích thước cho phép.",
+    "source": "35-2024-qh15.pdf, trang 56"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Bề rộng của vạch 7.1 được xác định như thế nào?",
+    "output": "Bề rộng vạch 7.1 có thể là 20cm, 30cm hoặc 40cm, tùy theo cấp đường, lưu lượng và tốc độ xe chạy.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 182"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Quy định về điều chỉnh hợp đồng khi có thỏa thuận với nhà đầu tư?",
+    "output": "Cơ quan có thẩm quyền thực hiện điều chỉnh chủ trương đầu tư và tổ chức đàm phán với nhà đầu tư hiện hữu.",
+    "source": "35-2024-qh15.pdf, trang 43"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi xảy ra sự cố, người tham gia giao thông cần thực hiện điều gì để đảm bảo an toàn?",
+    "output": "Phải thực hiện các biện pháp bảo đảm an toàn cho người, phương tiện, tài sản và hạn chế nguy hiểm đối với công trình.",
+    "source": "35-2024-qh15.pdf, trang 45"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Mẫu khám sức khỏe định kỳ cho người lái xe ô tô cần ghi thêm nội dung gì?",
+    "output": "Ghi thêm mục 10: khám Răng - Hàm - Mặt.",
+    "source": "36-byt.pdf, trang 13"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển P.127c được sử dụng để làm gì?",
+    "output": "Biển P.127c quy định tốc độ tối đa cho phép trên từng làn đường.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 91"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện nào được quy định để phát triển kết cấu hạ tầng đường bộ?",
+    "output": "Phải kết nối đồng bộ các tuyến đường bộ và các phương thức vận tải khác.",
+    "source": "35-2024-qh15.pdf, trang 1"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số R.404b áp dụng cho loại xe nào?",
+    "output": "Biển số R.404b áp dụng cho xe ôtô và xe máy.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 276"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Tốc độ khai thác trên đường bộ được xác định dựa trên những yếu tố nào?",
+    "output": "Dựa trên tốc độ thiết kế, hiện trạng đường, thời gian lưu thông, điều kiện thời tiết, lưu lượng phương tiện và chủng loại phương tiện.",
+    "source": "35-2024-qh15.pdf, trang 24"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi tham gia giao thông tại路口 không có đèn tín hiệu, phương tiện nào được quyền ưu tiên đi trước?",
+    "output": "Phương tiện trên đường chính đi trước, phương tiện khác nhập vào hoặc cắt ngang phải nhường đường (trừ xe được quy định ưu tiên).",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 129"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Mục đích của biển số S.505b là gì?",
+    "output": "Biển số S.505b được lắp đặt để thông báo về vị trí và tải trọng khai thác thấp nhất của cầu.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 152"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Nội dung quy định của Bộ trưởng Bộ Công an liên quan đến trung tâm chỉ huy giao thông bao gồm những gì?",
+    "output": "Bao gồm quy chuẩn kỹ thuật quốc gia, xây dựng, quản lý và hoạt động của trung tâm chỉ huy giao thông.",
+    "source": "36-2024-qh15_tiep.pdf, trang 47"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Đơn vị kinh doanh vận tải có nghĩa vụ gì liên quan đến bảo hiểm cho hành khách?",
+    "output": "Phải mua bảo hiểm cho hành khách; phí bảo hiểm được tính vào giá vé hoặc giá trị hợp đồng vận tải.",
+    "source": "35-2024-qh15.pdf, trang 53"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Trung tâm quản lý, điều hành giao thông tuyến đường cao tốc là gì?",
+    "output": "Là một thành phần của hệ thống quản lý giao thông thông minh, được đầu tư đồng thời khi xây dựng đường cao tốc.",
+    "source": "35-2024-qh15.pdf, trang 47"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Trong trường hợp nào nên chọn giá trị chiều dài đoạn nét liền L1 và nét đứt L2 nhỏ?",
+    "output": "Chọn giá trị L1 và L2 nhỏ khi cần tăng tính dẫn hướng xe chạy, ví dụ trong phạm vi đường cong bán kính nhỏ.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 157"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Điều kiện để người lái xe được tham gia giao thông đường bộ là gì?",
+    "output": "Người lái xe phải đủ tuổi, sức khỏe theo quy định; có giấy phép lái xe còn hiệu lực phù hợp với loại xe đang điều khiển.",
+    "source": "36-2024-qh15_tiep.pdf, trang 28"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Có thể điều khiển xe gắn máy nếu chưa đủ tuổi không?",
+    "output": "Không được, phải đủ tuổi theo quy định pháp luật (nội dung cụ thể không được nêu trong đoạn văn).",
+    "source": "36-2024-qh15_tiep.pdf, trang 28"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Xe cứu hộ giao thông đường bộ là gì?",
+    "output": "Xe cứu hộ giao thông đường bộ là xe ô tô chuyên dùng có trang bị dụng cụ, thiết bị dùng để cứu hộ, hỗ trợ di chuyển hoặc chuyên chở các phương tiện giao thông đường bộ bị hư hỏng, bị sự cố.",
+    "source": "36-2024-qh15_tiep.pdf, trang 26"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số P.124a có ý nghĩa gì?",
+    "output": "Biển số P.124a có nghĩa là 'Cấm quay đầu xe', chiều mũi tên phù hợp với chiều cấm quay đầu xe.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 86"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Việc lắp đặt biển quảng cáo cần đảm bảo điều gì?",
+    "output": "Bảo đảm an toàn giao thông, an toàn cho công trình đường bộ và công trình liền kề khác.",
+    "source": "35-2024-qh15.pdf, trang 15"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Phần đất để bảo vệ, bảo trì cầu, cống, rãnh trên đường đô thị được xác định như thế nào?",
+    "output": "Được xác định tương tự như đường ngoài đô thị theo quy định tại điểm c khoản 1.",
+    "source": "35-2024-qh15.pdf, trang 9"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Ủy ban nhân dân các cấp có trách nhiệm gì trong việc bảo vệ kết cấu hạ tầng đường bộ?",
+    "output": "Ủy ban nhân dân các cấp tổ chức thực hiện bảo vệ kết cấu hạ tầng đường bộ.",
+    "source": "35-2024-qh15.pdf, trang 18"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Bộ Giao thông vận tải có trách nhiệm gì trong việc bảo vệ kết cấu hạ tầng đường bộ?",
+    "output": "Bộ Giao thông vận tải tổ chức thực hiện bảo vệ kết cấu hạ tầng đường bộ thuộc phạm vi quản lý, trừ quy định tại điểm b.",
+    "source": "35-2024-qh15.pdf, trang 18"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Vạch 6.2 được sử dụng để làm gì?",
+    "output": "Vạch 6.2 dùng để cấm dừng xe và cấm đỗ xe trên đường.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 181"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số P.127 được sử dụng để làm gì?",
+    "output": "Biển số P.127 được đặt để báo tốc độ tối đa cho phép các xe cơ giới chạy.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 88"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Các hạng mục công trình của đường đô thị không thuộc quy định tại điểm a và b thì được xác định theo quy định nào?",
+    "output": "Được xác định tương tự như đường ngoài đô thị theo quy định tại điểm c khoản 1.",
+    "source": "35-2024-qh15.pdf, trang 9"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Khi tín hiệu mũi tên màu xanh bật sáng cùng lúc với tín hiệu đỏ hoặc vàng, phương tiện được phép đi như thế nào?",
+    "output": "Phương tiện được đi theo hướng mũi tên nhưng phải nhường đường cho các phương tiện khác đang được phép đi.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 8"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Tốc độ khai thác trên đường bộ được quy định như thế nào?",
+    "output": "Tốc độ khai thác là giá trị giới hạn tốc độ (tốc độ tối đa, tốc độ tối thiểu) được quy định theo từng loại đường.",
+    "source": "35-2024-qh15.pdf, trang 24"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển số I.442 có ý nghĩa gì?",
+    "output": "Biển số I.442 có ý nghĩa là 'Chợ'.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 29"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Phương tiện gắn biển số nước ngoài hoạt động tại Việt Nam theo quy định nào?",
+    "output": "Phương tiện gắn biển số nước ngoài hoạt động tại Việt Nam thực hiện theo quy định tại Điều 55 của Luật này.",
+    "source": "36-2024-qh15_tiep.pdf, trang 9"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Việc thanh tra đường bộ nhằm mục đích gì?",
+    "output": "Việc thanh tra đường bộ nhằm xử lý vi phạm pháp luật về kết cấu hạ tầng và vận tải đường bộ.",
+    "source": "35-2024-qh15.pdf, trang 65"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Biển báo nào cho biết hết đoạn đường dành cho xe ô tô và xe máy?",
+    "output": "Biển báo R.404b cho biết hết đoạn đường dành cho xe ô tô và xe máy.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 26"
+  },
+  {
+    "instruction": "Bạn là trợ lý tư vấn luật giao thông Việt Nam. Trả lời chính xác và ngắn gọn.",
+    "input": "Phần đường dành cho xe thô sơ là gì?",
+    "output": "Là phần của đường bộ được sử dụng cho các phương tiện giao thông thô sơ đường bộ qua lại.",
+    "source": "quychuankithuat_baohieuduongbo.pdf, trang 4"
+  }
+]
