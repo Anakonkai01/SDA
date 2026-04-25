@@ -35,6 +35,7 @@ nlp/models/**
 nlp/vector_db/
 nlp/unsloth_compiled_cache/
 nlp/data/laws/
+nlp/data/traffic_law_docs.json
 
 # VQA artifacts and heavy assets
 vqa/checkpoints/
