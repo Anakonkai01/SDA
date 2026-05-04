@@ -11,8 +11,8 @@ Hệ thống VQA (Visual Question Answering) nhận input là ảnh đường ph
 **4 cấu hình cần implement và so sánh:**
 - A1: CLIP ViT + PhoBERT + Co-Attention + LSTM decoder
 - A2: CLIP ViT + PhoBERT + Co-Attention + Transformer decoder
-- B1: Qwen-VL zero-shot
-- B2: Qwen-VL fine-tune LoRA
+- B1: BLIP VQA zero-shot
+- B2: BLIP VQA fine-tune LoRA
 
 ---
 
@@ -60,8 +60,8 @@ File JSON với cấu trúc:
 Ảnh (224x224)
       ↓
 CLIP ViT-B/16 (frozen)
-      ↓ [batch, 197, 512]
-Linear(512 → 768)
+      ↓ [batch, 197, 768]
+Identity projection (no linear layer needed when CLIP hidden size equals fusion dim)
       ↓ [batch, 197, 768]  — image_tokens
 
 Câu hỏi (text)
@@ -234,7 +234,7 @@ class VQAModelA(nn.Module):
         super().__init__()
         # Image encoder
         self.image_encoder = CLIPVisionModel.from_pretrained("openai/clip-vit-base-patch16")
-        self.img_proj = nn.Linear(512, 768)
+        self.img_proj = nn.Identity()
 
         # Text encoder
         self.text_encoder = AutoModel.from_pretrained("vinai/phobert-base")
@@ -259,7 +259,7 @@ class VQAModelA(nn.Module):
 
     def encode(self, pixel_values, input_ids, attention_mask):
         # Image features
-        img_out = self.image_encoder(pixel_values).last_hidden_state  # [B, 197, 512]
+        img_out = self.image_encoder(pixel_values).last_hidden_state  # [B, 197, 768]
         img_tokens = self.img_proj(img_out)                            # [B, 197, 768]
 
         # Text features
@@ -347,81 +347,54 @@ config_A = {
 
 ---
 
-## 4. Hướng B — Qwen-VL
+## 4. Hướng B — BLIP VQA
 
 ### 4.1 B1 — Zero-shot
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
-import torch
+from transformers import BlipForQuestionAnswering, BlipProcessor
+from PIL import Image
 
-model = AutoModelForCausalLM.from_pretrained(
-    "Qwen/Qwen-VL-Chat",
-    torch_dtype=torch.float16,
-    device_map="cuda",
-    trust_remote_code=True
-)
-tokenizer = AutoTokenizer.from_pretrained(
-    "Qwen/Qwen-VL-Chat",
-    trust_remote_code=True
-)
+processor = BlipProcessor.from_pretrained("Salesforce/blip-vqa-base")
+model = BlipForQuestionAnswering.from_pretrained("Salesforce/blip-vqa-base").to("cuda")
 model.eval()
 
 def inference_zero_shot(image_path, question):
-    query = tokenizer.from_list_format([
-        {"image": image_path},
-        {"text": question}
-    ])
-    with torch.no_grad():
-        response, _ = model.chat(tokenizer, query=query, history=None)
-    return response
-
-# Evaluate trên toàn bộ test set
-def evaluate_zero_shot(test_samples):
-    predictions = []
-    for sample in tqdm(test_samples):
-        pred = inference_zero_shot(sample["image"], sample["question"])
-        predictions.append(pred)
-    return predictions
+    image = Image.open(image_path).convert("RGB")
+    inputs = processor(images=image, text=question, return_tensors="pt").to("cuda")
+    generated = model.generate(**inputs, max_new_tokens=20)
+    return processor.decode(generated[0], skip_special_tokens=True)
 ```
 
 ### 4.2 B2 — LoRA Fine-tune
 
 ```python
-from peft import LoraConfig, get_peft_model, TaskType
+from peft import LoraConfig, get_peft_model
 
-# Load model
-model = AutoModelForCausalLM.from_pretrained(
-    "Qwen/Qwen-VL-Chat",
-    torch_dtype=torch.bfloat16,  # bf16 cho RTX 5070 Ti
-    device_map="cuda",
-    trust_remote_code=True
-)
+model = BlipForQuestionAnswering.from_pretrained("Salesforce/blip-vqa-base")
 
-# LoRA config
 lora_config = LoraConfig(
-    task_type=TaskType.CAUSAL_LM,
     r=16,
     lora_alpha=32,
-    target_modules=["c_attn", "c_proj", "w1", "w2"],
+    target_modules=["query", "key", "value"],
     lora_dropout=0.05,
     bias="none"
 )
 
 model = get_peft_model(model, lora_config)
 model.print_trainable_parameters()
-# Expected: ~0.3% params trainable
+# Current smoke: ~0.97% params trainable
 ```
 
 ### 4.3 Training config Hướng B
 
 ```python
 config_B = {
-    "model": "Qwen/Qwen-VL-Chat",
+    "model": "Salesforce/blip-vqa-base",
     "lora": {
         "r": 16,
         "lora_alpha": 32,
-        "target_modules": ["c_attn", "c_proj", "w1", "w2"],
+        "target_modules": ["query", "key", "value"],
         "lora_dropout": 0.05,
     },
     "training": {

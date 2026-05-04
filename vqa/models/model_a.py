@@ -9,7 +9,7 @@ from models.decoder_transformer import TransformerDecoder
 
 class VQAModelA(nn.Module):
     def __init__(self, decoder_type="lstm", vocab_size=64000,
-                 dim=768, clip_dim=512, co_attn_layers=2,
+                 dim=768, clip_dim=768, co_attn_layers=2,
                  co_attn_heads=8, dropout=0.1,
                  lstm_layers=2, transformer_layers=2,
                  transformer_ffn=3072):
@@ -19,7 +19,9 @@ class VQAModelA(nn.Module):
         self.image_encoder = CLIPVisionModel.from_pretrained(
             "openai/clip-vit-base-patch16"
         )
-        self.img_proj = nn.Linear(clip_dim, dim)
+        self.img_proj = (
+            nn.Identity() if clip_dim == dim else nn.Linear(clip_dim, dim)
+        )
 
         self.text_encoder = AutoModel.from_pretrained("vinai/phobert-base")
         self.tokenizer = AutoTokenizer.from_pretrained("vinai/phobert-base")

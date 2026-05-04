@@ -2,6 +2,7 @@ import json
 import torch
 from torch.utils.data import Dataset
 from PIL import Image
+from pathlib import Path
 
 
 class VQADataset(Dataset):
@@ -61,7 +62,56 @@ class VQADataset(Dataset):
         }
 
 
-def load_vqa_data(json_path, split="train"):
-    with open(json_path, "r", encoding="utf-8") as f:
+def _read_jsonl(path):
+    records = []
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if line:
+                records.append(json.loads(line))
+    return records
+
+
+def _normalize_record(record, processed_dir=None):
+    sample = dict(record)
+
+    if "image" not in sample:
+        image_path = sample.get("image_path")
+        if image_path is not None:
+            image = Path(image_path)
+            if processed_dir is not None and not image.is_absolute():
+                image = processed_dir / image
+            sample["image"] = str(image)
+
+    sample.setdefault("type", sample.get("question_type", "unknown"))
+    return sample
+
+
+def load_vqa_data(data_path, split="train"):
+    """Load legacy JSON data or new split JSONL annotations.
+
+    Supported inputs:
+    - legacy JSON file with top-level train/val/test lists
+    - annotations directory containing train.jsonl/val.jsonl/test.jsonl
+    - one JSONL file, optionally filtered by its split field
+    """
+    path = Path(data_path)
+
+    if path.is_dir():
+        jsonl_path = path / f"{split}.jsonl"
+        if not jsonl_path.exists():
+            raise FileNotFoundError(f"Missing split file: {jsonl_path}")
+        processed_dir = path.parent
+        return [_normalize_record(r, processed_dir) for r in _read_jsonl(jsonl_path)]
+
+    if path.suffix.lower() == ".jsonl":
+        processed_dir = path.parent.parent if path.parent.name.startswith("annotations") else path.parent
+        records = [
+            r for r in _read_jsonl(path)
+            if not r.get("split") or r.get("split") == split
+        ]
+        return [_normalize_record(r, processed_dir) for r in records]
+
+    with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
-    return data[split]
+    return [_normalize_record(r) for r in data[split]]

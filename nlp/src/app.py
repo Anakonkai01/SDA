@@ -1,207 +1,263 @@
-# ============================================================
-# app.py - Gradio Demo: So sánh 4 cấu hình RAG
-# ============================================================
-# pip install gradio
-# Chạy: python src/app.py
-# ============================================================
+"""
+Gradio demo: Vietnamese Traffic Law Q&A System
+4 configs: A (base, no RAG), B (base + RAG), C (fine-tuned, no RAG), D (fine-tuned + RAG)
 
+Models are lazy-loaded and swapped on demand to avoid OOM with 16GB VRAM.
+
+Run:
+  cd nlp && conda activate ai && python src/app.py
+"""
+
+import os
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
+
+import re
+import gc
 import torch
 import gradio as gr
+
+import unsloth  # must be first
 from unsloth import FastLanguageModel
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_community.vectorstores import FAISS
 
-# ============================================================
-# CẤU HÌNH
-# ============================================================
-
-BASE_MODEL_NAME  = "unsloth/Qwen2.5-3B-Instruct"
-FINETUNED_PATH   = "./models/qwen2.5-3b-lora/merged"
-DB_PATH          = "./vector_db"
-MAX_SEQ_LENGTH   = 1024
-TOP_K            = 5
-
-SYSTEM_PROMPT = (
-    "Bạn là trợ lý tư vấn luật giao thông Việt Nam. "
-    "Trả lời chính xác và ngắn gọn dựa trên luật hiện hành."
+from config import (
+    KB_PATH,
+    MODEL_DIR,
+    MODEL_ID,
+    TRAFFIC_QA_SYSTEM_PROMPT_NO_CONTEXT,
+    TRAFFIC_QA_SYSTEM_PROMPT_WITH_CONTEXT,
 )
+from build_kb import load_vectorstore
+from retrieval import retrieve_ranked_docs
 
-# ============================================================
-# LOAD TẤT CẢ KHI KHỞI ĐỘNG
-# ============================================================
+# ---------------------------------------------------------------------------
+# Constants
+# ---------------------------------------------------------------------------
 
-print("Đang load models và retriever...")
+MAX_NEW_TOKENS = 300
+RAG_TOP_K      = 3
 
-# Retriever
-_embeddings = HuggingFaceEmbeddings(
-    model_name="BAAI/bge-m3",
-    model_kwargs={"device": "cuda"},
-    encode_kwargs={"normalize_embeddings": True}
-)
-_vectorstore = FAISS.load_local(
-    DB_PATH, _embeddings,
-    allow_dangerous_deserialization=True
-)
-retriever = _vectorstore.as_retriever(search_kwargs={"k": TOP_K})
+_SYSTEM_NO_CONTEXT   = TRAFFIC_QA_SYSTEM_PROMPT_NO_CONTEXT
+_SYSTEM_WITH_CONTEXT = TRAFFIC_QA_SYSTEM_PROMPT_WITH_CONTEXT
 
-# Base model
-print("Loading base model...")
-model_base, tok_base = FastLanguageModel.from_pretrained(
-    model_name=BASE_MODEL_NAME,
-    max_seq_length=MAX_SEQ_LENGTH,
-    load_in_4bit=True,
-    dtype=None,
-)
-FastLanguageModel.for_inference(model_base)
+CONFIG_LABELS = {
+    "A": "A — Base model, No RAG",
+    "B": "B — Base model + RAG",
+    "C": "C — Fine-tuned, No RAG",
+    "D": "D — Fine-tuned + RAG  ✓ (recommended)",
+}
 
-# Fine-tuned model
-print("Loading fine-tuned model...")
-model_ft, tok_ft = FastLanguageModel.from_pretrained(
-    model_name=FINETUNED_PATH,
-    max_seq_length=MAX_SEQ_LENGTH,
-    load_in_4bit=True,
-    dtype=None,
-)
-FastLanguageModel.for_inference(model_ft)
+# ---------------------------------------------------------------------------
+# Lazy model loader — keeps only ONE model in VRAM at a time
+# ---------------------------------------------------------------------------
 
-print("Sẵn sàng!")
+_current_model     = None
+_current_tokenizer = None
+_current_type      = None   # "base" | "lora"
 
-# ============================================================
-# INFERENCE
-# ============================================================
 
-def generate(model, tokenizer, question: str, context: str = None) -> str:
-    if context:
-        user_msg = f"Dựa vào tài liệu sau:\n{context}\n\nCâu hỏi: {question}"
-    else:
-        user_msg = question
+def _load_model(use_lora: bool):
+    global _current_model, _current_tokenizer, _current_type
 
-    prompt = (
-        f"<|im_start|>system\n{SYSTEM_PROMPT}<|im_end|>\n"
-        f"<|im_start|>user\n{user_msg}<|im_end|>\n"
-        f"<|im_start|>assistant\n"
+    model_type = "lora" if use_lora else "base"
+    if _current_type == model_type:
+        return _current_model, _current_tokenizer
+
+    # Unload previous model to free VRAM
+    if _current_model is not None:
+        print(f"Unloading {_current_type} model...")
+        del _current_model, _current_tokenizer
+        _current_model = _current_tokenizer = None
+        gc.collect()
+        torch.cuda.empty_cache()
+
+    path  = str(MODEL_DIR) if use_lora else MODEL_ID
+    label = "fine-tuned (LoRA)" if use_lora else "base"
+    print(f"Loading {label} model...")
+    model, tokenizer = FastLanguageModel.from_pretrained(
+        model_name=path,
+        max_seq_length=2048,
+        dtype=None,
+        load_in_4bit=True,
     )
-    inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
-    with torch.no_grad():
-        outputs = model.generate(
-            **inputs,
-            max_new_tokens=250,
-            temperature=0.1,
-            do_sample=True,
-            pad_token_id=tokenizer.eos_token_id,
+    FastLanguageModel.for_inference(model)
+
+    _current_model     = model
+    _current_tokenizer = tokenizer
+    _current_type      = model_type
+    print(f"  {label} model ready.")
+    return model, tokenizer
+
+
+# ---------------------------------------------------------------------------
+# RAG — loaded once at startup (embeddings only, ~1GB)
+# ---------------------------------------------------------------------------
+
+print("Loading vector store (RAG)...")
+_vs        = load_vectorstore()
+print("Vector store ready. Starting Gradio...")
+
+
+# ---------------------------------------------------------------------------
+# Inference helpers
+# ---------------------------------------------------------------------------
+
+def _source_label(doc, idx: int) -> str:
+    md = doc.metadata or {}
+    bits = [
+        f"Nguồn {idx}",
+        md.get("doc_id") or md.get("source") or "unknown",
+    ]
+    article = md.get("article")
+    if article:
+        bits.append(article)
+    return " | ".join(bits)
+
+
+def _retrieve(question: str) -> tuple[str, list[tuple[str, str]]]:
+    docs = retrieve_ranked_docs(_vs, question, top_k=RAG_TOP_K)
+    context_parts = []
+    display_parts = []
+    for idx, doc in enumerate(docs, start=1):
+        md = doc.metadata or {}
+        label = _source_label(doc, idx)
+        title = md.get("title") or ""
+        source_path = md.get("source_path") or ""
+        header = f"[{label}]\nTiêu đề: {title}\nFile: {source_path}"
+        context_parts.append(f"{header}\n\n{doc.page_content}")
+        display_parts.append((header, doc.page_content))
+    return "\n\n---\n\n".join(context_parts), display_parts
+
+
+def _generate(model, tokenizer, question: str, context: str | None) -> str:
+    if context:
+        user_content = f"Đoạn văn bản luật:\n{context}\n\nCâu hỏi: {question}"
+        system_prompt = _SYSTEM_WITH_CONTEXT
+    else:
+        user_content = f"Câu hỏi: {question}"
+        system_prompt = _SYSTEM_NO_CONTEXT
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user",   "content": user_content},
+    ]
+    try:
+        prompt = tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True, enable_thinking=False
         )
-    return tokenizer.decode(
-        outputs[0][inputs["input_ids"].shape[1]:],
-        skip_special_tokens=True
-    ).strip()
+    except TypeError:
+        prompt = tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True
+        )
+    inputs = tokenizer(text=prompt, return_tensors="pt").to(model.device)
+    with torch.inference_mode():
+        out_ids = model.generate(
+            **inputs,
+            max_new_tokens=MAX_NEW_TOKENS,
+            do_sample=False,
+            use_cache=True,
+        )
+    new_ids = out_ids[0][inputs["input_ids"].shape[1]:]
+    raw     = tokenizer.decode(new_ids, skip_special_tokens=True).strip()
+    return re.sub(r"<think>.*?</think>", "", raw, flags=re.DOTALL).strip()
 
 
-def get_context(question: str) -> tuple[str, str]:
-    """Trả về (context_for_prompt, sources_display)."""
-    docs = retriever.invoke(question)
-    context = "\n\n".join([d.page_content for d in docs])
-    sources = "\n".join([
-        f"• {d.metadata.get('source', '').split('/')[-1]}, "
-        f"trang {d.metadata.get('page', '?')}"
-        for d in docs
-    ])
-    return context, sources
+# ---------------------------------------------------------------------------
+# Main handler
+# ---------------------------------------------------------------------------
 
-
-# ============================================================
-# HÀM CHÍNH GỌI TỪ GRADIO
-# ============================================================
-
-def run_all_configs(question: str):
+def answer(question: str, config: str) -> tuple[str, str]:
     if not question.strip():
-        empty = "Vui lòng nhập câu hỏi."
-        return empty, empty, empty, empty, ""
+        return "Vui lòng nhập câu hỏi.", ""
 
-    context, sources = get_context(question)
+    use_rag  = config in ("B", "D")
+    use_lora = config in ("C", "D")
 
-    ans_a = generate(model_base, tok_base, question, context=None)
-    ans_b = generate(model_base, tok_base, question, context=context)
-    ans_c = generate(model_ft,   tok_ft,   question, context=None)
-    ans_d = generate(model_ft,   tok_ft,   question, context=context)
+    model, tokenizer = _load_model(use_lora)
 
-    return ans_a, ans_b, ans_c, ans_d, sources
+    context, chunks = _retrieve(question) if use_rag else ("", [])
+    response        = _generate(model, tokenizer, question, context if use_rag else None)
+
+    rag_display = ""
+    if use_rag and chunks:
+        rag_display = "\n\n---\n\n".join(
+            f"**{header}**\n\n{content}" for header, content in chunks
+        )
+
+    return response, rag_display
 
 
-# ============================================================
-# GIAO DIỆN GRADIO
-# ============================================================
+# ---------------------------------------------------------------------------
+# Gradio UI
+# ---------------------------------------------------------------------------
 
-EXAMPLES = [
-    "Vượt đèn đỏ bị phạt bao nhiêu tiền?",
-    "Tốc độ tối đa trong khu dân cư là bao nhiêu?",
-    "Uống rượu bia lái xe bị xử lý thế nào?",
-    "Xe máy không đội mũ bảo hiểm phạt bao nhiêu?",
-    "Điều kiện để được cấp giấy phép lái xe hạng B2?",
-    "Đi ngược chiều bị phạt bao nhiêu?",
+EXAMPLE_QUESTIONS = [
+    "Người điều khiển xe ô tô có nồng độ cồn vượt 80mg/100ml máu bị phạt bao nhiêu?",
+    "Hành vi lạng lách đánh võng trên đường bộ bị xử lý như thế nào?",
+    "Tốc độ tối đa của xe con trên đường cao tốc là bao nhiêu?",
+    "Điều kiện để được cấp giấy phép lái xe hạng B là gì?",
+    "Xe ưu tiên gồm những loại xe nào?",
+    "Người đi xe máy không đội mũ bảo hiểm bị phạt bao nhiêu?",
+    "Điểm giấy phép lái xe hoạt động như thế nào?",
+    "Khi gặp đèn đỏ, người tham gia giao thông phải làm gì?",
 ]
 
 with gr.Blocks(title="Hỏi đáp Luật Giao thông VN", theme=gr.themes.Soft()) as demo:
+    gr.Markdown(
+        """
+        # 🚦 Hệ thống Hỏi đáp Luật Giao thông Đường bộ Việt Nam
+        Dựa trên các file text đã bật trong `docs/docs_giaothong/manifest.json`.
+        Fine-tuned: **Qwen3.5-9B** + **QLoRA** | RAG: **FAISS** + **BGE-M3** | Source policy: **local_text_only**
 
-    gr.Markdown("""
-    # Hệ thống Hỏi đáp Luật Giao thông Việt Nam
-    So sánh 4 cấu hình: **A** (base) · **B** (base + RAG) · **C** (fine-tuned) · **D** (fine-tuned + RAG)
-    """)
-
-    with gr.Row():
-        question_box = gr.Textbox(
-            label="Câu hỏi",
-            placeholder="VD: Vượt đèn đỏ bị phạt bao nhiêu tiền?",
-            lines=2,
-            scale=4,
-        )
-        submit_btn = gr.Button("Hỏi", variant="primary", scale=1)
-
-    gr.Examples(examples=EXAMPLES, inputs=question_box, label="Câu hỏi mẫu")
+        > ⚠️ Đổi giữa config A/B ↔ C/D sẽ cần **~30-60 giây** để swap model.
+        """
+    )
 
     with gr.Row():
-        out_a = gr.Textbox(label="A — LLM gốc, không RAG",        lines=6)
-        out_b = gr.Textbox(label="B — LLM gốc + RAG",             lines=6)
-    with gr.Row():
-        out_c = gr.Textbox(label="C — Fine-tuned, không RAG",      lines=6)
-        out_d = gr.Textbox(
-            label="D — Fine-tuned + RAG  ★",
-            lines=6,
-            elem_classes=["best-config"]
-        )
+        with gr.Column(scale=1):
+            config_radio = gr.Radio(
+                choices=list(CONFIG_LABELS.keys()),
+                value="D",
+                label="Config",
+                info="A=Base/NoRAG | B=Base+RAG | C=FineTuned/NoRAG | D=FineTuned+RAG",
+            )
+            gr.Markdown(
+                """
+                | Config | Model | RAG |
+                |--------|-------|-----|
+                | A | Base | ✗ |
+                | B | Base | ✓ |
+                | C | Fine-tuned | ✗ |
+                | **D** | **Fine-tuned** | **✓** |
+                """
+            )
 
-    sources_box = gr.Textbox(
-        label=f"Nguồn tài liệu retrieved (top {TOP_K} chunks)",
-        lines=5,
-        interactive=False,
+        with gr.Column(scale=3):
+            question_box = gr.Textbox(
+                label="Câu hỏi",
+                placeholder="Ví dụ: Người điều khiển xe máy không đội mũ bảo hiểm bị phạt bao nhiêu?",
+                lines=3,
+            )
+            submit_btn  = gr.Button("Hỏi 🔍", variant="primary")
+            answer_box  = gr.Textbox(label="Câu trả lời", lines=6, interactive=False)
+
+    with gr.Accordion("📄 Văn bản luật được truy xuất (RAG)", open=False):
+        rag_box = gr.Markdown(value="_Chọn config B hoặc D để xem văn bản tham chiếu._")
+
+    gr.Examples(
+        examples=EXAMPLE_QUESTIONS,
+        inputs=question_box,
+        label="Câu hỏi mẫu",
     )
 
     submit_btn.click(
-        fn=run_all_configs,
-        inputs=question_box,
-        outputs=[out_a, out_b, out_c, out_d, sources_box],
+        fn=answer,
+        inputs=[question_box, config_radio],
+        outputs=[answer_box, rag_box],
     )
     question_box.submit(
-        fn=run_all_configs,
-        inputs=question_box,
-        outputs=[out_a, out_b, out_c, out_d, sources_box],
+        fn=answer,
+        inputs=[question_box, config_radio],
+        outputs=[answer_box, rag_box],
     )
-
-    gr.Markdown("""
-    ---
-    **Metrics tự động (trên 50 câu test):**
-
-    | Config | BLEU | ROUGE-L | BERTScore | Recall@5 |
-    |--------|------|---------|-----------|----------|
-    | A | 0.0600 | 0.2698 | 0.7188 | — |
-    | B | 0.0818 | 0.2657 | 0.6547 | 0.7476 |
-    | C | 0.1165 | 0.3973 | 0.7777 | — |
-    | D | **0.1872** | 0.3842 | 0.6965 | 0.7476 |
-    """)
-
 
 if __name__ == "__main__":
-    demo.launch(
-        server_name="0.0.0.0",
-        server_port=7860,
-        share=False,       # Đổi True nếu muốn public URL để quay video demo
-    )
+    demo.launch(server_name="0.0.0.0", server_port=7860, share=False)

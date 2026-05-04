@@ -1,127 +1,73 @@
-# Progress Report: VQA - Vietnamese Traffic Sign Visual Question Answering
+# Progress Report: Vietnamese Traffic Sign VQA
 
-**Course**: Deep Learning (Final Project - Problem 1)
-**Project**: Visual Question Answering for Vietnamese Traffic Signs
-**Date**: April 25, 2026
+Last updated: 2026-04-29 (session 2)
 
----
+## Current Direction
 
-## 1. Project Objective
+The active project is VQA for Vietnamese traffic signs. The old NLP legal project is not part of the active scope.
 
-Build a VQA system that takes a Vietnamese street image containing traffic signs and a question in Vietnamese as input, and generates a Vietnamese text answer. The project requires implementing and comparing 4 model configurations (A1, A2, B1, B2) with different encoder-decoder architectures.
+Use `PROJECT_STATE.md` as the canonical short context for future chatbot sessions.
 
-## 2. Completed Work
+## Completed
 
-### 2.1 Dataset Preparation
+- Read the course requirement document in `docs/DỰ ÁN CUỐI KỲ MÔN HỌC SÂU.docx`.
+- Merged the VQA handoff data/code into `vqa/`.
+- Established the current dataset source as Kaggle VNTS converted into VQA.
+- Built/kept the rule-based dataset versions under `data/processed/`.
+- Verified dataset validation for the current annotation folders.
+- Verified Python compilation for the VQA scripts and data helpers.
+- Confirmed the repo has code paths for A1, A2, B1, B2.
 
-| Item | Status | Details |
-|------|--------|---------|
-| Detection dataset collection | Done | 3,680 images (1920x1080) from Roboflow |
-| Class remapping to QCVN 41:2024 | Done | Remapped from 58 raw classes to 42 standardized classes |
-| Class taxonomy documentation | Done | Full 93-class taxonomy documented per QCVN 41:2024/BGTVT |
-| VQA template generation | Done | 67,144 QA pairs generated from detection annotations |
-| VQA question types | Done | 6 types: count, recognition, yes_no, attribute, spatial, reasoning |
-| LLM paraphrase augmentation | In Progress | Target: ~280,000 QA pairs via Qwen3.5:9b paraphrase |
+## Current Dataset
 
-### 2.2 Model Implementation
+- Current training/evaluation dataset: `data/processed/annotations/` with 104146 train, 12944 val, 12966 test QA rows.
+- Canonical same-content copy: `data/processed/annotations_rulebased_v5_groupfix/`.
+- Active dataset uses 2193 train, 272 val, 271 test annotated images.
+- Previous V3 dataset was moved to `../handoff/processed_backup_before_v5_20260429/`.
 
-| Component | Status | File |
-|-----------|--------|------|
-| Co-Attention module | Done | `models/co_attention.py` |
-| LSTM Decoder (with cross-attention) | Done | `models/decoder_lstm.py` |
-| Transformer Decoder (with positional encoding) | Done | `models/decoder_transformer.py` |
-| VQAModelA (A1 + A2) | Done | `models/model_a.py` |
-| VQAModelB (B1 zero-shot + B2 LoRA) | Done | `models/model_b.py` |
-| VQA Dataset class | Done | `data_utils/dataset.py` |
-| Data Collator | Done | `data_utils/collator.py` |
+## Candidate New Dataset
 
-### 2.3 Training Pipeline
+- Downloaded from Drive file ID `1NmOYhTeuF5q-GVt4EIMlg9Axd9hRDG3X`.
+- Local archive: `../handoff/new_vqa_data_drive_file`.
+- Extracted root: `../handoff/new_vqa_data/processed_archive_all_stratified_801010/`.
+- Recommended folder: `annotations_rulebased_archive_all_stratified_v5_groupfix/`.
+- V5 validation passed with 104146 train, 12944 val, 12966 test QA rows.
+- V5 uses 2193 train, 272 val, 271 test annotated images with no image overlap across splits.
+- Adopted as the active dataset. Only referenced images were copied because the archive has extra unreferenced image files.
 
-| Component | Status | File |
-|-----------|--------|------|
-| Training config (all hyperparameters) | Done | `train/config.py` |
-| Training loop for A1/A2 (2-phase) | Done | `train/train_a.py` |
-| Training loop for B2 (LoRA) | Done | `train/train_b.py` |
-| Mixed precision (AMP) | Done | Integrated in both training loops |
-| Gradient clipping | Done | max_norm=1.0 |
-| Checkpoint saving (best + last) | Done | Based on validation loss |
+## Implemented
 
-### 2.4 Evaluation & Demo
+- A1/A2 custom architecture: CLIP ViT image encoder, PhoBERT text encoder, co-attention, LSTM or Transformer decoder.
+- CLIP ViT-B/16 patch tokens are 768-d, matching PhoBERT/fusion dim, so the image projection is `Identity` unless a future encoder has a different hidden size.
+- B1/B2 multimodal path: BLIP VQA zero-shot and LoRA fine-tuning wrapper.
+- Training scripts for A1/A2 and B2.
+- **wandb integration** in `train/train_a.py` and `train/train_b.py`. Project: `sda-vqa`. Flags: `--wandb-project`, `--wandb-run-name`, `--no-wandb`. Metrics: `train/loss`, `val/loss`, `train/lr`, `phase` (A only), `best_val_loss`, `best_epoch`.
+- Evaluation entrypoint for A1/A2/B1/B2.
+- Evaluation can save prediction-level JSONL with `--predictions-output` for later error analysis, LLM judging, and RL preference construction.
+- Added `docs/TRAIN_EVAL_RUNBOOK.md` for real training/evaluation commands.
+- Added `docs/RL_AND_IMPROVEMENT_PLAN.md` for the required PPO/DPO/RLHF advanced track.
+- Added `scripts/build_preference_pairs.py` to create preference JSONL from prediction outputs.
+- Gradio demo entrypoint.
+- Rule-based VQA data generation/filter/build/validate scripts.
 
-| Component | Status | File |
-|-----------|--------|------|
-| Metrics (BLEU, ROUGE-L, BERTScore, VQA Accuracy) | Done | `evaluate/metrics.py` |
-| Evaluation script (all 4 configs) | Done | `evaluate/evaluate.py` |
-| Gradio demo interface | Done | `demo/app.py` |
-| Greedy search generation | Done | Implemented in `model_a.py` |
+## Remaining
 
-### 2.5 Utility Scripts
+- METEOR is now available in the local evaluator.
+- Optional BERTScore is available through `evaluate/evaluate.py --bertscore`.
+- A1, A2, B1, and B2 smoke paths have been run successfully.
+- [ ] Run full training: A1, A2 (30 epochs each), B2 (10 epochs). Commands in `PROJECT_STATE.md`.
+- [ ] Run B1 zero-shot evaluation on test set.
+- [ ] Build at least 100 preference pairs and compare B2-SFT vs B2-DPO/RL.
+- [ ] Add LLM-as-a-judge evaluation.
+- [ ] Fill report tables with real metrics from eval outputs.
+- [ ] Confirm final test split manual review before report submission.
+- [ ] (Optional) Add Qwen2-VL-2B as B3 config for stronger multilingual comparison.
 
-| Script | Status | Purpose |
-|--------|--------|---------|
-| `scripts/remap_v2.py` | Done | Remap detection class names to QCVN standard |
-| `scripts/generate_vqa.py` | Done | Generate VQA QA pairs from YOLO annotations |
-| `scripts/check_classes.py` | Done | Analyze class distribution in dataset |
+## Design Notes
 
-## 3. Architecture Summary
+- BLIP VQA base is English-trained → B1 zero-shot on Vietnamese will score low. This is expected and should be explained in the report as a motivation for B2 LoRA fine-tuning.
+- Qwen2-VL was considered as a multilingual alternative for B1/B2 but not implemented. If added, use Qwen2-VL-2B-Instruct (fits 16GB VRAM). Only pursue after A1/A2/B1/B2 results are in hand.
 
-### Approach A: Custom Dual-Encoder
+## Cleanup Rule
 
-- **Image Encoder**: CLIP ViT-B/16 (frozen) -> 197 patch tokens x 512 dim -> projected to 768 dim
-- **Text Encoder**: PhoBERT-base (frozen) -> N tokens x 768 dim
-- **Fusion**: 2-layer Co-Attention stack (bidirectional cross-attention + FFN + LayerNorm)
-- **Decoder A1**: 2-layer LSTM with cross-attention to encoder memory
-- **Decoder A2**: 2-layer Transformer decoder with causal masking and Pre-LN
-- **Training**: 2-phase strategy (15 epochs frozen encoders + 15 epochs unfrozen with discriminative lr)
-- **Loss**: CrossEntropyLoss (ignore_index=-100 for padding)
-
-### Approach B: Large Vision-Language Model
-
-- **B1**: Qwen-VL-Chat zero-shot (fp16, no training)
-- **B2**: Qwen-VL-Chat + LoRA fine-tuning (r=16, alpha=32, bf16, 10 epochs)
-
-## 4. Remaining Work
-
-| Task | Priority | Estimated Effort |
-|------|----------|-----------------|
-| Complete LLM paraphrase augmentation (~280K QA pairs) | High | Data generation running |
-| Run training for A1 configuration | High | ~6 hours GPU time |
-| Run training for A2 configuration | High | ~6 hours GPU time |
-| Run training for B2 configuration | High | ~3 hours GPU time |
-| Run B1 zero-shot evaluation | Medium | ~1 hour |
-| Run full evaluation on test set (all 4 configs) | High | After training completes |
-| Fill in results table in report | High | After evaluation |
-| Record demo video | Medium | After training |
-| Implement beam search (optional improvement) | Low | Currently using greedy search |
-
-## 5. Technical Environment
-
-| Item | Specification |
-|------|---------------|
-| GPU | NVIDIA GeForce RTX 5070 Ti (16GB VRAM GDDR7) |
-| OS | Ubuntu Linux |
-| CUDA | 13.1, Driver 590.48.01 |
-| Python | 3.x (conda env: `d2l`) |
-| PyTorch | 2.10.0 |
-| Transformers | 4.57.6 |
-
-## 6. Expected Results Table (To Be Filled After Training)
-
-| Metric | A1 (LSTM) | A2 (Transformer) | B1 (Zero-shot) | B2 (LoRA) |
-|--------|-----------|-------------------|-----------------|-----------|
-| BLEU-1 | -- | -- | -- | -- |
-| BLEU-4 | -- | -- | -- | -- |
-| ROUGE-L | -- | -- | -- | -- |
-| BERTScore-F1 | -- | -- | -- | -- |
-| VQA Accuracy | -- | -- | -- | -- |
-| Inference (ms/sample) | -- | -- | -- | -- |
-| Trainable params | ~45M | ~61M | 0 | ~20M |
-
-## 7. Risk Assessment
-
-| Risk | Mitigation |
-|------|------------|
-| VQA paraphrase generation taking too long | Can train on template dataset (67K pairs) first, augment later |
-| A1/A2 models may underperform on spatial questions | Co-Attention design preserves patch-level spatial information |
-| B2 training may run out of VRAM | Using bf16 + gradient accumulation (effective batch=32 with batch_size=8) |
-| Qwen-VL download size (~15GB) | Already accounted for in disk space planning |
+Keep VQA source, processed annotations, metadata, and final images. Remove or ignore raw downloads, extracted handoff directories, zip packages, smoke-test outputs, and deprecated generated datasets when they are no longer needed.

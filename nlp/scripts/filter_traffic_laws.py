@@ -1,33 +1,35 @@
-from datasets import load_dataset
-import json
+"""Audit the local traffic-law source manifest."""
 
-ds = load_dataset('VLSP2025-LegalSML/legal-pretrain', split='train', streaming=True)
+from pathlib import Path
+import sys
 
-keywords = ['giao thông', 'đường bộ', 'lái xe', 'an toàn giao thông',
-            'giấy phép lái', 'phương tiện giao thông']
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-found = []
-count = 0
-for row in ds:
-    count += 1
-    name = row['metadata'].get('DocName', '').lower()
-    if any(kw in name for kw in keywords):
-        found.append({
-            'identity': row['metadata'].get('DocIdentity', ''),
-            'name': row['metadata'].get('DocName', ''),
-            'organ': row['metadata'].get('OrganName', ''),
-            'date': str(row['metadata'].get('IssueDate', ''))[:10],
-            'size_kb': len(row['doc_content']) // 1024,
-            'content': row['doc_content'],
-        })
-    if count % 20000 == 0:
-        print(f'  Duyet {count}... tim thay {len(found)}', flush=True)
+from corpus import iter_local_traffic_records, load_source_manifest
 
-print(f'\nTong: {count} van ban, tim thay {len(found)}', flush=True)
 
-with open('./data/traffic_law_docs.json', 'w', encoding='utf-8') as f:
-    json.dump(found, f, ensure_ascii=False)
-print(f'Da luu {len(found)} van ban vao ./data/traffic_law_docs.json', flush=True)
+def main() -> None:
+    manifest = load_source_manifest()
+    print(f"Source policy: {manifest['source_policy']}")
+    print(f"Manifest documents: {len(manifest['documents'])}")
+    print()
 
-for i, doc in enumerate(sorted(found, key=lambda x: x['date'], reverse=True)):
-    print(f'[{i+1}] {doc["identity"]} | {doc["name"][:80]} | {doc["date"]} | {doc["size_kb"]}KB', flush=True)
+    total_chars = 0
+    enabled = 0
+    for record in iter_local_traffic_records():
+        enabled += 1
+        chars = len(record["text"])
+        total_chars += chars
+        print(f"- {record['doc_id']}: {chars:,} chars")
+        print(f"  title: {record['title']}")
+        print(f"  file:  {record['source_path']}")
+
+    print()
+    print(f"Enabled local text documents: {enabled}")
+    print(f"Total trusted corpus size: {total_chars:,} chars")
+    if enabled == 0:
+        raise SystemExit("No enabled local text documents found.")
+
+
+if __name__ == "__main__":
+    main()

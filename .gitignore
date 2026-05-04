@@ -1,46 +1,40 @@
-# Operating system and editor files
-.DS_Store
-Thumbs.db
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-
-# Python cache and virtual environments
-__pycache__/
-*.py[cod]
-*.pyd
-*.pyo
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.ipynb_checkpoints/
-.venv/
-venv/
-env/
-ENV/
-
-# Local environment and logs
+*.env
 .env
-.env.*
-!.env.example
-*.log
+.codex
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
 
-# NLP artifacts and heavy assets
-nlp/models/**
-!nlp/models/
-!nlp/models/**/
-!nlp/models/**/README.md
-nlp/vector_db/
-nlp/unsloth_compiled_cache/
-nlp/data/laws/
-nlp/data/traffic_law_docs.json
+handoff/
+*.zip
 
-# VQA artifacts and heavy assets
+# VQA — large data/model artifacts
+vqa/data/raw/
+vqa/data/kaggle_config/
+vqa/data/processed/images/
+vqa/data/processed/previews/
+vqa/.cache/
 vqa/checkpoints/
-vqa/data/vqa/vqa_log.txt
-vqa/data/vqa/vqa_template.json
+vqa/checkpoints*/
+vqa/results*.json
+vqa/runs/
+vqa/wandb/
 
-# Temporary office lock files
-.~lock.*
+# VQA — stable diffusion generated outputs (large)
+vqa/stable_diffusion/lora_output/
+vqa/stable_diffusion/lora_output_smoke/
+vqa/stable_diffusion/lora_output_smoke_fp32/
+vqa/stable_diffusion/logs/
+vqa/stable_diffusion/dataset/
+
+# NLP — large artifacts
+nlp/vector_db_traffic/
+nlp/wandb/
+nlp/models/
+nlp/logs/
+nlp/unsloth_compiled_cache/
+
+# Root-level compiled cache
+unsloth_compiled_cache/
+
+.aider*

@@ -4,6 +4,10 @@ torchvision>=0.25.0
 transformers>=4.57.6
 peft
 accelerate
+bitsandbytes
+diffusers
+safetensors
+trl
 open-clip-torch
 evaluate
 rouge-score
@@ -12,3 +16,13 @@ gradio
 Pillow
 tqdm
 wandb
+pandas
+numpy
+opencv-python
+pyyaml
+python-dotenv
+scikit-learn
+google-generativeai
+google-genai
+pydantic
+matplotlib

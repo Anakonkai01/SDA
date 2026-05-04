@@ -9,7 +9,7 @@ class ModelConfigA:
     co_attention_layers: int = 2
     co_attention_heads: int = 8
     dim: int = 768
-    clip_dim: int = 512
+    clip_dim: int = 768
     dropout: float = 0.1
     lstm_hidden: int = 768
     lstm_layers: int = 2
@@ -22,7 +22,7 @@ class ModelConfigA:
 class TrainingConfigA:
     batch_size: int = 32
     learning_rate: float = 3e-4
-    epochs: int = 30
+    epochs: int = 15
     optimizer: str = "AdamW"
     weight_decay: float = 0.01
     warmup_steps: int = 1000
@@ -31,7 +31,7 @@ class TrainingConfigA:
     mixed_precision: bool = True
     phase1_epochs: int = 15
     phase1_lr: float = 3e-4
-    phase2_epochs: int = 15
+    phase2_epochs: int = 0
     phase2_lr: float = 3e-5
 
 
@@ -48,7 +48,7 @@ class LoRAConfig:
     r: int = 16
     lora_alpha: int = 32
     target_modules: List[str] = field(
-        default_factory=lambda: ["c_attn", "c_proj", "w1", "w2"]
+        default_factory=lambda: ["query", "key", "value"]
     )
     lora_dropout: float = 0.05
     bias: str = "none"
@@ -56,7 +56,14 @@ class LoRAConfig:
 
 @dataclass
 class ModelConfigB:
-    model_name: str = "Qwen/Qwen-VL-Chat"
+    backend: str = "blip"
+    model_name: str = "Salesforce/blip-vqa-base"
+    qwen_model_name: str = "Qwen/Qwen2.5-VL-3B-Instruct"
+    paligemma_model_name: str = "google/paligemma2-3b-pt-448"
+    paligemma_mix_model_name: str = "google/paligemma2-3b-mix-448"
+    load_in_4bit: bool = False
+    min_pixels: int = 256 * 28 * 28
+    max_pixels: int = 640 * 28 * 28
     lora: LoRAConfig = field(default_factory=LoRAConfig)
 
 
@@ -76,7 +83,9 @@ class TrainingConfigB:
 
 @dataclass
 class DataConfigB:
-    max_length: int = 256
+    max_question_length: int = 64
+    max_answer_length: int = 20
+    max_length: int = 1280
     image_size: int = 448
     num_workers: int = 4
 
@@ -86,7 +95,7 @@ class ConfigA:
     model: ModelConfigA = field(default_factory=ModelConfigA)
     training: TrainingConfigA = field(default_factory=TrainingConfigA)
     data: DataConfigA = field(default_factory=DataConfigA)
-    vqa_data_path: str = "data/vqa/vqa_template.json"
+    vqa_data_path: str = "data/processed/annotations"
     checkpoint_dir: str = "checkpoints"
 
 
@@ -95,5 +104,5 @@ class ConfigB:
     model: ModelConfigB = field(default_factory=ModelConfigB)
     training: TrainingConfigB = field(default_factory=TrainingConfigB)
     data: DataConfigB = field(default_factory=DataConfigB)
-    vqa_data_path: str = "data/vqa/vqa_template.json"
+    vqa_data_path: str = "data/processed/annotations"
     checkpoint_dir: str = "checkpoints"
