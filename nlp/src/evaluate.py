@@ -33,7 +33,11 @@ os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 import argparse
 import json
 import random
+import re
+import shlex
+import sys
 import time
+from pathlib import Path
 
 import torch
 from tqdm import tqdm
@@ -55,7 +59,29 @@ from config import (
 )
 from build_kb import load_vectorstore
 from corpus import load_source_manifest
-from retrieval import classify_intents, expand_traffic_query, retrieve_ranked_docs
+from retrieval import classify_intents, expand_traffic_query, is_supported_traffic_question, retrieve_ranked_docs
+try:
+    from context_packing import compress_evidence_context, pack_article_context, vectorstore_docs
+except Exception:  # keep legacy evaluation runnable if optional packer import fails
+    compress_evidence_context = None
+    pack_article_context = None
+    vectorstore_docs = None
+try:
+    from span_reranking import rerank_spans
+except Exception:
+    rerank_spans = None
+try:
+    from legal_units import retrieve_legal_units
+except Exception:
+    retrieve_legal_units = None
+try:
+    from evidence_cards import evidence_card_from_text
+except Exception:
+    evidence_card_from_text = None
+try:
+    from sanction_facts import retrieve_fact_cards
+except Exception:
+    retrieve_fact_cards = None
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -64,19 +90,51 @@ from retrieval import classify_intents, expand_traffic_query, retrieve_ranked_do
 DATA_PATH        = QA_DATA_PATH
 TEST_MANUAL_PATH = EVAL_DATA_PATH
 LEGACY_TEST_MANUAL_PATH = DATA_PATH.parent / "test_manual.jsonl"
-LORA_PATH        = LORA_PATH_DEFAULT
+LORA_PATH        = Path(os.environ.get("EVAL_LORA_PATH", str(LORA_PATH_DEFAULT)))
 RESULTS_PATH     = REPORTS_DIR / "evaluation_results.json"
 PREDS_PATH       = REPORTS_DIR / "predictions_all_configs.json"
+EVAL_CONFIG_ENV_KEYS = [
+    "RETRIEVAL_VERSION", "RAG_V4_RRF_K", "RAG_V4_W_DENSE", "RAG_V4_W_SPARSE",
+    "RAG_CONTEXT_PACKING", "RAG_CONTEXT_MAX_CHUNKS", "RAG_EVIDENCE_COMPRESSION",
+    "RAG_EVIDENCE_MAX_SPANS", "RAG_EVIDENCE_MAX_CHARS", "RAG_CLAUSE_AWARE_PACKING",
+    "RAG_HYBRID_FALLBACK", "RAG_SPAN_RERANKING", "RAG_CONTEXT_ORDER",
+    "RAG_LEGAL_UNIT_RETRIEVAL", "RAG_LEGAL_UNIT_TOP_K", "RAG_LEGAL_UNIT_MAX_CANDIDATES",
+    "RAG_LEGAL_UNIT_APPEND_BACKUP", "RAG_LEGAL_UNIT_USE_CE", "RAG_LEGAL_UNIT_CE_MODEL",
+    "RAG_LEGAL_UNIT_BM25_CANDIDATES", "RAG_LEGAL_UNIT_ALLOWED_TYPES", "RAG_LEGAL_UNIT_SEED_K",
+    "RAG_ANSWER_ONLY_CONTEXT_FIRST", "RAG_EVIDENCE_CARD_RENDERING",
+    "RAG_LEGAL_UNIT_ENTITY_SCORING", "RAG_SANCTION_FACT_CARDS",
+    "MAX_NEW_TOKENS", "GENERATION_REPETITION_PENALTY", "GENERATION_NO_REPEAT_NGRAM", "EVAL_LORA_PATH",
+]
 RETRIEVAL_DIAGNOSTICS_PATH = REPORTS_DIR / "retrieval_diagnostics.json"
 
 _SYSTEM_NO_CONTEXT   = TRAFFIC_QA_SYSTEM_PROMPT_NO_CONTEXT
 _SYSTEM_WITH_CONTEXT = TRAFFIC_QA_SYSTEM_PROMPT_WITH_CONTEXT
 
-MAX_NEW_TOKENS    = 256   # traffic-law answers; 128 was too small when thinking leaked through
-EVAL_BATCH_SIZE   = 8     # samples per GPU batch during evaluation
-RAG_TOP_K         = 3     # chunks used as context during generation
+MAX_NEW_TOKENS    = int(os.environ.get("MAX_NEW_TOKENS", "320"))   # cite-heavy legal answers need room for sanctions and point deductions
+EVAL_BATCH_SIZE   = 1     # RAG prompts are long; batch=1 avoids OOM on 16GB VRAM
+RAG_TOP_K         = 2     # compact context improves VRAM stability and reduces noise
+RAG_CONTEXT_PACKING = os.environ.get("RAG_CONTEXT_PACKING", "1") == "1"
+RAG_CONTEXT_MAX_CHUNKS = int(os.environ.get("RAG_CONTEXT_MAX_CHUNKS", "4"))
+RAG_EVIDENCE_COMPRESSION = os.environ.get("RAG_EVIDENCE_COMPRESSION", "0") == "1"
+RAG_EVIDENCE_MAX_SPANS = int(os.environ.get("RAG_EVIDENCE_MAX_SPANS", "6"))
+RAG_EVIDENCE_MAX_CHARS = int(os.environ.get("RAG_EVIDENCE_MAX_CHARS", "650"))
+RAG_SPAN_RERANKING = os.environ.get("RAG_SPAN_RERANKING", "0") == "1"
+RAG_SPAN_USE_DENSE = os.environ.get("RAG_SPAN_USE_DENSE", "0") == "1"
+RAG_RECALL_USE_EVIDENCE_SPANS = os.environ.get("RAG_RECALL_USE_EVIDENCE_SPANS", "0") == "1"
+RAG_RECALL_EVIDENCE_MAX_CHARS = int(os.environ.get("RAG_RECALL_EVIDENCE_MAX_CHARS", "900"))
+RAG_CONTEXT_ORDER = os.environ.get("RAG_CONTEXT_ORDER", "litm")
+RAG_LEGAL_UNIT_RETRIEVAL = os.environ.get("RAG_LEGAL_UNIT_RETRIEVAL", "1") == "1"
+RAG_LEGAL_UNIT_TOP_K = int(os.environ.get("RAG_LEGAL_UNIT_TOP_K", "3"))
+RAG_LEGAL_UNIT_MAX_CANDIDATES = int(os.environ.get("RAG_LEGAL_UNIT_MAX_CANDIDATES", "80"))
+RAG_LEGAL_UNIT_APPEND_BACKUP = os.environ.get("RAG_LEGAL_UNIT_APPEND_BACKUP", "0") == "1"
+RAG_LEGAL_UNIT_USE_CE = os.environ.get("RAG_LEGAL_UNIT_USE_CE", "0") == "1"
+RAG_LEGAL_UNIT_SEED_K = int(os.environ.get("RAG_LEGAL_UNIT_SEED_K", "8"))
+RAG_EVIDENCE_CARD_RENDERING = os.environ.get("RAG_EVIDENCE_CARD_RENDERING", "0") == "1"
+RAG_SANCTION_FACT_CARDS = os.environ.get("RAG_SANCTION_FACT_CARDS", "0") == "1"
+GENERATION_REPETITION_PENALTY = float(os.environ.get("GENERATION_REPETITION_PENALTY", "1.08"))
+GENERATION_NO_REPEAT_NGRAM = int(os.environ.get("GENERATION_NO_REPEAT_NGRAM", "8"))
 RAG_TOP_K_RECALL  = 5     # chunks retrieved for Recall@k metric
-RAG_MIN_SCORE     = -3.0  # cross-encoder score threshold: if best score < this, skip context (fallback to knowledge)
+RAG_MIN_SCORE     = None  # keep best retrieved context; prompt handles unsupported questions
 SEED              = 42
 VAL_RATIO         = 0.1   # must match finetune.py
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
@@ -163,7 +221,16 @@ def load_model(use_lora: bool):
 def build_prompt(tokenizer, question: str, context: str | None) -> str:
     """Build ChatML prompt — same format used during fine-tuning."""
     if context:
-        user_content = f"Đoạn văn bản luật:\n{context}\n\nCâu hỏi: {question}"
+        if os.environ.get("RAG_ANSWER_ONLY_CONTEXT_FIRST", "0") == "1":
+            user_content = (
+                f"Câu hỏi: {question}\n\n"
+                f"Đoạn văn bản luật:\n{context}\n\n"
+                "Yêu cầu: Trả lời trực tiếp câu hỏi bằng 1-2 câu. "
+                "Nếu có mức phạt trong đoạn văn bản, nêu đúng mức phạt đó trước. "
+                "Không chép nguyên văn danh sách điểm/khoản dài."
+            )
+        else:
+            user_content = f"Đoạn văn bản luật:\n{context}\n\nCâu hỏi: {question}"
         system_prompt = _SYSTEM_WITH_CONTEXT
     else:
         user_content = f"Câu hỏi: {question}"
@@ -206,6 +273,8 @@ def generate_answer(model, tokenizer, question: str, context: str | None) -> str
             max_new_tokens=MAX_NEW_TOKENS,
             do_sample=False,          # greedy — deterministic, faster
             temperature=1.0,          # ignored when do_sample=False
+            repetition_penalty=GENERATION_REPETITION_PENALTY,
+            no_repeat_ngram_size=GENERATION_NO_REPEAT_NGRAM,
             use_cache=True,
         )
 
@@ -214,6 +283,50 @@ def generate_answer(model, tokenizer, question: str, context: str | None) -> str
     raw = tokenizer.decode(new_ids, skip_special_tokens=True).strip()
     # Strip Qwen3 thinking blocks (<think>...</think>) — keep only the final answer
     return re.sub(r"<think>.*?</think>", "", raw, flags=re.DOTALL).strip()
+
+
+MONEY_RANGE_RE = re.compile(r"phạt\s+tiền\s+từ\s+\d{1,3}(?:[\.,]\d{3})*(?:\s*đồng)?\s+đến\s+\d{1,3}(?:[\.,]\d{3})*\s*đồng", re.I)
+POINT_DEDUCT_RE = re.compile(r"(?:trừ|bị\s+trừ)\s+\d+\s+điểm", re.I)
+
+
+def _direct_answer_from_context(question: str, context: str | None) -> str | None:
+    """Return a compact answer from structured evidence fields when the query asks for a sanction slot."""
+    if not context:
+        return None
+    q = (question or "").lower()
+    asks_money = any(x in q for x in ["bao nhiêu", "mức phạt", "phạt tiền", "phạt bao nhiêu"])
+    asks_points = "trừ" in q and "điểm" in q
+    if not (asks_money or asks_points):
+        return None
+    parts = []
+    if asks_money:
+        m = MONEY_RANGE_RE.search(context)
+        if m:
+            parts.append(_normalize_legal_answer(m.group(0)))
+    pm = POINT_DEDUCT_RE.search(context)
+    if pm and (asks_points or "trừ điểm" in q or "giấy phép" in q):
+        parts.append(_normalize_legal_answer(pm.group(0)))
+    if not parts:
+        return None
+    ans = " và ".join(parts)
+    if ans and not ans.endswith("."):
+        ans += "."
+    return ans
+
+
+def _normalize_legal_answer(text: str) -> str:
+    """Clean common numeric artifacts in generated legal money amounts."""
+    if not text:
+        return text
+    out = text.replace("ooo", "000").replace("OOO", "000")
+    out = re.sub(r"(?<=\d),(?=\d{3}\b)", ".", out)
+    out = re.sub(r"(?<=\d)\s+\.\s*(?=\d)", ".", out)
+    out = re.sub(r"(?<=\d)\s+(?=\d{3}(?:\D|$))", ".", out)
+    out = re.sub(r"\b(\d{1,3})\.0+(\d{3})\b", r"\1.\2", out)
+    out = re.sub(r"\b(\d{1,3})\.0\.(\d{3})\b", r"\1.000.\2", out)
+    out = re.sub(r"\b(\d{1,3})\.000\.000\b", lambda m: m.group(0), out)
+    out = re.sub(r"\s+", " ", out).strip()
+    return out
 
 
 def generate_answers_batch(
@@ -244,6 +357,8 @@ def generate_answers_batch(
             **inputs,
             max_new_tokens=MAX_NEW_TOKENS,
             do_sample=False,
+            repetition_penalty=GENERATION_REPETITION_PENALTY,
+            no_repeat_ngram_size=GENERATION_NO_REPEAT_NGRAM,
             use_cache=True,
             pad_token_id=tokenizer.eos_token_id,
         )
@@ -273,7 +388,9 @@ def _source_label(doc, idx: int) -> str:
         f"Nguồn {idx}",
         md.get("doc_id") or md.get("source") or "unknown",
     ]
-    if md.get("article"):
+    if md.get("legal_path"):
+        parts.append(md["legal_path"])
+    elif md.get("article"):
         parts.append(md["article"])
     return " | ".join(parts)
 
@@ -288,6 +405,11 @@ def _source_record(doc, idx: int) -> dict:
         "article": md.get("article") or "",
         "article_number": md.get("article_number") or "",
         "chunk_id": md.get("chunk_id") or "",
+        "unit_id": md.get("unit_id") or "",
+        "unit_type": md.get("unit_type") or "",
+        "clause_number": md.get("clause_number") or "",
+        "point_letter": md.get("point_letter") or "",
+        "legal_path": md.get("legal_path") or "",
         "source_path": md.get("source_path") or "",
         "corpus": md.get("corpus") or "",
     }
@@ -295,23 +417,105 @@ def _source_record(doc, idx: int) -> dict:
 
 def _format_context_chunk(doc, idx: int) -> str:
     md = doc.metadata or {}
-    header = (
-        f"[{_source_label(doc, idx)}]\n"
-        f"Tiêu đề: {md.get('title') or ''}\n"
-        f"File: {md.get('source_path') or ''}"
-    )
-    return f"{header}\n\n{doc.page_content}"
+    header = f"[{_source_label(doc, idx)}] Tiêu đề: {md.get('title') or ''}"
+    if md.get("legal_path"):
+        header += f"\nCấu trúc: {md.get('legal_path')}"
+    text = (doc.page_content or "").strip()
+    if len(text) > 1400:
+        text = text[:1400].rsplit(" ", 1)[0].strip() + " ..."
+    return f"{header}\n{text}"
+
+
+_ALL_DOCS_CACHE = {"vs_id": None, "docs": None}
+
+
+def _all_docs_for_packing(vs):
+    if vectorstore_docs is None:
+        return []
+    if _ALL_DOCS_CACHE["vs_id"] is id(vs) and _ALL_DOCS_CACHE["docs"] is not None:
+        return _ALL_DOCS_CACHE["docs"]
+    docs = vectorstore_docs(vs)
+    _ALL_DOCS_CACHE["vs_id"] = id(vs)
+    _ALL_DOCS_CACHE["docs"] = docs
+    return docs
 
 
 def retrieve_context(vs, question: str) -> tuple[str, list[dict]]:
-    """Retrieve top-k chunks, returning source-labeled context + source metadata."""
-    docs = retrieve_ranked_docs(vs, question, top_k=RAG_TOP_K, min_score=RAG_MIN_SCORE)
+    """Retrieve ranked seed chunks, then optionally pack same-article context for generation."""
+    seed_docs = retrieve_ranked_docs(vs, question, top_k=max(RAG_TOP_K, RAG_LEGAL_UNIT_SEED_K), min_score=RAG_MIN_SCORE)
+    docs = seed_docs[:RAG_TOP_K]
+    legal_unit_docs = []
+    q_low = question.lower()
+    sanction_like = any(x in q_low for x in ["phạt", "bao nhiêu tiền", "mức tiền", "trừ điểm", "tước", "đình chỉ"])
+    use_fact_cards = RAG_SANCTION_FACT_CARDS and retrieve_fact_cards is not None
+    if os.environ.get("RAG_FACT_ONLY_FOR_SANCTION", "0") == "1":
+        use_fact_cards = use_fact_cards and sanction_like
+    if use_fact_cards:
+        legal_unit_docs = retrieve_fact_cards(question, seed_docs, top_k=RAG_LEGAL_UNIT_TOP_K)
+    elif RAG_LEGAL_UNIT_RETRIEVAL and retrieve_legal_units is not None:
+        legal_unit_docs = retrieve_legal_units(
+            question,
+            seed_docs,
+            top_k=RAG_LEGAL_UNIT_TOP_K,
+            max_candidates=RAG_LEGAL_UNIT_MAX_CANDIDATES,
+        )
+    if RAG_CONTEXT_PACKING and pack_article_context is not None:
+        docs = pack_article_context(
+            docs,
+            _all_docs_for_packing(vs),
+            top_k=RAG_TOP_K,
+            max_chunks=RAG_CONTEXT_MAX_CHUNKS,
+        )
+    if RAG_SPAN_RERANKING and rerank_spans is not None:
+        docs = rerank_spans(
+            docs,
+            question,
+            top_k=RAG_EVIDENCE_MAX_SPANS,
+            max_chars_per_span=RAG_EVIDENCE_MAX_CHARS,
+            vs=vs,
+            use_dense=RAG_SPAN_USE_DENSE,
+        )
+    elif RAG_EVIDENCE_COMPRESSION and compress_evidence_context is not None:
+        docs = compress_evidence_context(
+            docs,
+            question,
+            max_spans=RAG_EVIDENCE_MAX_SPANS,
+            max_chars_per_span=RAG_EVIDENCE_MAX_CHARS,
+            order=RAG_CONTEXT_ORDER,
+        )
+    if legal_unit_docs:
+        # Prefer concise structured evidence; appending long backup chunks made generation noisier in eval.
+        if RAG_LEGAL_UNIT_APPEND_BACKUP:
+            seen_units = {str((d.metadata or {}).get("unit_id")) for d in legal_unit_docs}
+            docs = legal_unit_docs + [d for d in docs if str((d.metadata or {}).get("unit_id")) not in seen_units]
+        else:
+            docs = legal_unit_docs
+
     context_parts = []
     sources = []
-    for idx, doc in enumerate(docs, start=1):
+    source_docs_for_context = list(docs)
+    if RAG_SANCTION_FACT_CARDS and os.environ.get("RAG_FACT_MIX_LEGAL_CARDS", "0") == "1" and legal_unit_docs:
+        # Fact cards provide compact answer fields; one legal-unit card preserves wording/style.
+        legal_backup = []
+        backup_k = int(os.environ.get("RAG_FACT_MIX_LEGAL_TOP_K", "1"))
+        if retrieve_legal_units is not None and backup_k > 0:
+            legal_backup = retrieve_legal_units(question, seed_docs, top_k=backup_k, max_candidates=RAG_LEGAL_UNIT_MAX_CANDIDATES)
+        source_docs_for_context = list(docs) + legal_backup[:backup_k]
+    for idx, doc in enumerate(source_docs_for_context, start=1):
         sources.append(_source_record(doc, idx))
-        context_parts.append(_format_context_chunk(doc, idx))
-    return "\n\n---\n\n".join(context_parts), sources
+        if RAG_SANCTION_FACT_CARDS and not str((doc.metadata or {}).get("unit_type", "")).startswith("fact:"):
+            if RAG_EVIDENCE_CARD_RENDERING and evidence_card_from_text is not None:
+                context_parts.append(evidence_card_from_text(question, doc.page_content or "", doc.metadata or {}))
+            else:
+                context_parts.append(_format_context_chunk(doc, idx))
+        elif RAG_SANCTION_FACT_CARDS:
+            context_parts.append(doc.page_content or "")
+        elif RAG_EVIDENCE_CARD_RENDERING and evidence_card_from_text is not None:
+            context_parts.append(evidence_card_from_text(question, doc.page_content or "", doc.metadata or {}))
+        else:
+            context_parts.append(_format_context_chunk(doc, idx))
+    separator = "\n\n" if RAG_EVIDENCE_CARD_RENDERING else "\n\n---\n\n"
+    return separator.join(context_parts), sources
 
 
 # ---------------------------------------------------------------------------
@@ -612,7 +816,18 @@ def compute_context_recall_at_k(vs, test_data: list[dict], k: int = 5) -> float:
         if not ctx:
             continue
         total += 1
-        for doc in retrieve_ranked_docs(vs, item["question"], top_k=k, candidate_k=max(12, k * 4)):
+        docs = retrieve_ranked_docs(vs, item["question"], top_k=k, candidate_k=max(30, k * 8))
+        if RAG_RECALL_USE_EVIDENCE_SPANS and compress_evidence_context is not None:
+            # Optional span-level evaluation matches the compressed evidence used
+            # by RAG while keeping the retriever itself generic and non-rule-based.
+            docs = compress_evidence_context(
+                docs,
+                item["question"],
+                max_spans=k,
+                max_chars_per_span=RAG_RECALL_EVIDENCE_MAX_CHARS,
+                order="rank",
+            )
+        for doc in docs[:k]:
             if scorer.score(ctx, doc.page_content)["rougeL"].fmeasure >= 0.5:
                 hits += 1
                 break
@@ -677,6 +892,12 @@ def compute_source_hit_rate(test_data: list[dict], retrieved_sources: list[list[
     return (hits / total) if total else None
 
 
+def _looks_like_refusal(pred: str) -> bool:
+    p = pred.lower()
+    refusal_keywords = ["không tìm thấy căn cứ", "không thể trả lời", "không đủ thông tin",
+                        "không có thông tin", "không thuộc phạm vi"]
+    return any(kw in p for kw in refusal_keywords)
+
 def compute_refusal_rate(test_data: list[dict], predictions: list[str]) -> float | None:
     total = 0
     refused = 0
@@ -695,14 +916,11 @@ def compute_false_refusal_rate(test_data: list[dict], predictions: list[str]) ->
     """Fraction of SUPPORTED questions that are incorrectly refused."""
     total = 0
     falsely_refused = 0
-    refusal_keywords = ["không tìm thấy căn cứ", "không thể trả lời", "không đủ thông tin",
-                        "không có thông tin", "không thuộc phạm vi"]
     for item, pred in zip(test_data, predictions):
         if item.get("category") == "unsupported":
             continue
         total += 1
-        p = pred.lower()
-        if any(kw in p for kw in refusal_keywords):
+        if _looks_like_refusal(pred):
             falsely_refused += 1
     return (falsely_refused / total) if total else None
 
@@ -745,6 +963,7 @@ def run_retrieval_diagnostics(vs, test_data: list[dict]) -> dict:
             "index": idx,
             "question": question,
             "category": item.get("category") or "",
+            "context": ctx,
             "expected_doc_ids": sorted(expected),
             "expanded_query": expand_traffic_query(question),
             "intents": classify_intents(question),
@@ -781,6 +1000,7 @@ def evaluate_config(
     phobert_mdl,
     retriever=None,
     llm_judge_fn=None,   # callable(questions, preds, refs) -> float, or None
+    fast_metrics: bool = False,
 ) -> dict:
     """Run inference on all test samples and return metrics + predictions."""
     print(f"\n{'='*60}")
@@ -800,7 +1020,12 @@ def evaluate_config(
         batch = test_data[batch_start : batch_start + EVAL_BATCH_SIZE]
         batch_questions = [item["question"] for item in batch]
         batch_contexts = []
-        if use_rag:
+        oracle_field = os.environ.get("EVAL_ORACLE_CONTEXT_FIELD")
+        if use_rag and oracle_field:
+            for item in batch:
+                batch_contexts.append(item.get(oracle_field) or "")
+                retrieved_sources.append([])
+        elif use_rag:
             for q in batch_questions:
                 context, sources = retrieve_context(retriever, q)
                 batch_contexts.append(context)
@@ -810,7 +1035,26 @@ def evaluate_config(
             retrieved_sources.extend([[] for _ in batch_questions])
 
         t0      = time.time()
+        direct_answers = []
+        if use_rag and os.environ.get("RAG_DIRECT_SLOT_ANSWER", "0") == "1":
+            direct_answers = [_direct_answer_from_context(q, c) for q, c in zip(batch_questions, batch_contexts)]
+        else:
+            direct_answers = [None for _ in batch_questions]
         answers = generate_answers_batch(model, tokenizer, batch_questions, batch_contexts)
+        answers = [direct if direct is not None else ans for direct, ans in zip(direct_answers, answers)]
+        if use_rag and os.environ.get("RAG_HYBRID_FALLBACK", "0") == "1":
+            for idx, answer in enumerate(list(answers)):
+                fallback_needed = _looks_like_refusal(answer) and (
+                    is_supported_traffic_question(batch_questions[idx])
+                    or os.environ.get("RAG_FALLBACK_ON_ANY_REFUSAL", "0") == "1"
+                )
+                if os.environ.get("RAG_FALLBACK_ON_SHORT_AMOUNT", "0") == "1":
+                    fallback_needed = fallback_needed or bool(re.search(r"phạt\s+tiền\s+từ\s+\d+[\.,]?\s*$", answer or "", re.I))
+                if fallback_needed:
+                    # Optional hybrid fallback: let the fine-tuned model answer without retrieved context.
+                    answers[idx] = generate_answers_batch(model, tokenizer, [batch_questions[idx]], [None])[0]
+        if os.environ.get("NORMALIZE_LEGAL_NUMBERS", "0") == "1":
+            answers = [_normalize_legal_answer(a) for a in answers]
         elapsed = time.time() - t0
 
         predictions.extend(answers)
@@ -821,7 +1065,7 @@ def evaluate_config(
     bleu        = compute_bleu(predictions, references)
     meteor      = compute_meteor(predictions, references)
     f1_token    = compute_f1_token(predictions, references)
-    bert_f1     = compute_bert_score(predictions, references, phobert_tok, phobert_mdl)
+    bert_f1     = 0.0 if fast_metrics else compute_bert_score(predictions, references, phobert_tok, phobert_mdl)
     exact_match = compute_exact_match(predictions, references)
     forbidden_legacy = compute_forbidden_legacy_rate(predictions)
     source_hit_rate = compute_source_hit_rate(test_data, retrieved_sources) if use_rag else None
@@ -865,7 +1109,10 @@ def evaluate_config(
     print(f"  BLEU-4:       {bleu:.4f}")
     print(f"  METEOR:       {meteor:.4f}")
     print(f"  F1-token:     {f1_token:.4f}")
-    print(f"  BERTScore-F1: {bert_f1:.4f}")
+    if fast_metrics:
+        print("  BERTScore-F1: skipped (--fast-metrics)")
+    else:
+        print(f"  BERTScore-F1: {bert_f1:.4f}")
     print(f"  Exact Match:  {exact_match:.4f}")
     print(f"  Legacy rate:  {forbidden_legacy:.4f}")
     if source_hit_rate is not None:
@@ -920,7 +1167,38 @@ def main():
         "--retrieval-only", action="store_true",
         help="Run retrieval diagnostics without loading/generating with LLMs",
     )
+    parser.add_argument(
+        "--indices", type=str, default=None,
+        help="Comma-separated 0-based sample indices to evaluate after loading/--samples filtering",
+    )
+    parser.add_argument(
+        "--output", type=str, default=None,
+        help="Metrics JSON output path (default: reports/traffic/evaluation_results.json)",
+    )
+    parser.add_argument(
+        "--predictions-output", type=str, default=None,
+        help="Predictions JSON output path (default: reports/traffic/predictions_all_configs.json)",
+    )
+    parser.add_argument(
+        "--oracle-context-field", type=str, default=None,
+        help="Use this field from each sample as RAG context instead of retrieval (diagnostic oracle evidence test)",
+    )
+    parser.add_argument(
+        "--fast-metrics", action="store_true",
+        help="Skip PhoBERT BERTScore for faster ablation runs",
+    )
     args = parser.parse_args()
+    selected_indices = None
+    if args.oracle_context_field:
+        os.environ["EVAL_ORACLE_CONTEXT_FIELD"] = args.oracle_context_field
+    if args.indices:
+        selected_indices = [int(x.strip()) for x in args.indices.split(",") if x.strip()]
+        if not selected_indices:
+            raise ValueError("--indices was provided but no valid indices were parsed")
+    results_path = Path(args.output) if args.output else RESULTS_PATH
+    preds_path = Path(args.predictions_output) if args.predictions_output else PREDS_PATH
+    if args.output and not args.predictions_output:
+        preds_path = results_path.with_name(results_path.stem.replace("evaluation_results", "predictions") + results_path.suffix)
 
     # Set up LLM judge function if requested
     llm_judge_fn = None
@@ -952,6 +1230,13 @@ def main():
 
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     test_data = load_test_data(args.test_file, args.samples)
+    if selected_indices is not None:
+        n_before = len(test_data)
+        bad = [idx for idx in selected_indices if idx < 0 or idx >= n_before]
+        if bad:
+            raise IndexError(f"--indices out of range for loaded test set of {n_before} samples: {bad}")
+        test_data = [dict(test_data[idx], eval_original_index=idx) for idx in selected_indices]
+        print(f"Selected {len(test_data)} samples by index from {n_before} loaded samples")
     eval_validation = validate_eval_data(test_data)
 
     if args.retrieval_only:
@@ -974,8 +1259,8 @@ def main():
 
     rag_needed = any(c in args.configs for c in ("B", "D"))
 
-    # Load PhoBERT once and reuse across all 4 configs
-    phobert_tok, phobert_mdl = load_phobert()
+    # Load PhoBERT only for final/report runs; ablations can skip it for speed.
+    phobert_tok, phobert_mdl = (None, None) if args.fast_metrics else load_phobert()
 
     # Load vector store once — used for both RAG generation and Recall@5
     vs = None
@@ -1027,6 +1312,7 @@ def main():
                 phobert_tok, phobert_mdl,
                 vs if use_rag else None,
                 llm_judge_fn=llm_judge_fn,
+                fast_metrics=args.fast_metrics,
             )
             all_metrics[config_name]     = result["metrics"]
             all_predictions[config_name] = {
@@ -1043,8 +1329,40 @@ def main():
         torch.cuda.empty_cache()
 
     # Attach retrieval metrics to every config's metrics (shared retrieval metrics)
+    eval_run_config = {
+        "test_file": args.test_file or str(TEST_MANUAL_PATH),
+        "n_samples": len(test_data),
+        "configs": args.configs,
+        "max_new_tokens": MAX_NEW_TOKENS,
+        "generation_repetition_penalty": GENERATION_REPETITION_PENALTY,
+        "generation_no_repeat_ngram": GENERATION_NO_REPEAT_NGRAM,
+        "rag_top_k": RAG_TOP_K,
+        "rag_top_k_recall": RAG_TOP_K_RECALL,
+        "rag_context_packing": RAG_CONTEXT_PACKING,
+        "rag_context_max_chunks": RAG_CONTEXT_MAX_CHUNKS,
+        "rag_evidence_compression": RAG_EVIDENCE_COMPRESSION,
+        "rag_evidence_max_spans": RAG_EVIDENCE_MAX_SPANS,
+        "rag_evidence_max_chars": RAG_EVIDENCE_MAX_CHARS,
+        "rag_clause_aware_packing": os.environ.get("RAG_CLAUSE_AWARE_PACKING", "1") == "1",
+        "rag_span_reranking": RAG_SPAN_RERANKING,
+        "rag_context_order": RAG_CONTEXT_ORDER,
+        "rag_legal_unit_retrieval": RAG_LEGAL_UNIT_RETRIEVAL,
+        "rag_legal_unit_top_k": RAG_LEGAL_UNIT_TOP_K,
+        "rag_legal_unit_max_candidates": RAG_LEGAL_UNIT_MAX_CANDIDATES,
+        "rag_legal_unit_append_backup": RAG_LEGAL_UNIT_APPEND_BACKUP,
+        "rag_legal_unit_use_ce": RAG_LEGAL_UNIT_USE_CE,
+        "rag_legal_unit_seed_k": RAG_LEGAL_UNIT_SEED_K,
+        "rag_answer_only_context_first": os.environ.get("RAG_ANSWER_ONLY_CONTEXT_FIRST", "0") == "1",
+        "rag_evidence_card_rendering": RAG_EVIDENCE_CARD_RENDERING,
+        "rag_sanction_fact_cards": RAG_SANCTION_FACT_CARDS,
+        "fast_metrics": args.fast_metrics,
+        "env": {k: os.environ.get(k) for k in EVAL_CONFIG_ENV_KEYS if os.environ.get(k) is not None},
+        "command": " ".join(shlex.quote(x) for x in sys.argv),
+    }
+
     for cfg_metrics in all_metrics.values():
         cfg_metrics["eval_validation"] = eval_validation
+        cfg_metrics["eval_run_config"] = eval_run_config
         if context_recall_at_5 is not None:
             cfg_metrics["context_rouge_recall_at_5"] = round(context_recall_at_5, 4)
             cfg_metrics["recall_at_5"] = round(context_recall_at_5, 4)
@@ -1088,13 +1406,15 @@ def main():
             + f" {m['avg_latency_s']:>6.1f}s"
         )
 
-    with open(RESULTS_PATH, "w", encoding="utf-8") as f:
+    results_path.parent.mkdir(parents=True, exist_ok=True)
+    preds_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(results_path, "w", encoding="utf-8") as f:
         json.dump(all_metrics, f, ensure_ascii=False, indent=2)
-    with open(PREDS_PATH, "w", encoding="utf-8") as f:
+    with open(preds_path, "w", encoding="utf-8") as f:
         json.dump(all_predictions, f, ensure_ascii=False, indent=2)
 
-    print(f"\nSaved: {RESULTS_PATH}")
-    print(f"Saved: {PREDS_PATH}")
+    print(f"\nSaved: {results_path}")
+    print(f"Saved: {preds_path}")
 
 
 if __name__ == "__main__":

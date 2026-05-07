@@ -32,12 +32,12 @@ from config import (
 from corpus import infer_article, iter_manifest_documents, iter_traffic_documents
 
 
-EMBED_MODEL = "BAAI/bge-m3"
+EMBED_MODEL = os.environ.get("EMBED_MODEL", "BAAI/bge-m3")
 EMBED_BATCH = 128
 EMBED_MAX_SEQ = 1024
 
 FORBIDDEN_LEGACY_TERMS_LOWER = [term.lower() for term in FORBIDDEN_LEGACY_TERMS]
-LEGAL_CHUNKING_POLICY = "legal_article_clause_v1"
+LEGAL_CHUNKING_POLICY = "article_v2"
 
 ARTICLE_RE = re.compile(r"(?m)^Điều\s+(\d+[a-zA-Z]?)\.\s*[^\n]+")
 CLAUSE_RE = re.compile(r"(?m)^(\d+)\.\s+")
@@ -160,7 +160,6 @@ def _article_documents(doc: Document) -> list[Document]:
         article_start = match.start()
         article_end = article_matches[article_idx + 1].start() if article_idx + 1 < len(article_matches) else len(text)
         article_text = text[article_start:article_end].strip()
-        clause_matches = list(CLAUSE_RE.finditer(article_text))
         article_metadata = {
             **base_metadata,
             "article": article_title,
@@ -169,30 +168,8 @@ def _article_documents(doc: Document) -> list[Document]:
             "chunking_policy": LEGAL_CHUNKING_POLICY,
         }
 
-        if not clause_matches:
-            chunks.extend(_split_long_legal_chunk(Document(page_content=article_text, metadata=article_metadata)))
-            continue
-
-        lead = article_text[: clause_matches[0].start()].strip()
-        if lead and _compact(lead) != article_title:
-            lead_doc = Document(page_content=lead, metadata={**article_metadata, "legal_block": "article_lead"})
-            chunks.extend(_split_long_legal_chunk(lead_doc))
-
-        for clause_idx, clause_match in enumerate(clause_matches):
-            clause_no = clause_match.group(1)
-            clause_start = clause_match.start()
-            clause_end = clause_matches[clause_idx + 1].start() if clause_idx + 1 < len(clause_matches) else len(article_text)
-            clause_text = article_text[clause_start:clause_end].strip()
-            content = f"{article_title}\n\n{clause_text}"
-            clause_doc = Document(
-                page_content=content,
-                metadata={
-                    **article_metadata,
-                    "clause_number": clause_no,
-                    "legal_block": "clause",
-                },
-            )
-            chunks.extend(_split_long_legal_chunk(clause_doc))
+        article_doc = Document(page_content=article_text, metadata=article_metadata)
+        chunks.extend(_split_long_legal_chunk(article_doc))
 
     return chunks
 
